@@ -1,0 +1,44 @@
+@use "../../../scss/abstract/" as *;
+
+.signin-id {
+  font-size: 18px;
+  margin-left: 2%;
+}
+
+.create-password {
+  margin-top: 6%;
+  background: #b3e0ee;
+  width: 35%;
+  height: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  @include xsBreakPoint {
+    width: 50%;
+    margin-top: 15%;
+    cursor: pointer;
+  }
+  @include mdBreakPoint {
+    width: 50%;
+    margin-top: 11%;
+    cursor: pointer;
+  }
+  @include lgBreakPoint {
+    width: 50%;
+    margin-top: 9%;
+    cursor: pointer;
+  }
+  @include xxxlBreakPoint {
+    margin-top: 5%;
+    cursor: pointer;
+  }
+  .para-create {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 1%;
+    @include xsBreakPoint{
+      font-size: 11px;
+      margin-top: 3px;
+    }
+  }
+}

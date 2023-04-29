@@ -1,0 +1,23 @@
+@use "../../scss/abstract/" as *;
+
+.large-size-container {
+  display: flex;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.small-size-container {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 12%;
+  // height: 100vh;
+  .outlet-area {
+    margin-bottom: 8%;
+    @include xsBreakPoint {
+      margin-bottom: 15%;
+    }
+  }
+  .sidebar-area {
+    position: fixed;
+    bottom: 0px;
+  }
+}

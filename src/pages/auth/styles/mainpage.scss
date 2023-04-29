@@ -1,0 +1,190 @@
+@use "../../../scss/abstract/" as *;
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+.carousel-dark .carousel-control-prev-icon {
+  filter: blur() !important;
+}
+.carousel-dark .carousel-control-next-icon {
+  filter: blur() !important;
+}
+.signIn-container {
+  background-color: #b3e0ee;
+  height: 100vh;
+  overflow: scroll;
+  .register-para {
+    margin-top: 0px;
+    padding: 2%;
+    padding-bottom: 0px;
+    text-align: end;
+  }
+  .center-container-main {
+    background-color: #b3e0ee;
+    margin-top: 3%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    // display: flex;
+    // justify-content: space-around;
+    @include xsBreakPoint {
+      display: flow-root;
+    }
+    @include smBreakPoint {
+      display: flow-root;
+    }
+    @include mdBreakPoint {
+      // display: contents;
+    }
+    .whole-color-border{
+      background-color: white;
+      border-radius: 10px;
+    }
+    .center-heading {
+      // background-color: white;
+      .header-center-content {
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 1%;
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 0%;
+      }
+    }
+    .center-inner-full-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 2%;
+      // background-color: white;
+      @include smBreakPoint {
+        flex-direction: column;
+      }
+      @include xsBreakPoint {
+        flex-direction: column;
+      }
+      .leftside-container-main {
+        background-color: white;
+        width: 100%;
+        // border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        @include xsBreakPoint {
+          border-radius: inherit;
+        }
+        @include smBreakPoint {
+          border-radius: inherit;
+        }
+        @include mdBreakPoint {
+          border-radius: inherit;
+        }
+        .innerside {
+          padding: 8%;
+          // border-right: 1px solid black;
+          .signin-header {
+            margin-top: 10%;
+            font-size: 24px;
+          }
+          .signin-number {
+            margin-top: 10%;
+            font-size: 16px;
+          }
+          .number-container {
+            display: flex;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 0.5%;
+            .default-content {
+              width: 7%;
+              border: none;
+              margin-left: 4px;
+              margin-top: 5px;
+              margin-bottom: 8px;
+              font-size: 16px;
+              @include xsBreakPoint {
+                width: 13%;
+              }
+              @include mdBreakPoint {
+                width: 12%;
+                margin-bottom: 5px;
+              }
+            }
+            .input-field-number {
+              width: 90%;
+              border: none;
+              font-size: 16px;
+              border-radius: 5px;
+              margin-left: 3%;
+              @include lgBreakPoint {
+                margin-bottom: 5px;
+                margin-left: 10px;
+              }
+              @include mdBreakPoint {
+                width: 100%;
+              }
+              @include xsBreakPoint {
+                margin-bottom: 3px;
+                margin-left: 10px;
+              }
+            }
+          }
+          .err-msg {
+            margin-bottom: 0px;
+            color: red;
+          }
+          .signin-btn {
+            width: 100%;
+            padding: 3%;
+            background-color: #0197c6;
+            border: none;
+            border-radius: 33px;
+            font-size: 18px;
+            color: white;
+            margin-top: 5%;
+            // margin-bottom: 23%;
+            @include xsBreakPoint{
+              margin-top: 10%;
+            }
+          }
+          .mobile-number {
+            margin-top: 2%;
+            font-size: 16px;
+          }
+        }
+      }
+      .center-line {
+        border-left: 2px solid black;
+      }
+      .rightside-container-main {
+        background-color: white;
+        width: 100%;
+        // border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 2%;
+        @include smBreakPoint {
+          border-radius: inherit;
+        }
+        @include xsBreakPoint {
+          border-radius: inherit;
+        }
+        @include mdBreakPoint {
+          border-radius: inherit;
+        }
+        .carousel-schrol {
+          width: 77%;
+          margin-left: 7%;
+          padding: 8%;
+        }
+      }
+    }
+  }
+}

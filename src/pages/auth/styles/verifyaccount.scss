@@ -1,0 +1,79 @@
+.center-container-1 {
+  background-color: #b3e0ee;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -1.5%;
+}
+.verify-container-2 {
+  background-color: white;
+  width: 438px;
+  border-radius: 10px;
+  padding: 2%;
+  // margin-top: 10%;
+
+  .student-input-box-1 {
+    width: 96%;
+    padding: 2%;
+    // height: 44px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    background-color: #f5f5f5;
+  }
+  .student-input-box-2 {
+    width: 96%;
+    padding: 2%;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+  .user {
+    margin-bottom: 2%;
+  }
+  .user-id {
+    width: 46%;
+  }
+
+  .student-input-dropbox-1 {
+    width: 95%;
+    height: 44px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    background-color: #f5f5f5;
+  }
+
+  .btn-verify {
+    // width: 98%;
+    width: 368px;
+    padding: 2%;
+    background-color: #0197c6;
+    border: none;
+    border-radius: 33px;
+    font-size: 18px;
+    color: white;
+    margin-top: 5%;
+  }
+}
+.first-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #a2a2a2;
+  cursor: pointer;
+}
+.first-dot-null {
+  width: 20px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 3px;
+  background-color: #0395c4;
+  cursor: pointer;
+}
+.second-dot-null {
+  width: 20px;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 3px;
+  background-color: #0395c4;
+  cursor: pointer;
+}

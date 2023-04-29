@@ -1,0 +1,313 @@
+@use "../../../../scss/abstract/" as *;
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #03c473 !important;
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: black !important;
+}
+
+.active {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  background-color: white;
+}
+.active-crt {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: #017d2e;
+  color: white;
+}
+.active-skip {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  background-color: #a2a2a2;
+  color: white;
+}
+.active-wrong {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  background-color: #960e0e;
+  color: white;
+}
+.isQnRead {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  background-color: #e1f1e7;
+}
+.isQnNotvisit {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  background-color: white;
+}
+
+.isSkipped {
+  border: 1px solid #83d09f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  background-color: #a2a2a2;
+}
+
+.labeltrue {
+  color: black;
+}
+.labelfalse {
+  color: gray;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+.wrong {
+  background-color: rgb(169, 65, 65);
+  color: white;
+}
+.notanswer {
+  background-color: rgb(162, 162, 162);
+  color: white;
+}
+
+.data-button-assesment {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  @include smBreakPoint {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @include xsBreakPoint {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include mdBreakPoint {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @include lgBreakPoint {
+    // width: 78%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @include xlBreakPoint {
+    // width: 78%;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+  }
+  @include xxlBreakPoint {
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+  }
+  @include xxxlBreakPoint {
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+  }
+}
+
+.assesment-full-container {
+  width: 100%;
+  background-color: #f5f5f5;
+  @include xsBreakPoint {
+    padding-bottom: 2%;
+  }
+  @include smBreakPoint {
+    padding-bottom: 7%;
+  }
+  @include mdBreakPoint {
+    padding-bottom: 5%;
+  }
+}
+.assessment-question-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3%;
+  @include xsBreakPoint {
+    display: flex;
+    flex-direction: column;
+  }
+  @include smBreakPoint {
+    display: flex;
+    flex-direction: column;
+  }
+  @include mdBreakPoint {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  @include lgBreakPoint {
+    // margin-top: 4%;
+  }
+  .assessment-left-container {
+    width: 59%;
+    border: 1px solid #a2a2a2;
+    border-radius: 10px;
+    padding: 1%;
+    min-height: 400px;
+    @include xsBreakPoint {
+      width: 100%;
+      min-height: 300px;
+    }
+    @include smBreakPoint {
+      width: 100%;
+    }
+    @include mdBreakPoint {
+      width: 100%;
+    }
+  }
+  .assessment-right-container {
+    width: 40%;
+    min-height: 400px;
+    @include xsBreakPoint {
+      width: 100%;
+      min-height: 300px;
+      margin-top: 2%;
+    }
+    @include mdBreakPoint {
+      margin-top: 2%;
+      width: 100%;
+    }
+    @include smBreakPoint {
+      width: 100%;
+      margin-top: 2%;
+    }
+    .right-answer-check {
+      padding: 2%;
+      display: flex;
+      justify-content: space-between;
+      @include mdBreakPoint {
+        // flex-direction: column;
+        margin-left: 5%;
+      }
+      @include smBreakPoint {
+        // flex-direction: column;
+        margin-left: 5%;
+      }
+      .dot-change {
+        margin-top: 3%;
+        @include mdBreakPoint {
+          margin-top: 1%;
+        }
+        @include smBreakPoint {
+          margin-top: 1%;
+        }
+      }
+    }
+  }
+}
+
+.data-prev-btn {
+  color: #03c4ad;
+  background-color: white;
+  border-color: #03c4ad;
+  border-radius: 20px;
+}
+
+.data-bot-btn {
+  // margin-left: 48%;
+  width: 200px;
+  // margin-top: -35px;
+  @include xsBreakPoint {
+    // margin-left: 67%;
+    // width: 35%;
+  }
+  @include mdBreakPoint {
+    margin-left: 40%;
+  }
+}
+
+.crt-wrg-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  border-bottom: 1px solid #a2a2a2;
+  @include smBreakPoint {
+    flex-direction: column;
+  }
+  @include xsBreakPoint {
+    flex-direction: column;
+    width: 100%;
+    // height: 20%;
+  }
+  .circle-img-crt-wrg {
+    width: 30px;
+    margin-top: 4%;
+    @include smBreakPoint {
+      width: 20px;
+    }
+    @include xsBreakPoint {
+      width: 20px;
+    }
+  }
+  .circle-img-not {
+    width: 24px;
+    margin-top: 4%;
+    @include smBreakPoint {
+      width: 0px;
+    }
+    @include xsBreakPoint {
+      width: 20px;
+    }
+  }
+}
+.crt-wrg {
+  width: 41%;
+  // border: 1px solid #a2a2a2;
+  border-radius: 5px;
+  // height: 300px;
+  @include xsBreakPoint {
+    width: 100%;
+  }
+
+  .inner-crt-wrg {
+    min-height: 300px;
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+  }
+}
+.numbers {
+  height: 34vh;
+}
+
+.finall {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scores {
+  display: flex;
+  @include xsBreakPoint {
+    flex-direction: column-reverse;
+  }
+}

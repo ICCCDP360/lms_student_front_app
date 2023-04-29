@@ -1,0 +1,303 @@
+// @use "../../../../scss/abstract/" as *;
+
+// .dailyVideoPlay {
+//   padding: 1%;
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   cursor: pointer;
+//   // width: 150px;
+//   text-align: center;
+//   font-size: 18px;
+//   font-weight: 600;
+// }
+// .selectVideoPlay {
+//   padding: 1%;
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   border-bottom: 2px solid #0197c6;
+//   background-color: white;
+//   cursor: pointer;
+//   // width: 180px;
+//   text-align: center;
+//   font-size: 18px;
+//   font-weight: 600;
+// }
+// .rsw-editor {
+//   min-height: 250px !important;
+// }
+// .ableImg {
+//   text-align: center;
+//   cursor: pointer;
+// }
+// .disableImg {
+//   text-align: center;
+//   cursor: pointer;
+//   pointer-events: none;
+//   opacity: 0.4;
+// }
+
+// .video-full-container{
+//   padding: 1%;
+//   .video-header{
+//     font-size: 24px;
+//     font-weight: 700;
+//   }
+//   .top-header-img-container{
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 2%;
+//     .header-img-inside-container{
+//       width: 60%;
+//       display: flex;
+//       justify-content: space-around;
+//       @include xsBreakPoint{
+//         width: 100%;
+//       }
+//       .img-header-container{
+//         text-align: center;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }
+
+// .video-slide-container{
+//   padding: 1%;
+//   text-align: center;
+//   .underline-video{
+//     border: 1px solid #F5F5F5;
+//     margin-bottom: 0px;
+//   }
+//   .videoplayer-video{
+//     border: 1px solid gray;
+//     border-right: 1px solid gray;
+//     border-radius: 5px;
+//     width: 50%;
+//     height: 50%;
+//     @include mdBreakPoint{
+//       width: 60%;
+//       height: 60%;
+//     }
+//     @include smBreakPoint{
+//       width: 70%;
+//       height: 70%;
+//     }
+//     @include xsBreakPoint{
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+//   .end-underline-video{
+//     border: 1px solid #F5F5F5;
+//   }
+// }
+
+// .video-base-container{
+//   display: flex;
+//   background-color: white;
+//   border-bottom: 1px solid #a2a2a2;
+// }
+// .video-descrip-container{
+//   padding: 2%;
+//   .descrip-name{
+//     font-size: 20px;
+//     font-weight: 600;
+//   }
+//   .descrip-content{
+//     font-size: 18px;
+//     font-weight: 400;
+//   }
+//   .second-video-content{
+//     font-size: 18px;
+//     font-weight: 400;
+//     color: #000000;
+//   }
+//   .second-video-subcontent{
+//     font-size: 18px;
+//     font-weight: 400;
+//     margin-left: 2%;
+//     color: #333333;
+//   }
+//   .details-head{
+//     font-size: 20px;
+//     font-weight: 600;
+//   }
+//   .email-container{
+//     width: 50%;
+//     @include mdBreakPoint{
+//       width: 60%;
+//     }
+//     @include smBreakPoint{
+//       width: 70%;
+//       margin-bottom: 5px;
+//     }
+//     @include xsBreakPoint{
+//       width: 80%;
+//       margin-bottom: 5px;
+//     }
+//   }
+// }
+@use "../../../../scss/abstract/" as *;
+
+.dailyVideoPlay {
+  padding: 1%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  // width: 150px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.selectVideoPlay {
+  padding: 1%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #0197c6;
+  background-color: white;
+  cursor: pointer;
+  // width: 180px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.rsw-editor {
+  min-height: 250px !important;
+}
+.ableImg {
+  text-align: center;
+  cursor: pointer;
+}
+.disableImg {
+  text-align: center;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.video-full-container {
+  padding: 1%;
+  .video-header {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .top-header-img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    .header-img-inside-container {
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      @include xsBreakPoint {
+        width: 100%;
+      }
+      .img-header-container {
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.video-slide-container {
+  padding: 1%;
+  text-align: center;
+  .underline-video {
+    border: 1px solid #f5f5f5;
+    margin-bottom: 0px;
+  }
+  .videoplayer-video {
+    border: 1px solid gray;
+    border-right: 1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    @include mdBreakPoint {
+      width: 60%;
+      height: 60%;
+    }
+    @include smBreakPoint {
+      width: 70%;
+      height: 70%;
+    }
+    @include xsBreakPoint {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .end-underline-video {
+    border: 1px solid #f5f5f5;
+  }
+}
+
+.video-base-container {
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid #a2a2a2;
+}
+.video-descrip-container {
+  padding: 2%;
+  padding-bottom: 12%;
+  .descrip-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .descrip-content {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .second-video-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+  }
+  .second-video-subcontent {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 2%;
+    color: #333333;
+  }
+  .details-head {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .ask-btn {
+    color: white;
+    background-color: #03c4ad;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    // height: 40px;
+    padding: 2%;
+  }
+  .email-container {
+    width: 65%;
+    @include mdBreakPoint {
+      width: 60%;
+    }
+    @include smBreakPoint {
+      width: 70%;
+      margin-bottom: 5px;
+    }
+    @include xsBreakPoint {
+      width: 80%;
+      margin-bottom: 5px;
+    }
+  }
+  .ask-btn {
+    padding: 1%;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: none;
+    background-color: #0197c6;
+    border-radius: 30px;
+    margin-top: 5%;
+    @include xsBreakPoint {
+      padding: 1.5%;
+    }
+  }
+}

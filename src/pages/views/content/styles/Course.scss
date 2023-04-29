@@ -1,0 +1,1155 @@
+// // @use "../../../../scss/abstract/" as *;
+
+// // .dailyTask {
+// //   padding: 5px;
+// //   margin-top: 0px;
+// //   margin-bottom: 0px;
+// //   cursor: pointer;
+// //   width: 120px;
+// //   text-align: center;
+// //   font-size: 18px;
+// //   font-weight: 600;
+// //   @include xsBreakPoint{
+// //     font-size: 15px;
+// //   }
+// // }
+// // .selectDailyTask {
+// //   padding: 5px;
+// //   margin-top: 0px;
+// //   margin-bottom: 0px;
+// //   border: 1px solid #0197c6;
+// //   border-bottom: 3px solid #0395C4;
+// //   border-radius: 50px;
+// //   background-color: #b3e0ee;
+// //   cursor: pointer;
+// //   width: 120px;
+// //   text-align: center;
+// //   font-size: 18px;
+// //   font-weight: 600;
+// //   @include xsBreakPoint{
+// //     font-size: 15px;
+// //   }
+// // }
+// // .selectAllTask {
+// //   padding: 5px;
+// //   margin-top: 0px;
+// //   margin-bottom: 0px;
+// //   border: 1px solid #0197c6;
+// //   border-bottom: 3px solid #0395C4;
+// //   border-radius: 50px;
+// //   background-color: #b3e0ee;
+// //   cursor: pointer;
+// //   width: 120px;
+// //   text-align: center;
+// //   font-size: 18px;
+// //   font-weight: 600;
+// //   @include xsBreakPoint{
+// //     font-size: 15px;
+// //   }
+// // }
+// // .disabledbutton {
+// //   pointer-events: none;
+// //   opacity: 0.4;
+// // }
+
+// // // ----------------------------------
+// // .task-full-container {
+// //   width: 100%;
+// //   padding: 1%;
+// //   padding-top: 0.5%;
+// //   padding-bottom: 2%;
+// //   .divider-line {
+// //     border-top: 2px solid #0197c6;
+// //   }
+// //   .full-subcontainer {
+// //     background-color: white;
+// //     padding: 1%;
+// //     border-top-left-radius: 10px;
+// //     border-top-right-radius: 10px;
+// //     // min-height: 80vh;
+// //     .task-topheader-container {
+// //       display: flex;
+// //       background-color: white;
+// //       border-radius: 20px;
+// //       box-shadow: 0px 0px 2px 0px gray;
+// //     }
+// //   }
+// //   .myTask-full-border {
+// //     background-color: white;
+// //     min-height: 70vh;
+// //     border-bottom-left-radius: 10px;
+// //     border-bottom-right-radius: 10px;
+// //     .myTask-full-container {
+// //       padding: 1%;
+// //       .mytask-sub-container {
+// //         display: flex;
+// //         padding: 2%;
+// //         border-radius: 10px;
+// //         margin-left: 1%;
+// //         margin-right: 1%;
+// //         justify-content: space-between;
+// //         .subject-name {
+// //           margin-top: 0px;
+// //           margin-bottom: 0px;
+// //           font-size: 20px;
+// //           color: #333333;
+// //           @include xsBreakPoint{
+// //             font-size: 15px;
+// //           }
+// //         }
+// //         .subject-content {
+// //           margin-top: 0px;
+// //           font-size: 24px;
+// //           @include xsBreakPoint{
+// //             font-size: 20px;
+// //           }
+// //         }
+// //         .subject-btm-container {
+// //           display: flex;
+// //           width: 300px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           @include xsBreakPoint{
+// //             width: 280px;
+// //           }
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //             margin-left: -20px;
+// //             @include xsBreakPoint{
+// //               // margin-left: -15px;
+// //             }
+// //           }
+// //         }
+// //         .subject-btm-container-tamil {
+// //           display: flex;
+// //           width: 450px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //             margin-left: -25px;
+// //           }
+// //         }
+// //         .mytask-btn {
+// //           padding: 2%;
+// //           color: white;
+// //           font-size: 18px;
+// //           font-weight: 600;
+// //           padding-left: 5%;
+// //           padding-right: 5%;
+// //           border: none;
+// //           background-color: #0197c6;
+// //           border-radius: 20px;
+// //           margin-top: 5%;
+// //           @include xsBreakPoint{
+// //             padding: 1.5%;
+// //           }
+// //         }
+// //         .task-progress-size {
+// //           width: 30%;
+// //           @include xsBreakPoint{
+// //             margin-left: -40%;
+// //           }
+// //         }
+// //       }
+// //     }
+// //   }
+// //   .allTask-full-border {
+// //     background-color: white;
+// //     border-bottom-left-radius: 10px;
+// //     border-bottom-right-radius: 10px;
+// //     min-height: 80vh;
+// //     .allTask-full-container {
+// //       padding: 1%;
+// //       .allTask-sub-container {
+// //         display: flex;
+// //         padding: 2%;
+// //         border-radius: 10px;
+// //         margin-left: 1%;
+// //         margin-right: 1%;
+// //         justify-content: space-between;
+// //         .subject-name {
+// //           margin-top: 0px;
+// //           margin-bottom: 0px;
+// //           font-size: 20px;
+// //           color: #333333;
+// //           @include xsBreakPoint{
+// //             font-size: 15px;
+// //           }
+// //         }
+// //         .subject-content {
+// //           margin-top: 0px;
+// //           font-size: 24px;
+// //           @include xsBreakPoint{
+// //             font-size: 20px;
+// //           }
+// //         }
+// //         .subject-btm-container {
+// //           display: flex;
+// //           width: 320px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           @include xsBreakPoint{
+// //             width: 280px;
+// //           }
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //             margin-left: -10%;
+// //             @include xsBreakPoint{
+// //               margin-left: -5%;
+// //             }
+// //           }
+// //         }
+// //         .subject-btm-container-tamil {
+// //           display: flex;
+// //           width: 450px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //             margin-left: -20px;
+// //           }
+// //         }
+// //         .mytask-btn {
+// //           padding: 2%;
+// //           color: white;
+// //           font-size: 18px;
+// //           font-weight: 600;
+// //           padding-left: 5%;
+// //           padding-right: 5%;
+// //           border: none;
+// //           background-color: #0197c6;
+// //           border-radius: 20px;
+// //           margin-top: 5%;
+// //            @include xsBreakPoint{
+// //             padding: 1.5%;
+// //           }
+// //         }
+// //         .task-progress-size {
+// //           width: 30%;
+// //           @include xsBreakPoint{
+// //             margin-left: -40%;
+// //           }
+// //         }
+// //       }
+// //     }
+// //   }
+
+// //   .completed-full-border {
+// //     background-color: white;
+// //     border-bottom-left-radius: 10px;
+// //     border-bottom-right-radius: 10px;
+// //     min-height: 70vh;
+// //     .completed-full-container {
+// //       padding: 1%;
+// //       .complete-sub-container {
+// //         display: flex;
+// //         padding: 2%;
+// //         margin-left: 1%;
+// //         margin-right: 1%;
+// //         border-radius: 10px;
+// //         justify-content: space-between;
+// //         .subject-name {
+// //           margin-top: 0px;
+// //           margin-bottom: 0px;
+// //           font-size: 20px;
+// //           color: #333333;
+// //           @include xsBreakPoint{
+// //             font-size: 15px;
+// //           }
+// //         }
+// //         .subject-content {
+// //           margin-top: 0px;
+// //           font-size: 24px;
+// //           @include xsBreakPoint{
+// //             font-size: 20px;
+// //           }
+// //         }
+// //         .comp-subject-btm-container {
+// //           display: flex;
+// //           width: 180px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //             margin-left: -15%;
+// //           }
+// //         }
+// //         .comp-subject-btm-container-tamil {
+// //           display: flex;
+// //           width: 310px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //             margin-left: -10%;
+// //           }
+// //         }
+// //         .complete-btn {
+// //           padding: 2%;
+// //           color: #0197c6;
+// //           font-size: 18px;
+// //           font-weight: 600;
+// //           padding-left: 5%;
+// //           padding-right: 5%;
+// //           border: 1px solid #245998;
+// //           background-color: white;
+// //           border-radius: 20px;
+// //           margin-top: 5%;
+// //         }
+// //         .task-progress-size {
+// //           width: 30%;
+// //         }
+// //       }
+// //       .completes-sub-container {
+// //         display: flex;
+// //         border: 1px solid gray;
+// //         padding: 2%;
+// //         border-radius: 10px;
+// //         justify-content: space-between;
+// //         margin-top: 1.5%;
+// //         .subject-name {
+// //           margin-top: 0px;
+// //           margin-bottom: 0px;
+// //           font-size: 20px;
+// //           color: #333333;
+// //         }
+// //         .subject-content {
+// //           margin-top: 0px;
+// //           font-size: 24px;
+// //         }
+// //         .comp-subject-btm-container {
+// //           display: flex;
+// //           width: 220px;
+// //           justify-content: space-between;
+// //           margin-top: 5%;
+// //           .subject-btm-text {
+// //             margin-top: 0px;
+// //             margin-bottom: 0px;
+// //           }
+// //         }
+// //         .complete-btn {
+// //           padding: 2%;
+// //           color: #0197c6;
+// //           font-size: 18px;
+// //           font-weight: 600;
+// //           padding-left: 5%;
+// //           padding-right: 5%;
+// //           border: 1px solid #0197c6;
+// //           background-color: white;
+// //           border-radius: 8px;
+// //           margin-top: 5%;
+// //           @include xsBreakPoint{
+// //             padding: 1.5%;
+// //           }
+// //         }
+// //         .task-progress-size {
+// //           width: 30%;
+// //         }
+// //       }
+// //     }
+// //   }
+// // }
+
+// @use "../../../../scss/abstract/" as *;
+
+// .dailyTask {
+//   padding: 5px;
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   cursor: pointer;
+//   width: 120px;
+//   text-align: center;
+//   font-size: 18px;
+//   font-weight: 600;
+//   @include xsBreakPoint {
+//     font-size: 15px;
+//   }
+// }
+// .selectDailyTask {
+//   padding: 5px;
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   border: 1px solid #0197c6;
+//   border-bottom: 3px solid #0395c4;
+//   border-radius: 50px;
+//   background-color: #b3e0ee;
+//   cursor: pointer;
+//   width: 120px;
+//   text-align: center;
+//   font-size: 18px;
+//   font-weight: 600;
+//   @include xsBreakPoint {
+//     font-size: 15px;
+//   }
+// }
+// .selectAllTask {
+//   padding: 5px;
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   border: 1px solid #0197c6;
+//   border-bottom: 3px solid #0395c4;
+//   border-radius: 50px;
+//   background-color: #b3e0ee;
+//   cursor: pointer;
+//   width: 120px;
+//   text-align: center;
+//   font-size: 18px;
+//   font-weight: 600;
+//   @include xsBreakPoint {
+//     font-size: 15px;
+//   }
+// }
+// .disabledbutton {
+//   pointer-events: none;
+//   opacity: 0.4;
+// }
+
+// // ----------------------------------
+// .task-full-container {
+//   width: 100%;
+//   padding: 1%;
+//   padding-top: 0.5%;
+//   padding-bottom: 2%;
+//   .divider-line {
+//     border-top: 2px solid #0197c6;
+//   }
+//   .full-subcontainer {
+//     // border: 1px solid red;
+//     background-color: white;
+//     padding: 1%;
+//     border-top-left-radius: 10px;
+//     border-top-right-radius: 10px;
+//     // min-height: 80vh;
+//     .task-topheader-container {
+//       display: flex;
+//       background-color: white;
+//       border-radius: 20px;
+//       height: 40px;
+//       // box-shadow: 0px 0px 2px 0px gray;
+//       .search {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         margin-left: 50px;
+//         margin-left: 450px;
+//         height: 40px;
+//         background-color: #f5f5f5;
+//         border: 1px solid #e6e6e6;
+//         border-radius: 20px;
+//         width: 40%;
+//         .search-icon {
+//           cursor: pointer;
+//         }
+//         .input {
+//           width: 80%;
+//           margin-left: 10px;
+//           border: none;
+//           background-color: #f5f5f5;
+//         }
+//       }
+//     }
+//   }
+//   .myTask-full-border {
+//     background-color: white;
+//     min-height: 70vh;
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//     .myTask-full-container {
+//       padding: 1%;
+//       .mytask-sub-container {
+//         display: flex;
+//         padding: 2%;
+//         border-radius: 10px;
+//         margin-left: 1%;
+//         margin-right: 1%;
+//         justify-content: space-between;
+//         .subject-name {
+//           margin-top: 0px;
+//           margin-bottom: 0px;
+//           font-size: 20px;
+//           color: #333333;
+//           @include xsBreakPoint {
+//             font-size: 15px;
+//           }
+//         }
+//         .subject-content {
+//           margin-top: 0px;
+//           font-size: 24px;
+//           @include xsBreakPoint {
+//             font-size: 20px;
+//           }
+//         }
+//         .subject-btm-container {
+//           display: flex;
+//           width: 300px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           @include xsBreakPoint {
+//             width: 280px;
+//           }
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             margin-left: -20px;
+//             @include xsBreakPoint {
+//               // margin-left: -15px;
+//             }
+//           }
+//         }
+//         .subject-btm-container-tamil {
+//           display: flex;
+//           width: 450px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             margin-left: -25px;
+//           }
+//         }
+//         .mytask-btn {
+//           padding: 2%;
+//           color: white;
+//           font-size: 18px;
+//           font-weight: 600;
+//           padding-left: 5%;
+//           padding-right: 5%;
+//           border: none;
+//           background-color: #0197c6;
+//           border-radius: 20px;
+//           margin-top: 5%;
+//           @include xsBreakPoint {
+//             padding: 1.5%;
+//           }
+//         }
+//         .task-progress-size {
+//           width: 30%;
+//           @include xsBreakPoint {
+//             margin-left: -40%;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .allTask-full-border {
+//     background-color: white;
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//     min-height: 80vh;
+//     .allTask-full-container {
+//       padding: 1%;
+//       .allTask-sub-container {
+//         display: flex;
+//         padding: 2%;
+//         border-radius: 10px;
+//         margin-left: 1%;
+//         margin-right: 1%;
+//         justify-content: space-between;
+//         .subject-name {
+//           margin-top: 0px;
+//           margin-bottom: 0px;
+//           font-size: 20px;
+//           color: #333333;
+//           @include xsBreakPoint {
+//             font-size: 15px;
+//           }
+//         }
+//         .subject-content {
+//           margin-top: 0px;
+//           font-size: 24px;
+//           @include xsBreakPoint {
+//             font-size: 20px;
+//           }
+//         }
+//         .subject-btm-container {
+//           display: flex;
+//           width: 320px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           @include xsBreakPoint {
+//             width: 280px;
+//           }
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             margin-left: -10%;
+//             @include xsBreakPoint {
+//               margin-left: -5%;
+//             }
+//           }
+//         }
+//         .subject-btm-container-tamil {
+//           display: flex;
+//           width: 450px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             margin-left: -20px;
+//           }
+//         }
+//         .mytask-btn {
+//           padding: 2%;
+//           color: white;
+//           font-size: 18px;
+//           font-weight: 600;
+//           padding-left: 5%;
+//           padding-right: 5%;
+//           border: none;
+//           background-color: #0197c6;
+//           border-radius: 20px;
+//           margin-top: 5%;
+//           @include xsBreakPoint {
+//             padding: 1.5%;
+//           }
+//         }
+//         .task-progress-size {
+//           width: 30%;
+//           @include xsBreakPoint {
+//             margin-left: -40%;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .completed-full-border {
+//     background-color: white;
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//     min-height: 70vh;
+//     .completed-full-container {
+//       padding: 1%;
+//       .complete-sub-container {
+//         display: flex;
+//         padding: 2%;
+//         margin-left: 1%;
+//         margin-right: 1%;
+//         border-radius: 10px;
+//         justify-content: space-between;
+//         .subject-name {
+//           margin-top: 0px;
+//           margin-bottom: 0px;
+//           font-size: 20px;
+//           color: #333333;
+//           @include xsBreakPoint {
+//             font-size: 15px;
+//           }
+//         }
+//         .subject-content {
+//           margin-top: 0px;
+//           font-size: 24px;
+//           @include xsBreakPoint {
+//             font-size: 20px;
+//           }
+//         }
+//         .comp-subject-btm-container {
+//           display: flex;
+//           width: 180px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             margin-left: -15%;
+//           }
+//         }
+//         .comp-subject-btm-container-tamil {
+//           display: flex;
+//           width: 310px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             margin-left: -10%;
+//           }
+//         }
+//         .complete-btn {
+//           padding: 2%;
+//           color: white;
+//           font-size: 18px;
+//           font-weight: 600;
+//           padding-left: 5%;
+//           padding-right: 5%;
+//           border: none;
+//           background-color: #0197c6;
+//           border-radius: 20px;
+//           margin-top: 5%;
+//           @include xsBreakPoint {
+//             padding: 1.5%;
+//           }
+//         }
+//         .task-progress-size {
+//           width: 30%;
+//           .progress-bar {
+//             background-color: #03c473;
+//           }
+//         }
+//       }
+//       .completes-sub-container {
+//         display: flex;
+//         border: 1px solid gray;
+//         padding: 2%;
+//         border-radius: 10px;
+//         justify-content: space-between;
+//         margin-top: 1.5%;
+//         .subject-name {
+//           margin-top: 0px;
+//           margin-bottom: 0px;
+//           font-size: 20px;
+//           color: #333333;
+//         }
+//         .subject-content {
+//           margin-top: 0px;
+//           font-size: 24px;
+//         }
+//         .comp-subject-btm-container {
+//           display: flex;
+//           width: 220px;
+//           justify-content: space-between;
+//           margin-top: 5%;
+//           .subject-btm-text {
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//           }
+//         }
+//         .complete-btn {
+//           padding: 2%;
+//           color: #0197c6;
+//           font-size: 18px;
+//           font-weight: 600;
+//           padding-left: 5%;
+//           padding-right: 5%;
+//           border: 1px solid #0197c6;
+//           background-color: white;
+//           border-radius: 8px;
+//           margin-top: 5%;
+//           @include xsBreakPoint {
+//             padding: 1.5%;
+//           }
+//         }
+//         .task-progress-size {
+//           width: 30%;
+//           // .progress-bar1 {
+//           //   background-color: #0197c6;
+//           // }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@use "../../../../scss/abstract/" as *;
+
+.dailyTask {
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  @include xsBreakPoint {
+    font-size: 11px;
+    height: 30px;
+  }
+}
+.selectDailyTask {
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 1px solid #0197c6;
+  border-bottom: 3px solid #0395c4;
+  border-radius: 50px;
+  background-color: #b3e0ee;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  @include xsBreakPoint {
+    font-size: 11px;
+    height: 30px;
+  }
+}
+.selectAllTask {
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 1px solid #0197c6;
+  border-bottom: 3px solid #0395c4;
+  border-radius: 50px;
+  background-color: #b3e0ee;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  @include xsBreakPoint {
+    font-size: 11px;
+    height: 30px;
+  }
+}
+.disabledbutton {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+// ----------------------------------
+.task-full-container {
+  width: 100%;
+  padding: 1%;
+  padding-top: 0.5%;
+  padding-bottom: 2%;
+  .divider-line {
+    border-top: 2px solid #0197c6;
+  }
+  .full-subcontainer {
+    // border: 1px solid red;
+    background-color: white;
+    padding: 1%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    // min-height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    .task-topheader-container {
+      display: flex;
+      background-color: white;
+      border-radius: 20px;
+      height: 40px;
+      // box-shadow: 0px 0px 2px 0px gray;
+
+      .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        margin-left: 450px;
+        height: 40px;
+        background-color: #f5f5f5;
+        border: 1px solid #e6e6e6;
+        border-radius: 20px;
+        width: 40%;
+        .search-icon {
+          cursor: pointer;
+        }
+        .input {
+          width: 80%;
+          margin-left: 10px;
+          border: none;
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+  .myTask-full-border {
+    background-color: white;
+    min-height: 70vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .myTask-full-container {
+      padding: 1%;
+      .mytask-sub-container {
+        display: flex;
+        padding: 2%;
+        border-radius: 10px;
+        margin-left: 1%;
+        margin-right: 1%;
+        justify-content: space-between;
+        .subject-name {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 20px;
+          color: #333333;
+          @include xsBreakPoint {
+            font-size: 15px;
+          }
+        }
+        .subject-content {
+          margin-top: 0px;
+          font-size: 24px;
+          @include xsBreakPoint {
+            font-size: 20px;
+          }
+        }
+        .subject-btm-container {
+          display: flex;
+          width: 300px;
+          justify-content: space-between;
+          margin-top: 5%;
+          @include xsBreakPoint {
+            width: 280px;
+          }
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: -20px;
+            @include xsBreakPoint {
+              // margin-left: -15px;
+            }
+          }
+        }
+        .subject-btm-container-tamil {
+          display: flex;
+          width: 450px;
+          justify-content: space-between;
+          margin-top: 5%;
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: -25px;
+          }
+        }
+        .mytask-btn {
+          padding: 2%;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          padding-left: 5%;
+          padding-right: 5%;
+          border: none;
+          background-color: #0197c6;
+          border-radius: 20px;
+          margin-top: 5%;
+          @include xsBreakPoint {
+            padding: 1.5%;
+          }
+        }
+        .task-progress-size {
+          width: 30%;
+          @include xsBreakPoint {
+            margin-left: -40%;
+          }
+        }
+      }
+    }
+  }
+  .allTask-full-border {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 80vh;
+    .allTask-full-container {
+      padding: 1%;
+      .allTask-sub-container {
+        display: flex;
+        padding: 2%;
+        border-radius: 10px;
+        margin-left: 1%;
+        margin-right: 1%;
+        justify-content: space-between;
+        .subject-name {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 20px;
+          color: #333333;
+          @include xsBreakPoint {
+            font-size: 15px;
+          }
+        }
+        .subject-content {
+          margin-top: 0px;
+          font-size: 24px;
+          @include xsBreakPoint {
+            font-size: 20px;
+          }
+        }
+        .subject-btm-container {
+          display: flex;
+          width: 320px;
+          justify-content: space-between;
+          margin-top: 5%;
+          @include xsBreakPoint {
+            width: 280px;
+          }
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: -10%;
+            @include xsBreakPoint {
+              margin-left: -5%;
+            }
+          }
+        }
+        .subject-btm-container-tamil {
+          display: flex;
+          width: 450px;
+          justify-content: space-between;
+          margin-top: 5%;
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: -20px;
+          }
+        }
+        .mytask-btn {
+          padding: 2%;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          padding-left: 5%;
+          padding-right: 5%;
+          border: none;
+          background-color: #0197c6;
+          border-radius: 20px;
+          margin-top: 5%;
+          @include xsBreakPoint {
+            padding: 1.5%;
+          }
+        }
+        .task-progress-size {
+          width: 30%;
+          @include xsBreakPoint {
+            margin-left: -40%;
+          }
+        }
+      }
+    }
+  }
+
+  .completed-full-border {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 70vh;
+    .completed-full-container {
+      padding: 1%;
+      .complete-sub-container {
+        display: flex;
+        background-color: #cdf3ef;
+        height: 202px;
+        padding: 2%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 10px;
+        justify-content: space-between;
+        @include mdBreakPoint {
+          height: 180px;
+        }
+        @include xsBreakPoint {
+          height: 150px;
+        }
+        .subject-name {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 20px;
+          color: #333333;
+          @include xsBreakPoint {
+            font-size: 15px;
+          }
+        }
+        .subject-content {
+          margin-top: 0px;
+          font-size: 24px;
+          @include xsBreakPoint {
+            font-size: 20px;
+          }
+        }
+        .comp-subject-btm-container {
+          display: flex;
+          width: 180px;
+          justify-content: space-between;
+          margin-top: 5%;
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: -15%;
+          }
+        }
+        .comp-subject-btm-container-tamil {
+          display: flex;
+          width: 310px;
+          justify-content: space-between;
+          margin-top: 5%;
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: -10%;
+          }
+        }
+        .complete-btn {
+          padding: 3.5%;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          padding-left: 5%;
+          padding-right: 5%;
+          width: 100px;
+          border: none;
+          background-color: #03c4ad;
+          border-radius: 20px;
+          margin-top: 11.5%;
+          @include xsBreakPoint {
+            padding: 1.5%;
+          }
+        }
+        .task-progress-size {
+          width: 30%;
+          .progress-bar {
+            background-color: #03c473;
+          }
+        }
+      }
+      .completes-sub-container {
+        display: flex;
+        border: 1px solid gray;
+        padding: 2%;
+        border-radius: 10px;
+        justify-content: space-between;
+        margin-top: 1.5%;
+        .subject-name {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 20px;
+          color: #333333;
+        }
+        .subject-content {
+          margin-top: 0px;
+          font-size: 24px;
+        }
+        .comp-subject-btm-container {
+          display: flex;
+          width: 220px;
+          justify-content: space-between;
+          margin-top: 5%;
+          .subject-btm-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+        }
+        .complete-btn {
+          padding: 2%;
+          color: #0197c6;
+          font-size: 16px;
+          font-weight: 600;
+          padding-left: 5%;
+          padding-right: 5%;
+          border: 1px solid #0197c6;
+          background-color: white;
+          border-radius: 8px;
+          margin-top: 5%;
+          @include xsBreakPoint {
+            padding: 1.5%;
+          }
+        }
+        .task-progress-size {
+          width: 30%;
+          // .progress-bar1 {
+          //   background-color: #0197c6;
+          // }
+        }
+      }
+    }
+  }
+}

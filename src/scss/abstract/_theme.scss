@@ -1,0 +1,16 @@
+@use "variables" as *;
+$primary: "primary";
+$secondary: "secondary";
+$background: "background";
+$inverter: "inverter";
+
+$themes: (
+    light: (
+        background: $background--light,
+        inverter: $inverter--light,
+    ),
+    dark: (
+        background: $background--dark,
+        inverter: $inverter--dark,
+    ),
+);

@@ -1,0 +1,209 @@
+@use "../../../../scss/abstract/" as *;
+
+.main-container-profilecontent {
+  width: 96%;
+  background: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 800px;
+  @include xsBreakPoint {
+    display: flex;
+    flex-direction: column;
+    // height: 900px;
+    height: auto;
+    overflow: hidden;
+  }
+  @include smBreakPoint {
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+  }
+  @include mdBreakPoint {
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+  }
+  .sub-container-content-1 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 1px solid #a2a2a2;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    height: 15rem;
+    @include xsBreakPoint {
+      width: 90%;
+      margin-left: 8%;
+    }
+    @include mdBreakPoint {
+      width: 90%;
+      margin-left: 3%;
+    }
+    @include smBreakPoint {
+      width: 90%;
+      margin-left: 2%;
+    }
+    .user-details-img-dp {
+      width: 120px;
+      height: auto;
+    }
+    .user-details-stu-name {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+    .profile-content-point {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 15%;
+    }
+  }
+  .sub-container-content-2 {
+    width: 75%;
+    border: 1px solid #a2a2a2;
+    border-radius: 10px;
+    margin-left: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    height: 753px;
+    @include xsBreakPoint {
+      height: 751px;
+      margin-left: 8%;
+      width: 90%;
+      margin-top: 2%;
+    }
+    @include mdBreakPoint {
+      width: 90%;
+      margin-top: 2%;
+    }
+    @include smBreakPoint {
+      width: 90%;
+      height: 800px;
+      margin-top: 2%;
+    }
+    @include xsBreakPoint {
+      height: 800px;
+    }
+    @include xxlBreakPoint {
+      height: 753px;
+    }
+    @include xxxlBreakPoint {
+      height: 753px;
+    }
+    .personal-para-info {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .eng-para-1 {
+      margin-bottom: 0px;
+      @include xsBreakPoint {
+        font-size: small;
+      }
+    }
+    .stu-name-input-field {
+      width: 95%;
+      padding: 1.5%;
+      border-radius: 5px;
+      border: 1px solid gray;
+      margin-bottom: 2%;
+      background-color: #f5f5f5;
+      @include xsBreakPoint {
+        font-size: x-small;
+      }
+    }
+  }
+  .stu-name-input-field-1 {
+    width: 95%;
+    padding: 1.5%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-bottom: 2%;
+    background-color: #f5f5f5;
+    @include xsBreakPoint {
+      font-size: x-small;
+      // margin-top: 16%;
+    }
+  }
+}
+
+//header
+.profile-header-main-container {
+  .profile-lang-1 {
+    margin-bottom: 0px;
+    margin-top: 10%;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .dropdown-container-1 {
+    margin-top: -3%;
+  }
+  .dropdown-menu-container-2 {
+    width: 310px;
+    margin-left: -250px;
+  }
+  .drop-submenu {
+    padding-left: 5%;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 5%;
+  }
+  .eng-content {
+    margin-bottom: 0px;
+  }
+  .eng-content-2 {
+    margin-bottom: 0px;
+    font-size: 17px;
+  }
+  .hr-container {
+    margin-top: 5px;
+    border-top: 2px solid gray;
+    margin-bottom: 5px;
+  }
+  .container-main-1 {
+    padding-left: 5%;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 5%;
+  }
+  .eng-view-container {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0395c4;
+    padding-left: 5%;
+    margin-bottom: 5px;
+  }
+}
+
+//main
+
+.main-container-profilemain {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  .hr-main-sub-container {
+    border-top: 2px solid #0197c6;
+  }
+}
+
+.profile-bottom-container {
+  @include xsBreakPoint {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-parent-1 {
+    @include xsBreakPoint {
+      flex-direction: column;
+    }
+  }
+  .profile-parent-2 {
+    flex-direction: column;
+  }
+}
+.star {
+  @include xsBreakPoint {
+    display: none;
+  }
+}

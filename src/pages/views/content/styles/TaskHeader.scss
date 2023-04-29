@@ -1,0 +1,429 @@
+// // @use "../../../../scss/abstract/" as *;
+
+// // .task-header-container {
+// //   display: flex;
+// //   justify-content: space-between;
+// //   height: 60px;
+// //   @include lgBreakPoint {
+// //     height: 40px;
+// //   }
+// //   @include mdBreakPoint {
+// //     height: 40px;
+// //   }
+// //   @include smBreakPoint{
+// //     height: 40px;
+// //   }
+// //   @include xsBreakPoint{
+// //     height: 40px;
+// //   }
+// //   .task-head-text {
+// //     padding-left: 1%;
+// //     .head-text-content {
+// //       margin-bottom: 0px;
+// //       margin-top: 35%;
+// //       font-size: 24px;
+// //       font-weight: 700;
+// //       @include lgBreakPoint {
+// //         margin-top: 20%;
+// //       }
+// //       @include mdBreakPoint{
+// //         margin-top: 20%;
+// //       }
+// //       @include smBreakPoint{
+// //         margin-top: 20%;
+// //       }
+// //       @include xsBreakPoint{
+// //         margin-top: 20%;
+// //       }
+// //     }
+// //   }
+// //   .rightside-taskcontainer {
+// //     width: 22%;
+// //     display: flex;
+// //     justify-content: space-between;
+// //     padding: 1.5%;
+// //     @include lgBreakPoint {
+// //       width: 30%;
+// //     }
+// //     @include mdBreakPoint{
+// //       width: 35%;
+// //     }
+// //     @include smBreakPoint{
+// //       width: 40%;
+// //     }
+// //     @include xsBreakPoint{
+// //       width: 45%;
+// //     }
+// //     .rank-num-text {
+// //       margin-top: 1%;
+// //       margin-left: -5%;
+// //       font-size: 16px;
+// //       font-weight: 500;
+// //       @include lgBreakPoint {
+// //         margin-left: -5%;
+// //       }
+// //     }
+// //   }
+// // }
+
+// @use "../../../../scss/abstract/" as *;
+
+// .CircularProgressbar .CircularProgressbar-path {
+//   stroke: #03c473 !important;
+// }
+// .CircularProgressbar .CircularProgressbar-text {
+//   fill: black !important;
+// }
+
+// .active {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: white;
+// }
+// .active-crt {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: #017d2e;
+//   color: white;
+// }
+// .active-skip {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: #a2a2a2;
+//   color: white;
+// }
+// .active-wrong {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: #960e0e;
+//   color: white;
+// }
+// .isQnRead {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: #e1f1e7;
+// }
+// .isQnNotvisit {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: white;
+// }
+
+// .isSkipped {
+//   border: 1px solid #83d09f;
+//   border-radius: 100%;
+//   width: 45px;
+//   height: 45px;
+//   margin-left: 2%;
+//   margin-top: 2%;
+//   background-color: #a2a2a2;
+// }
+
+// .labeltrue {
+//   color: black;
+// }
+// .labelfalse {
+//   color: gray;
+// }
+
+// .correct {
+//   background-color: green;
+//   color: white;
+// }
+// .wrong {
+//   background-color: rgb(169, 65, 65);
+//   color: white;
+// }
+// .notanswer {
+//   background-color: rgb(162, 162, 162);
+//   color: white;
+// }
+
+// .data-button-assesment {
+//   @include lgBreakPoint {
+//     width: 78%;
+//   }
+//   @include xlBreakPoint {
+//     width: 78%;
+//   }
+//   @include xxlBreakPoint {
+//     width: 100%;
+//   }
+//   @include xxxlBreakPoint {
+//     width: 100%;
+//   }
+// }
+
+// .assessment-question-container {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-top: 3%;
+//   @include xsBreakPoint {
+//     flex-direction: column;
+//   }
+//   .assessment-left-container {
+//     width: 59%;
+//     border: 1px solid #a2a2a2;
+//     border-radius: 10px;
+//     padding: 1%;
+//     min-height: 400px;
+//     @include xsBreakPoint {
+//       width: 100%;
+//       min-height: 300px;
+//     }
+//   }
+//   .assessment-right-container {
+//     width: 40%;
+//     min-height: 400px;
+//     @include xsBreakPoint {
+//       width: 100%;
+//       min-height: 300px;
+//       margin-top: 2%;
+//     }
+//     .right-answer-check {
+//       padding: 2%;
+//       display: flex;
+//       justify-content: space-between;
+//       @include mdBreakPoint {
+//         flex-direction: column;
+//         margin-left: 5%;
+//       }
+//       @include smBreakPoint {
+//         flex-direction: column;
+//         margin-left: 5%;
+//       }
+//       .dot-change {
+//         margin-top: 3%;
+//         @include mdBreakPoint {
+//           margin-top: 1%;
+//         }
+//         @include smBreakPoint {
+//           margin-top: 1%;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .data-prev-btn {
+//   color: #03c4ad;
+//   background-color: white;
+//   border-color: #03c4ad;
+//   border-radius: 20px;
+// }
+
+// .data-bot-btn {
+//   margin-left: 48%;
+//   width: 200px;
+//   margin-top: -35px;
+//   @include xsBreakPoint {
+//     margin-left: 58%;
+//   }
+//   @include mdBreakPoint {
+//     margin-left: 40%;
+//   }
+// }
+
+// .crt-wrg-container {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 2%;
+//   border-bottom: 1px solid #a2a2a2;
+//   @include smBreakPoint {
+//     flex-direction: column;
+//   }
+//   @include xsBreakPoint {
+//     flex-direction: column;
+//   }
+//   .circle-img-crt-wrg {
+//     width: 30px;
+//     margin-top: 4%;
+//     @include smBreakPoint {
+//       width: 20px;
+//     }
+//     @include xsBreakPoint {
+//       width: 20px;
+//     }
+//   }
+//   .circle-img-not {
+//     width: 24px;
+//     margin-top: 4%;
+//     @include smBreakPoint {
+//       width: 20px;
+//     }
+//     @include xsBreakPoint {
+//       width: 20px;
+//     }
+//   }
+// }
+
+@use "../../../../scss/abstract/" as *;
+
+.task-header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  @include lgBreakPoint {
+    height: 40px;
+  }
+  @include mdBreakPoint {
+    height: 40px;
+  }
+  @include smBreakPoint {
+    height: 40px;
+  }
+  @include xsBreakPoint {
+    height: 40px;
+  }
+  .task-head-text {
+    padding-left: 1%;
+    .head-text-content {
+      margin-bottom: 0px;
+      margin-top: 35%;
+      font-size: 24px;
+      font-weight: 700;
+      @include lgBreakPoint {
+        margin-top: 20%;
+      }
+      @include mdBreakPoint {
+        margin-top: 20%;
+      }
+      @include smBreakPoint {
+        margin-top: 20%;
+      }
+      @include xsBreakPoint {
+        margin-top: 20%;
+      }
+    }
+  }
+  .rightside-taskcontainer {
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5%;
+    @include lgBreakPoint {
+      width: 30%;
+    }
+    @include mdBreakPoint {
+      width: 35%;
+    }
+    @include smBreakPoint {
+      width: 40%;
+    }
+    @include xsBreakPoint {
+      width: 45%;
+    }
+    .rank-num-text {
+      margin-top: 1%;
+      margin-left: -5%;
+      font-size: 16px;
+      font-weight: 500;
+      @include xsBreakPoint{
+        display: none;
+      }
+      @include lgBreakPoint {
+        margin-left: -5%;
+      }
+    }
+  }
+}
+
+.inside-task-tabs {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  @include lgBreakPoint {
+    width: 100%;
+    // border: 1px solid red;
+  }
+  @include mdBreakPoint {
+    gap: 10px;
+  }
+  @include smBreakPoint {
+    width: 100%;
+  }
+  @include xsBreakPoint {
+    width: 100%;
+  }
+  .lefttabs {
+    width: 70%;
+    display: flex;
+    @include lgBreakPoint {
+      width: 100%;
+    }
+    @include mdBreakPoint {
+      width: 100%;
+    }
+    @include smBreakPoint {
+      width: 100%;
+    }
+    @include xsBreakPoint {
+      width: 60%;
+    }
+  }
+  .rightsearch {
+    width: 30%;
+    height: 20px;
+    @include lgBreakPoint {
+      width: 100%;
+      // border: 1px solid red;
+    }
+    @include mdBreakPoint {
+      width: 80%;
+      // border: 1px solid blue;
+    }
+    @include xsBreakPoint{
+      width: 100%;
+    }
+    .searchs {
+      border: 1px solid rgb(145, 141, 141);
+      // background-color: red;
+      width: 100%;
+      display: flex;
+      padding: 5px;
+      border-radius: 20px;
+      @include lgBreakPoint {
+        margin-left: 40px;
+        width: 90%;
+      }
+      @include xsBreakPoint{
+        height: 30px;
+      }
+      .inputs {
+        width: 100%;
+        border: none;
+        @include lgBreakPoint {
+          width: 100%;
+          // border: 1px solid red;
+        }
+        @include mdBreakPoint {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+
+  height: 350px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.slideshowDots {
+  text-align: center;
+  border-radius: 50%;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 5px;
+  width: 20px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.slideshowDot.active {
+  background-color: #d9d9d9;
+  display: inline-block;
+  height: 5px;
+  width: 20px;
+  border: none;
+  margin: 0px;
+  border-radius: 0%;
+  cursor: pointer;
+}

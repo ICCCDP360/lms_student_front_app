@@ -1,0 +1,54 @@
+@use "../../../../scss/abstract/" as *;
+
+.notification-full-container {
+  width: 100%;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 4%;
+  .notification-inner-container {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 34vh;
+    @include xsBreakPoint {
+      min-height: 80vh;
+    }
+    .notify-container {
+      padding: 1%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #f5f5f5;
+      width: 98%;
+      .notify-name {
+        font-size: 17px;
+        font-weight: 600;
+        @include smBreakPoint {
+          font-size: 15px;
+        }
+        @include xsBreakPoint {
+          font-size: 10px;
+          width: 100px;
+        }
+      }
+      .notify-content {
+        font-size: 15px;
+        font-weight: 500;
+        @include smBreakPoint {
+          font-size: 13px;
+        }
+        @include xsBreakPoint {
+          font-size: 9px;
+        }
+      }
+      .notify-time {
+        font-size: 18px;
+        font-weight: 600;
+        @include smBreakPoint {
+          font-size: 16px;
+        }
+        @include xsBreakPoint {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

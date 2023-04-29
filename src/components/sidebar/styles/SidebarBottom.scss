@@ -1,0 +1,25 @@
+@use "../../../scss/abstract/" as *;
+
+.single-sidecontent-bottom {
+  cursor: pointer;
+  width: 100%;
+  padding-bottom: 5%;
+}
+.single-sidecontent-bottom-active {
+  cursor: pointer;
+  background-color: #0395c4;
+  width: 100%;
+  padding: 1%;
+}
+
+.side-bot {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  .side-bot-main {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+}

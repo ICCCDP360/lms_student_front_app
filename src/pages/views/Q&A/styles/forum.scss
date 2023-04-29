@@ -1,0 +1,254 @@
+@use "../../../../scss/abstract/" as *;
+
+.forum-main-container {
+  width: 100%;
+  padding: 1%;
+  padding-bottom: 4%;
+  padding-top: 0.5%;
+  height: auto;
+  overflow: hidden;
+}
+.main-contain {
+  //   padding: 1%;
+  .dailyTaskforum {
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    width: 170px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .selectDailyTaskforum {
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #0197c6;
+    border-radius: 50px;
+    background-color: #b3e0ee;
+    cursor: pointer;
+    width: 170px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .para-one {
+    margin-bottom: 0%;
+    font-weight: 500;
+  }
+  .main-contain {
+    width: 96%;
+    margin-left: 2%;
+  }
+  .para-two {
+    font-weight: 500;
+  }
+  .para-three {
+    margin-right: 5%;
+  }
+  .para-main {
+    width: 30%;
+  }
+  .para-head {
+    font-weight: 600;
+    font-size: larger;
+  }
+  .para-four {
+    width: 30%;
+    @include mdBreakPoint {
+      width: 720px;
+    }
+    @include xsBreakPoint {
+      width: 400px;
+    }
+  }
+  .logo-one {
+    cursor: pointer;
+  }
+  .para {
+    margin-bottom: 0%;
+  }
+
+  .horizontal_inner {
+    border-top: 2px solid #0395c4;
+    width: 98%;
+    margin-left: 1%;
+  }
+  .horizontal-inner-data {
+    border-top: 2px solid grey;
+  }
+  .selectAllTaskforum {
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #0197c6;
+    // border-top-left-radius: 10px
+    background-color: #b3e0ee;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    width: 170px;
+    text-align: center;
+  }
+  .disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  .full-subcontainer {
+    background-color: white;
+    padding: 1%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .task-topheader-container-forum {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    // box-shadow: 0px 0px 2px 0px gray;
+  }
+
+  .mytask-full-container-forum {
+    background-color: white;
+    padding: 2%;
+    //   height: 75vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .questions {
+      display: flex;
+    }
+  }
+  .all-full-container {
+    background-color: white;
+    padding: 2%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100vh;
+    .mytask-sub-container {
+      display: flex;
+      border: 1px solid gray;
+      padding: 2%;
+      border-radius: 10px;
+      justify-content: space-between;
+      .subject-name {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        color: #333333;
+      }
+      .subject-content {
+        margin-top: 0px;
+        font-size: 24px;
+      }
+      .subject-btm-container {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        margin-top: 5%;
+        .subject-btm-text {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+      .mytask-btn {
+        padding: 2%;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding-left: 5%;
+        padding-right: 5%;
+        border: none;
+        background-color: #0197c6;
+        border-radius: 8px;
+        margin-top: 5%;
+      }
+      .task-progress-size {
+        width: 30%;
+      }
+    }
+    .all-sub-container {
+      display: flex;
+      border: 1px solid gray;
+      padding: 2%;
+      border-radius: 10px;
+      justify-content: space-between;
+      margin-top: 1.5%;
+      .subject-name {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        color: #333333;
+      }
+      .subject-content {
+        margin-top: 0px;
+        font-size: 24px;
+      }
+      .subject-btm-container {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        margin-top: 5%;
+        .subject-btm-text {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+      .mytask-btn {
+        padding: 2%;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding-left: 5%;
+        padding-right: 5%;
+        border: none;
+        background-color: #0197c6;
+        border-radius: 8px;
+        margin-top: 5%;
+      }
+      .task-progress-size {
+        width: 30%;
+      }
+    }
+    .disabled-sub-container {
+      display: flex;
+      border: 1px solid gray;
+      padding: 2%;
+      border-radius: 10px;
+      justify-content: space-between;
+      margin-top: 1.5%;
+      pointer-events: none;
+      opacity: 0.4;
+      .subject-name {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        color: #333333;
+      }
+      .subject-content {
+        margin-top: 0px;
+        font-size: 24px;
+      }
+      .subject-btm-container {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        margin-top: 5%;
+        .subject-btm-text {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+
+      .task-progress-size {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.star {
+  @include xsBreakPoint {
+    display: none;
+  }
+}
