@@ -23,12 +23,14 @@ import ProfileMain from "../pages/views/profile/ProfileMain";
 import ChangePassword from "./../pages/views/changePassword/ChangePassword";
 import Notification from "./../pages/views/notification/Notification";
 import ProtectedRoutes from "./protected-route";
+import SchoolIdVerify from "../pages/auth/signin/SchoolIdVerify";
 
 function IndexRouters() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Mainpage />} />
+        <Route path='/' element={<SchoolIdVerify/>}/>
+        <Route path="/number_verify" element={<Mainpage />} />
         <Route path="/verification_page" element={<Verificationpage />} />
         <Route path="/login_otp" element={<Loginotp />} />
         <Route path="/account_details" element={<Accountdetails />} />
