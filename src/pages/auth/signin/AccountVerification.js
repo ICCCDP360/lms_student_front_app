@@ -16,7 +16,6 @@ function AccountVerification() {
   const navigate = useNavigate();
   // const [error, setError] = useState("");
   const { state } = useLocation();
-  console.log(state, "manojkumar");
   const [passwordType, setPasswordType] = useState("password");
 
   const language = localStorage.getItem("lang") || "english";
@@ -58,14 +57,13 @@ function AccountVerification() {
           if (res !== "Wrong Password") {
           // } else {
             localStorage.setItem(
-              "accessToken",
+              "access_tokens",
               JSON.stringify(res?.access_tokens)
             );
             localStorage.setItem("id", JSON.stringify(res?.response?._id));
             navigate("/dashboard", { state: state });
           }
 
-          // console.log(res,'manoj');
 
           // localStorage.setItem("accessToken", JSON.stringify(res.token));
           // localStorage.setItem("userDetails", JSON.stringify(res.StudentFound));

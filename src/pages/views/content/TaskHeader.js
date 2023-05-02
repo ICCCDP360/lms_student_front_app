@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./styles/TaskHeader.scss";
 import Notification from "../../../assets/images/notify.svg";
-import logo from "../../../assets/avatar.svg";
+// import logo from "../../../assets/avatar.svg";
 // import popup from "../../../assets/images/popup.svg";
-import logo1 from "../../../assets/avatar.svg";
+// import logo1 from "../../../assets/avatar.svg";
 import key from "../../../assets/images/key.svg";
 import switchacc from "../../../assets/images/switch.svg";
 import Profile from "../../../assets/avatar.svg";
@@ -29,50 +29,50 @@ function TaskHeader() {
   const handleClose = () => setShow(false);
 
   const language = localStorage.getItem("lang") || "english";
-  const [userDetails, SetuserDetails] = useState([]);
+  // const [userDetails, SetuserDetails] = useState([]);
   // const [userOtherDetails, SetUserOtherDetails] = useState([]);
 
-  const other = localStorage.getItem("otherAccDetails");
-  const otherDetails = JSON.parse(other);
+  // const other = localStorage.getItem("otherAccDetails");
+  // const otherDetails = JSON.parse(other);
 
   useEffect(() => {
     // console.log(JSON.parse(localStorage.getItem("userDetails")), userDetails);
-    SetuserDetails(JSON.parse(localStorage.getItem("userDetails")));
+    // SetuserDetails(JSON.parse(localStorage.getItem("userDetails")));
     // SetUserOtherDetails(JSON.parse(localStorage.getItem("otherAccDetails")));
   }, []);
 
-  const switchAccount = () => {
-    return new Promise((resolve, reject) => {
-      let data = {
-        phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
-      };
-      dashboardServices
-        .DashboardSwitchAcc(data)
-        .then((response) => {
-          resolve(response);
-          navigate("/sign_in", {
-            state: { id: response, number: data.phone },
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-          reject(false);
-        });
-    });
-  };
-  const name = JSON.parse(localStorage.getItem("otherAccDetails"))[0].name;
-  const id = JSON.parse(localStorage.getItem("otherAccDetails"))[0]._id;
+  // const switchAccount = () => {
+  //   return new Promise((resolve, reject) => {
+  //     let data = {
+  //       phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
+  //     };
+  //     dashboardServices
+  //       .DashboardSwitchAcc(data)
+  //       .then((response) => {
+  //         resolve(response);
+  //         navigate("/sign_in", {
+  //           state: { id: response, number: data.phone },
+  //         });
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         reject(false);
+  //       });
+  //   });
+  // };
+  // const name = JSON.parse(localStorage.getItem("otherAccDetails"))[0].name;
+  // const id = JSON.parse(localStorage.getItem("otherAccDetails"))[0]._id;
 
-  const otherAcc = () => {
-    let data = {
-      name: name,
-      _id: id,
-    };
+  // const otherAcc = () => {
+  //   let data = {
+  //     name: name,
+  //     _id: id,
+  //   };
 
-    navigate("/account_verify", {
-      state: { id: data },
-    });
-  };
+  //   navigate("/account_verify", {
+  //     state: { id: data },
+  //   });
+  // };
   const englishLang = () => {
     localStorage.setItem("lang", "english");
     window.location.reload();
@@ -105,7 +105,7 @@ function TaskHeader() {
     });
   };
 
-  const forms = userDetails?.dp;
+  // const forms = userDetails?.dp;
 
   return (
     <>
@@ -270,7 +270,7 @@ function TaskHeader() {
             <div>
               <img src={YellowStar} />
             </div>
-            <p className="rank-num-text">{userDetails.points}</p>
+            {/* <p className="rank-num-text">{userDetails.points}</p> */}
             <div>
               {/* {forms ? (
                 <> */}{" "}
@@ -468,7 +468,7 @@ function TaskHeader() {
       <Modal className="modal-first-container" show={show} onHide={handleClose}>
         <Modal.Body>
           <div className="d-flex justify-content-center">
-            {forms ? (
+            {/* {forms ? (
               <>
                 <img
                   src={userDetails.dp}
@@ -481,13 +481,13 @@ function TaskHeader() {
               <>
                 <img src={logo} style={{ width: "20%" }} />
               </>
-            )}
+            )} */}
           </div>
           <h6 className="d-flex justify-content-center ">
-            {language == "english" ? `${userDetails.name}` : "பாலா"}
+            {/* {language == "english" ? `${userDetails.name}` : "பாலா"} */}
           </h6>
           <h6 className="d-flex justify-content-center ">
-            {userDetails.email}
+            {/* {userDetails.email} */}
           </h6>
           <Button
             onClick={profileData}
@@ -498,7 +498,7 @@ function TaskHeader() {
           </Button>
           <hr className="horizantal-first" />
 
-          {otherDetails.map((data, index) => (
+          {/* {otherDetails.map((data, index) => (
             <>
               <div
                 onClick={otherAcc}
@@ -510,7 +510,7 @@ function TaskHeader() {
               </div>
               <hr className="horizontal-second" />
             </>
-          ))}
+          ))} */}
           <div className="d-flex justify-content-center modal-four-container point">
             <img src={key} />
             <h6
@@ -532,7 +532,9 @@ function TaskHeader() {
           />
           <div className="d-flex justify-content-center point">
             <img src={switchacc} />
-            <h6 className="mt-2 ms-3 " onClick={switchAccount}>
+            <h6 className="mt-2 ms-3 " 
+            // onClick={switchAccount}
+            >
               {language == "english" ? "Switch Account" : "கணக்கு சேர்க்க"}
             </h6>
           </div>

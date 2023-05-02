@@ -11,7 +11,7 @@ import logo from "../../../assets/images/profile.svg";
 import Language from "../../../assets/images/language.svg";
 import YellowStar from "../../../assets/images/yellowStar.svg";
 // import popup from "../../../assets/images/popup.svg";
-import logo1 from "../../../assets/avatar.svg";
+// import logo1 from "../../../assets/avatar.svg";
 import key from "../../../assets/images/key.svg";
 import switchacc from "../../../assets/images/switch.svg";
 import { useNavigate } from "react-router";
@@ -29,17 +29,17 @@ function Forum() {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const language = localStorage.getItem("lang") || "english";
-  const [userDetails, SetuserDetails] = useState([]);
+  // const [userDetails, SetuserDetails] = useState([]);
 
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
-  const other = localStorage.getItem("otherAccDetails");
-  const otherDetails = JSON.parse(other);
+  // const other = localStorage.getItem("otherAccDetails");
+  // const otherDetails = JSON.parse(other);
 
   const profileData = () => {
     return new Promise((resolve, reject) => {
-      const datas = localStorage.getItem("userid");
+      const datas = localStorage.getItem("id");
 
       dashboardServices
         .profiledetails(JSON.parse(datas))
@@ -56,13 +56,13 @@ function Forum() {
   };
 
   useEffect(() => {
-    SetuserDetails(JSON.parse(localStorage.getItem("userDetails")));
+    // SetuserDetails(JSON.parse(localStorage.getItem("userDetails")));
   }, []);
 
   const switchAccount = () => {
     return new Promise((resolve, reject) => {
       let data = {
-        phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
+        // phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
       };
       dashboardServices
         .DashboardSwitchAcc(data)
@@ -78,19 +78,19 @@ function Forum() {
         });
     });
   };
-  const name = JSON.parse(localStorage.getItem("otherAccDetails"))[0].name;
-  const id = JSON.parse(localStorage.getItem("otherAccDetails"))[0]._id;
+  // const name = JSON.parse(localStorage.getItem("otherAccDetails"))[0].name;
+  // const id = JSON.parse(localStorage.getItem("otherAccDetails"))[0]._id;
 
-  const otherAcc = () => {
-    let data = {
-      name: name,
-      _id: id,
-    };
+  // const otherAcc = () => {
+  //   let data = {
+  //     name: name,
+  //     _id: id,
+  //   };
 
-    navigate("/account_verify", {
-      state: { id: data },
-    });
-  };
+  //   navigate("/account_verify", {
+  //     state: { id: data },
+  //   });
+  // };
 
   const englishLang = () => {
     localStorage.setItem("lang", "english");
@@ -102,7 +102,7 @@ function Forum() {
     window.location.reload();
   };
 
-  const forms = userDetails?.dp;
+  // const forms = userDetails?.dp;
   return (
     <div className="forum-main-container" >
       {/* <div className="task-header-container ">
@@ -127,7 +127,7 @@ function Forum() {
           <p
             style={{
               marginBottom: "0px",
-              marginTop: "10%",
+              marginTop: "40%",
               fontSize: "24px",
               fontWeight: "700",
             }}
@@ -288,9 +288,9 @@ function Forum() {
           <div className="star">
             <img src={YellowStar} />
           </div>
-          <p className="rank-num-text">{userDetails.points}</p>
+          {/* <p className="rank-num-text">{userDetails.points}</p> */}
           <div>
-            {forms ? (
+            {/* {forms ? (
               <>
                 {" "}
                 <img
@@ -300,14 +300,14 @@ function Forum() {
                 />
               </>
             ) : (
-              <>
+              <> */}
                 <img
                   src={logos}
-                  onClick={handleShow}
+                  // onClick={handleShow}
                   style={{ width: "35px", height: "35px" }}
                 />
-              </>
-            )}
+              {/* </>
+            )} */}
           </div>
         </div>
       </div>
@@ -319,7 +319,7 @@ function Forum() {
       >
         <Modal.Body>
           <div className="d-flex justify-content-center">
-            {forms ? (
+            {/* {forms ? (
               <>
                 {" "}
                 <img
@@ -331,13 +331,13 @@ function Forum() {
               <>
                 <img src={logos} style={{ width: "20%" }} />
               </>
-            )}
+            )} */}
           </div>
           <h6 className="d-flex justify-content-center ">
-            {language == "english" ? `${userDetails.name}` : "பாலா"}
+            {/* {language == "english" ? `${userDetails.name}` : "பாலா"} */}
           </h6>
           <h6 className="d-flex justify-content-center ">
-            {userDetails.email}
+            {/* {userDetails.email} */}
           </h6>
           <Button
             className="mt-2"
@@ -352,7 +352,7 @@ function Forum() {
             <h6 className="mt-2 ms-3">Kalai@gmail.com</h6>
           </div>
           <hr className="horizontal-second" /> */}
-          {otherDetails.map((data, index) => (
+          {/* {otherDetails.map((data, index) => (
             <>
               <div
                 onClick={otherAcc}
@@ -364,7 +364,7 @@ function Forum() {
               </div>
               <hr className="horizontal-second" />
             </>
-          ))}
+          ))} */}
           <div className="d-flex justify-content-center modal-four-container point">
             <img src={key} />
             <h6

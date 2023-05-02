@@ -234,31 +234,28 @@
 
 // export default Verifyaccount;
 
-
-import React from 'react'
+import React from "react";
 import logo from "../../../assets/logo.svg";
 import profile from "../../../assets/images/Ellipse 160.svg";
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown } from "react-bootstrap";
 import Language from "../../../assets/images/language.svg";
-import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 import "../styles/verifyaccount.scss";
-// import { VerifyData } from "../../../services/verifyacc";
-// import { useNavigate } from 'react-router-dom';
+import { VerifyData } from "../../../services/verifyacc";
+import checkServices from "../../../services/checkaccount";
+import { useNavigate } from "react-router-dom";
 
 function Verifyaccount() {
   const language = localStorage.getItem("lang") || "english";
-    const [passcode, setPasscode] = useState("");
+  const [passcode, setPasscode] = useState("");
   const [confirmPasscode, setConfirmPasscode] = useState("");
-  // const [correctPasscode,setCorrectPasscode]=useState('')
-  // const [errMsg,setErrMsg]=useState('')
-  const {state} = useLocation()
-  console.log(state,'manojk');
-  const [selectedData]=useState(state)
-  // const [selectedIndex,setSelectedIndex]=useState(state.index)
-  // console.log(selectedIndex,'index');
-  // const navigate = useNavigate();
-    const englishLang = () => {
+  const { state } = useLocation();
+  const [selectedData, setSelectedData] = useState(state.id);
+  const [datas] = useState(state.data);
+
+  const navigate = useNavigate();
+  const englishLang = () => {
     localStorage.setItem("lang", "english");
     window.location.reload();
   };
@@ -267,50 +264,47 @@ function Verifyaccount() {
     localStorage.setItem("lang", "tamil");
     window.location.reload();
   };
-  
-  // const slideChange = (id,number) =>{
-  //   if(passcode===confirmPasscode){
-  //     if(passcode!=''){
-  //       const data={
-  //         user_id:id,
-  //         password:passcode
-  //       }
-  //       console.log(data,'man');
-  //       VerifyData(data).then((res)=>{
-  //         console.log(res,'manoj');
-  //         if(res.data=='Password Created'){
-  //           // if(state.id.length>0){
-  //           //   setSelectedIndex(selectedIndex+1)
-  //           //   setPasscode('')
-  //           //   setConfirmPasscode('')
-  //           // }else
-  //           if(state.id.length===0){
-  //             navigate('/dashboard')
-  //           }else if(selectedIndex!==state.id.length-1){
-  //                setSelectedIndex(selectedIndex+1)
-  //             setPasscode('')
-  //             setConfirmPasscode('')
-  //             // navigate('/sign_in')
-  //             // console.log('naviga');
-  //           }else {
-  //             navigate('/',{
-  //               state:{id:number}
-  //             })
-  //           }
-  //           // navigate('/account_verify'
-  //           // ,{state:{id:selectData}}
-  //           // )
-  //         }
-          
-  //       })
-  //     }else{
-  //       console.log('ng');
-  //     }
-  //   }else{
-  //     console.log('wrng');
-  //   }
 
-  // }
+  const slideChanges = (values) => {
+    return new Promise((resolve) => {
+      let datas = {
+        phone: values.toString(),
+      };
+      checkServices.checkaccount(datas).then((response, result) => {
+        if (result) {
+          resolve(result.id);
+        }
+        if (response) {
+          navigate("/sign_in", {
+            state: { id: { id: response.data }, number: values },
+          });
+        }
+      });
+    });
+  };
+
+  const slideChange = () => {
+    if (passcode === confirmPasscode) {
+      if (passcode != "") {
+        const data = {
+          otp: datas.otp,
+          phone: datas.phone,
+          user_id: selectedData._id,
+          password: passcode,
+        };
+        VerifyData(data).then((res) => {
+          if (res.data.remain.length !== 0) {
+            console.log(res.data.remain[0], "kumar");
+            setSelectedData(res.data.remain[0]);
+            setConfirmPasscode("");
+            setPasscode("");
+          } else {
+            slideChanges(state.data.phone);
+          }
+        });
+      }
+    }
+  };
 
   return (
     <div className="signIn-container">
@@ -348,103 +342,82 @@ function Verifyaccount() {
           </div>
         </div>
       </div>
-        <div className="center-container-1">
-          {/* {
-            state.id[state.index].map((data,index)=>{
-              return( */}
-                <div className="verify-container-2" >
-                  {/* {console.log(data,'manojk')} */}
-              <h4 className="ms-3">Student Details</h4>
-              <div className="d-flex justify-content-center mt-4">
-                <img src={profile} />
-              </div>
-              <div className=" ms-3 mt-2">
-                <p className="user">Name</p>
-                <input
-                  className="student-input-box-1"
-                  value={selectedData.userName}
-                  // value={state?.overall[state.index]?.name}
-                />
-              </div>
-              <div className=" ms-3 mt-1 ">
-                <p className="user">Userid</p>
-                <input
-                  className="student-input-box-1"
-                  value={selectedData.schoolId}
-                  // value={state?.overall[state.index]?._id.slice(0, 5)}
-                />
-              </div>
+      <div className="center-container-1">
+        <div className="verify-container-2">
+          <h4 className="ms-3">Student Details</h4>
+          <div className="d-flex justify-content-center mt-4">
+            <img src={profile} />
+          </div>
+          <div className=" ms-3 mt-2">
+            <p className="user">Name</p>
+            <input
+              className="student-input-box-1"
+              value={selectedData.userName}
+              // value={state?.overall[state.index]?.name}
+            />
+          </div>
+          <div className=" ms-3 mt-1 ">
+            <p className="user">Userid</p>
+            <input
+              className="student-input-box-1"
+              value={selectedData.standard[0].rollNo}
+              // value={state?.overall[state.index]?._id.slice(0, 5)}
+            />
+          </div>
 
-              <div className=" ms-3 mt-1 ">
-                <div className="d-flex">
-                  <div className="user-id">
-                    <p className="user">Standard</p>
-                    <input
-                      className="student-input-dropbox-1"
-                      value={selectedData.standard[0].standard}
-                    />
-                  </div>
-                  <div className="user-id ms-3">
-                    <p className="user">Section</p>
+          <div className=" ms-3 mt-1 ">
+            <div className="d-flex">
+              <div className="user-id">
+                <p className="user">Standard</p>
+                <input
+                  className="student-input-dropbox-1"
+                  value={selectedData.standard[0].standard}
+                />
+              </div>
+              <div className="user-id ms-3">
+                <p className="user">Section</p>
 
-                    <input
-                      className="student-input-dropbox-1"
-                      value={selectedData.standard[0].section}
-                      // value={state.id.sec}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className=" ms-3 mt-1 ">
-                <p className="user">Create Password</p>
                 <input
-                  value={passcode}
-                  name="passcode"
-                  className="student-input-box-2"
-                  placeholder="Password"
-                  onChange={(e)=>setPasscode(e.target.value)}
-                  required
+                  className="student-input-dropbox-1"
+                  value={selectedData.standard[0].section}
+                  // value={state.id.sec}
                 />
               </div>
-              <div className=" ms-3 mt-1 ">
-                <p className="user">Confirm Password</p>
-                <input
-                  value={confirmPasscode}
-                  className="student-input-box-2"
-                  placeholder="Password"
-                  name="confirm_passcode"
-                  onChange={(e)=>setConfirmPasscode(e.target.value)}
-                  required
-                />
-              </div>
-              <button
-                className="btn-verify ms-3"
-                // onClick={()=>slideChange(state.id[selectedIndex]._id,state.id[selectedIndex].phone)}
-                type="submit"
-              >
-                Verify & Next
-              </button>
             </div>
-               {/* )
-              
-            })
-          }  */}
-            
+          </div>
+          <div className=" ms-3 mt-1 ">
+            <p className="user">Create Password</p>
+            <input
+              value={passcode}
+              name="passcode"
+              className="student-input-box-2"
+              placeholder="Password"
+              onChange={(e) => setPasscode(e.target.value)}
+              required
+            />
+          </div>
+          <div className=" ms-3 mt-1 ">
+            <p className="user">Confirm Password</p>
+            <input
+              value={confirmPasscode}
+              className="student-input-box-2"
+              placeholder="Password"
+              name="confirm_passcode"
+              onChange={(e) => setConfirmPasscode(e.target.value)}
+              required
+            />
+          </div>
+          <button
+            className="btn-verify ms-3"
+            onClick={slideChange}
+            type="submit"
+          >
+            Verify & Next
+          </button>
         </div>
-        {/* <div
-          style={{ display: "flex", justifyContent: "center", marginTop: "1%" }}
-        >
-          <div
-            onClick={() => setAccountSlide(true)}
-            className={accountSlide == true ? "first-dot" : "first-dot-null"}
-          ></div>
-          <div
-            onClick={() => setAccountSlide(false)}
-            className={accountSlide == false ? "first-dot" : "second-dot-null"}
-          ></div>
-        </div> */}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Verifyaccount
+export default Verifyaccount;

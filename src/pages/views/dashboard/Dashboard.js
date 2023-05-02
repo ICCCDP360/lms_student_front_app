@@ -35,7 +35,7 @@ import dashboardServices from "../../../services/dashboard";
 function Dashboard() {
   const [show, setShow] = useState(false);
   const {state}=useLocation()
-  console.log(state,'manoj');
+  console.log(state,'manojk');
 
   // const [language, setLanguage] = useState("english");
   const language = localStorage.getItem("lang") || "english";

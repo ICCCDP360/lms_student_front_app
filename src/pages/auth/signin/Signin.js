@@ -4,9 +4,7 @@ import "../styles/signin.scss";
 import logo from "../../../assets/logo.svg";
 import Slideshow from "../../views/components/Slider/SliderShow";
 import { SliderData } from "../../views/components/Slider/SliderData";
-// import { SelectAccount } from "../../../services/selectaccount";
 import { useFormik } from "formik";
-// import selectServices from "../../../services/selectaccount";
 import * as yup from "yup";
 import Language from "../../../assets/images/language.svg";
 
@@ -15,7 +13,6 @@ import { Dropdown } from "react-bootstrap";
 function Signin() {
   const navigate = useNavigate();
   const { state } = useLocation();
-  console.log(state, "manoj");
   const language = localStorage.getItem("lang") || "english";
 
   const [selectId, setSelectId] = useState({});
@@ -43,33 +40,13 @@ function Signin() {
   };
 
   const slideChange = () => {
-    // return new Promise((resolve, reject) => {
-    //   let data = {
-    //     stu_id: selectId,
-    //   };
-    //   selectServices
-    //     .SelectAccount(data)
-    //     .then((response, result) => {
-    //       if (result) {
-    //         resolve(result.id);
-    //       }
-
     navigate("/account_verify", {
       state: { id: selectId },
     });
-
-    // })
-    // .catch((err) => {
-    //   if (err) {
-    //     console.log(err, "err");
-    //     reject(false);
-    //   }
-    // });
-    // });
   };
 
   function handleCreatePassword(data) {
-    navigate("/verify_account", { state: { id: [data],index:0 } });
+    navigate("/verify_account", { state: { id: [data], index: 0 } });
   }
 
   return (
@@ -130,10 +107,10 @@ function Signin() {
                       />
                     </div>
                     <div>
-                      {state.id.map((data) => (
+                      {state.id.id.map((data) => (
                         <>
                           <div className="d-flex">
-                            {data.passwordAdded === true ? (
+                            {data.verify === true ? (
                               <input
                                 onClick={() => {
                                   setSelectId(data);
@@ -160,7 +137,7 @@ function Signin() {
                             </label>
 
                             <br />
-                            {data.passwordAdded === true ? null : (
+                            {data.verify === true ? null : (
                               <div className="create-password ms-3">
                                 <p
                                   className="para-create"

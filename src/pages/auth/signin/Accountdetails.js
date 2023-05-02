@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useLocation,useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import vector1 from "../../../assets/images/Ellipse 157.svg";
 import logo from "../../../assets/logo.svg";
 
 import "../styles/accountdetails.scss";
 import Language from "../../../assets/images/language.svg";
-// import accountServices from "../../../services/accountdetails";
-
-// import { Accountdeatailsdata } from "../../../services/accountdetails";
 import { Dropdown } from "react-bootstrap";
 
 function Accountdetails() {
   const navigate = useNavigate();
   const { state } = useLocation();
-  console.log(state,'manoj');
   const [selectDetails, setSelectDetails] = useState(0);
-
   const language = localStorage.getItem("lang") || "english";
-
-  // console.log(selectDetails);
 
   const englishLang = () => {
     localStorage.setItem("lang", "english");
@@ -32,31 +25,9 @@ function Accountdetails() {
   };
 
   const slideChange = () => {
-    // return new Promise((resolve, reject) => {
-    // let datas = {
-    //   stu_id: state[selectDetails],
-    // };
-    // console.log(state,'manoj');
-    // accountServices.Accountdeatailsdata(datas).then(() => {
-      // if (result) {
-      //   resolve(result.id);
-      // }
-      navigate("/verify_account", {
-        state: state[selectDetails],
-        // {
-          // id: response.data,
-          // overall: state?.id,
-          // index: selectDetails,
-        // },
-      });
-      // .catch((err) => {
-      //   if (err) {
-      //     console.log(err);
-      //     reject(false);
-      //   }
-      // });
-    // });
-    // });
+    navigate("/verify_account", {
+      state: { id: state.id[selectDetails], data: state.data, datas: state },
+    });
   };
 
   const selectedId = (index) => {
@@ -102,7 +73,7 @@ function Accountdetails() {
       <div className="center-container-pass">
         <div className="verify-container">
           <h4>Create Password</h4>
-          {state.map((data, index) => (
+          {state.id.map((data, index) => (
             <div
               key={index}
               onClick={() => selectedId(index)}
@@ -112,7 +83,6 @@ function Accountdetails() {
                   : "verify-subcontainer1"
               }
             >
-              {console.log(data,'kumar')}
               <img src={vector1} />
               <p
                 className={

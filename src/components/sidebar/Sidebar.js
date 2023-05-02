@@ -56,7 +56,7 @@ function Sidebar() {
           // localStorage.setItem("Acc");
           resolve(response);
           console.log(response,'manoj');
-          localStorage.removeItem('accessToken')
+          localStorage.removeItem('access_tokens')
           localStorage.removeItem('id')
     navigate("/")
           // navigate("/", { state: { id: response } });
