@@ -24,12 +24,14 @@ import ChangePassword from "./../pages/views/changePassword/ChangePassword";
 import Notification from "./../pages/views/notification/Notification";
 import ProtectedRoutes from "./protected-route";
 import SchoolIdVerify from "../pages/auth/signin/SchoolIdVerify";
-
+import VideoPlayer2 from '../pages/video_player'
 function IndexRouters() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<SchoolIdVerify/>}/>
+        <Route path='/' element={<SchoolIdVerify />} />
+        <Route path='/video' element={<VideoPlayer2 />} />
+
         <Route path="/number_verify" element={<Mainpage />} />
         <Route path="/verification_page" element={<Verificationpage />} />
         <Route path="/login_otp" element={<Loginotp />} />
