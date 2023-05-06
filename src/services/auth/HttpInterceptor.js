@@ -5,8 +5,15 @@ import axios from "axios";
 axios.interceptors.request.use(
   function (config) {
     if (config) {
+      const school_id = localStorage.getItem("school_id");
+
       config.url = process.env.REACT_APP_API_URL + config.url;
       // config.withCredentials = true;
+      config.headers = {
+        ...config.headers,
+        "Content-Type": "application/json",
+        school_id: school_id,
+      };
       return config;
     } else {
       const token = localStorage.getItem("accessToken");

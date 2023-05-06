@@ -48,7 +48,7 @@ function SchoolIdVerify() {
           .SchoolIdpage(trigger)
           .then((res) => {
             navigate('/number_verify')
-            console.log(res, "res");
+            localStorage.setItem('school_id',res.schoolId)
           })
           .catch((err) => {
             if (err.response.data == "School Not Found") {
@@ -115,6 +115,7 @@ function SchoolIdVerify() {
                       <input
                         // onChange={(e) => setNumber(e.target.value)}
                         className="input-field-number "
+                        style={{padding:'2%'}}
                         type="text"
                         placeholder="School Id"
                         name="number"

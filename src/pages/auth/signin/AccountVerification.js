@@ -78,10 +78,8 @@ function AccountVerification() {
           // );
         })
         .catch((err) => {
-          if (err) {
             console.log(err);
             reject(false);
-          }
         });
     });
   };

@@ -55,7 +55,7 @@ function Dashboard() {
 
   const profileData = () => {
     return new Promise((resolve, reject) => {
-      const datas = localStorage.getItem("userid");
+      const datas = localStorage.getItem("id");
 
       dashboardServices
         .profiledetails(JSON.parse(datas))
@@ -229,11 +229,13 @@ function Dashboard() {
           <div className="header-leftside-container">
             <h2 className="heading-content">
               {language == "english" ? "Welcome" : "வரவேற்பு"},{" "}
-              {state?.id?.userName}
+              {/* {state?.id?.userName} */}
+              Test
             </h2>
             <p className="header-sub-content">
+            {/* ${state?.id?.standard[0].standard} */}
               {language == "english"
-                ? `${state?.id?.standard[0].standard}th Standard - Last logged in: 18 Jan, 2023 06:00 pm`
+                ? `11th Standard - Last logged in: 18 Jan, 2023 06:00 pm`
                 : "7ஆம் வகுப்பு - கடைசியாக உள்நுழைந்தது: 18 ஜனவரி, 2023 மாலை 06:00 மணி"}
             </p>
           </div>

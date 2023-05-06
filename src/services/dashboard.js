@@ -17,7 +17,7 @@ class dashboardServices {
   profiledetails = (data) => {
     return new Promise((resolve, reject) => {
       instanceBaseurl
-        .get(`/api/v1/student/profile/${data}`)
+        .get(`api/v1/student/profile/${data}`)
         .then((respose) => {
           resolve(respose.data);
         })
