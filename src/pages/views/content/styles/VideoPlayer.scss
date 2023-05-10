@@ -1,0 +1,113 @@
+@use "../../../../scss/abstract/" as *;
+
+.dailyVideoPlay {
+  padding: 1%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.selectVideoPlay {
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #9c1303;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #9c1303;
+}
+
+.underline-video {
+  border: 1px solid #f5f5f5;
+  margin-bottom: 0px;
+}
+.video-slide-container {
+  padding: 1%;
+  text-align: center;
+  .videoplayer-video {
+    border: 1px solid gray;
+    border-right: 1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.video-base-container {
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid #a2a2a2;
+}
+.video-descrip-container {
+  padding: 2%;
+  .descrip-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .descrip-content {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .second-video-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+  }
+  .second-video-subcontent {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 2%;
+    color: #333333;
+  }
+  .details-head {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .ask-btn {
+    color: white;
+    background-color: #03c4ad;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    // height: 40px;
+    padding: 2%;
+  }
+  .email-container {
+    width: 65%;
+    @include mdBreakPoint {
+      width: 60%;
+    }
+    @include smBreakPoint {
+      width: 70%;
+      margin-bottom: 5px;
+    }
+    @include xsBreakPoint {
+      width: 80%;
+      margin-bottom: 5px;
+    }
+  }
+  .ask-btn {
+    padding: 1%;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: none;
+    background-color: #0197c6;
+    border-radius: 30px;
+    margin-top: 5%;
+    @include xsBreakPoint {
+      padding: 1.5%;
+    }
+  }
+}

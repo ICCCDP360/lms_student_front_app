@@ -25,6 +25,9 @@ import Notification from "./../pages/views/notification/Notification";
 import ProtectedRoutes from "./protected-route";
 import SchoolIdVerify from "../pages/auth/signin/SchoolIdVerify";
 import VideoPlayer2 from '../pages/video_player'
+import ContentPlayPage from "../pages/views/content/ContentPlayPage";
+import PractiseText from './../pages/views/content/ExamPage/PractiseText';
+import AssessmentText from './../pages/views/content/ExamPage/AssessmentText';
 function IndexRouters() {
   return (
     <div>
@@ -50,6 +53,11 @@ function IndexRouters() {
             <Route path="/content" element={<MainCourse />}>
               <Route path="/content/task" element={<MyTaskContinuePage />} />
             </Route>
+
+            <Route path='/contentshow' element={<ContentPlayPage/>}/>
+            <Route path='/practise_text' element={<PractiseText/>}/>
+          <Route path='/assessment_text' element={<AssessmentText/>}/>
+
             <Route path="/exam" element={<ExamContent />}>
               <Route path="/exam/pdf" element={<PdfPage />} />
             </Route>

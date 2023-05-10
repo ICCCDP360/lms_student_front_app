@@ -1,314 +1,89 @@
 @use "../../../../scss/abstract/" as *;
 
-.dailyVideo {
-  padding: 5px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  cursor: pointer;
-  width: 120px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  @include xsBreakPoint {
-    width: 76px;
-    font-size: 13px;
-    padding: 0px;
-  }
-  @include smBreakPoint {
-    font-size: 14px;
-    width: 90px;
-    padding: 4px;
-  }
-}
-.tele-contain {
-  // width: 50px;
-  .tele-img {
-    width: 60%;
-    margin-bottom: 5%;
-    @include smBreakPoint {
-      // width: 50px;
-    }
-    @include mdBreakPoint {
-      // width: 60px;
-      // margin-left: -45px;
-    }
-    @include lgBreakPoint {
-      // width: 70px;
-      // margin-left: -15px;
-    }
-  }
-}
-
-.selectVideo {
-  padding: 5px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border: 1px solid #0197c6;
-  // border-bottom: 3px solid #0395C4;
-  border-bottom: 3px solid #03c4ad;
-  // background-color: #b3e0ee;
-  background-color: #cdf3ef;
-  border-radius: 50px;
-  cursor: pointer;
-  width: 120px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  @include xsBreakPoint {
-    width: 76px;
-    font-size: 13px;
-    padding: 0px;
-  }
-  @include smBreakPoint {
-    font-size: 14px;
-    width: 90px;
-    padding: 4px;
-  }
-}
-
-.taskcontinue-full-container {
-  // background-color: #d8ffe8;
-  background-color: #cdf3ef;
-  padding: 1.5%;
-  padding-bottom: 0%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  .size-varient {
-    width: 90%;
-    @include xsBreakPoint {
-      width: 100%;
-    }
-    @include smBreakPoint {
-      width: 100%;
-    }
-    @include mdBreakPoint {
-      width: 100%;
-    }
-    .subject-name {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 0px;
-      @include xsBreakPoint {
-        font-size: 18px;
-      }
-    }
-    .funnel-container {
-      display: flex;
-      padding: 7px;
-      justify-content: space-between;
-      background-color: #e6f5f9;
-      border-radius: 10px;
-      .funnel-img {
-        width: 15px;
-        margin-top: 2px;
-      }
-      .filter-name {
-        margin-bottom: 0px;
-        margin-left: 10px;
-      }
-    }
-
-    .sub-subject-name {
-      font-size: 24px;
-      font-weight: 700;
-      // color: #03c473;
-      margin-bottom: 0px;
-      @include xsBreakPoint {
-        font-size: 20px;
-      }
-    }
-    // .task-continue-container {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   background-color: white;
-    //   border-radius: 50px;
-    //   .task-continue-container-inside {
-    //     display: flex;
-    //     background-color: white;
-    //     border-radius: 50px;
-    //   }
-    //   .search-task {
-    //     background-color: #f5f5f5;
-    //     border-radius: 50px;
-    //     width: 300px;
-    //     @include smBreakPoint {
-    //       width: 200px;
-    //     }
-    //     @include mdBreakPoint {
-    //       width: 300px;
-    //     }
-    //     .search-img {
-    //       padding-left: 10px;
-    //     }
-    //     .search-input {
-    //       border: none;
-    //       background-color: #f5f5f5;
-    //       height: 100%;
-    //       border-radius: 50px;
-    //       margin-left: 5%;
-    //       @include smBreakPoint {
-    //         width: 75%;
-    //       }
-    //       @include mdBreakPoint {
-    //         width: 65%;
-    //       }
-    //     }
-    //   }
-    // }
-  }
-}
-.task-continue-header-container {
-  padding: 2%;
-  padding-bottom: 0%;
-  background-color: white;
-  .task-continue-container {
-    display: flex;
+.content-full-container{
     width: 100%;
     background-color: white;
-    border-radius: 50px;
-    border: 1px solid #f5f5f5;
-
-    .task-continue-container-inside {
-      display: flex;
-      width: 60%;
-      background-color: white;
-      border-radius: 50px;
-    }
-    .search-task {
-      background-color: #f5f5f5;
-      border-radius: 50px;
-      width: 40%;
-      .search-img {
-        padding-left: 10px;
-      }
-      .search-input {
-        border: none;
-        background-color: #f5f5f5;
-        height: 100%;
-        border-radius: 50px;
-        margin-left: 5%;
-        @include smBreakPoint {
-          width: 75%;
+    height: 82vh;
+    overflow: auto;
+    border-radius: 10px;
+    .header-container{
+        background-color: rgba(237, 20, 2, 0.2);
+        display: flex;
+        justify-content: space-between;
+        .subject-container{
+            padding: 2%;
+            .subject-name{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .content-name{
+                font-size: 24px;
+                font-weight: 700;
+            }
         }
-        @include mdBreakPoint {
-          width: 65%;
+        
+    }
+    .sub-content-container{
+        padding: 2%;
+        padding-bottom: 0%;
+        .top-header-container{
+            display: flex;
+            justify-content: space-between;
+            .subject-container{
+                display: flex;
+                .subject-text{
+                    padding: 1%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    font-size: 18px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+                .subject-text-active{
+                    padding: 1%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background-color: #FBD0CC;
+                    border-radius: 10px;
+                    border-bottom: 3px solid #9C1303;
+                    cursor: pointer;
+                }
+            }
+            .input-container{
+                border: 1px solid #F5F5F5;
+                border-radius: 10px;
+                width: 35%;
+                display: flex;
+                .inputs{
+                    border: none;
+                    border-radius: 10px;
+                    margin-left: 5px;
+                    width: 100%;
+                }
+            }
         }
-        @include xsBreakPoint {
-          width: 30%;
-          border: 1px solid green;
-          margin-left: 0px;
+        .content-show{
+            height: 50vh;
+            overflow: auto;
+            .mytask-btn {
+                padding: 2%;
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                padding-left: 5%;
+                padding-right: 5%;
+                border: none;
+                background-image: linear-gradient(97.74deg, #9C1303 -4.15%, #E81402 100%);;
+                border-radius: 10px;
+                margin-top: 5%;
+                @include xsBreakPoint {
+                  padding: 1.5%;
+                }
+              }
         }
-      }
+       
     }
-  }
-}
-
-.taskcontinue-full-container2 {
-  background-color: white;
-  padding: 1%;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  min-height: 60vh;
-  @include xsBreakPoint {
-    min-height: 100vh;
-  }
-  .video-full-container {
-    padding: 10%;
-    cursor: pointer;
-    @include mdBreakPoint {
-      padding: 5%;
-    }
-    @include smBreakPoint {
-      padding: 2%;
-    }
-    @include xsBreakPoint {
-      padding: 2%;
-    }
-    .video-main-img {
-      width: 100%;
-      @include mdBreakPoint {
-        width: 71%;
-      }
-      @include smBreakPoint {
-        width: 71%;
-      }
-      @include xsBreakPoint {
-        width: 71%;
-      }
-    }
-    .video-header-content {
-      font-size: 18px;
-      height: 50px;
-      font-weight: 400;
-      margin-bottom: 0px;
-    }
-    .video-progress-container {
-      // margin-top: 15%;
-      @include lgBreakPoint {
-        // margin-top: 25%;
-      }
-      @include mdBreakPoint {
-        margin-top: 0%;
-      }
-      @include smBreakPoint {
-        margin-top: 0%;
-      }
-      .video-progress {
-        height: 10px;
-      }
-    }
-    .pdf-progress-container {
-      // margin-top: 10%;
-      // @include mdBreakPoint {
-      //   margin-top: -6%;
-      // }
-      // @include smBreakPoint {
-      //   margin-top: -6%;
-      // }
-      // @include xsBreakPoint {
-      //   margin-top: -6%;
-      // }
-      .pdf-btn {
-        color: white;
-        background-color: #03c4ad;
-        border: none;
-        border-radius: 10px;
-        width: 100px;
-        padding: 3%;
-        @include smBreakPoint {
-          padding: 1%;
-        }
-        @include xsBreakPoint {
-          padding: 1%;
-        }
-      }
-    }
-  }
-}
-
-.ableRead {
-  pointer-events: none;
-  opacity: 0.5;
-  padding: 10%;
-  .video-main-img {
-    width: 100%;
-  }
-  .video-header-content {
-    font-size: 18px;
-    height: 50px;
-    font-weight: 400;
-  }
-  .pdf-progress-container {
-    margin-top: 10%;
-    .pdf-btn {
-      color: white;
-      background-color: #0395c4;
-      border: none;
-      border-radius: 10px;
-      width: 100px;
-      padding: 3%;
-    }
-  }
+    
 }

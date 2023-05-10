@@ -1,57 +1,56 @@
-@use "../../../../scss/abstract/" as *;
+// @use "../../../../scss/abstract/" as *;
 
-.startpractise-btn {
-  padding: 1%;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  background-color: #03c4ad;
-  border-radius: 25px;
-  @include mdBreakPoint {
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-  @include xsBreakPoint {
-    margin-bottom: 10px;
-    font-size: 12px;
-    padding: 8px;
-  }
-}
+// .startpractise-btn {
+//   padding: 1%;
+//   color: white;
+//   font-size: 16px;
+//   font-weight: 600;
+//   border: none;
+//   background-color: #03c4ad;
+//   border-radius: 25px;
+//   @include mdBreakPoint {
+//     margin-bottom: 10px;
+//     font-size: 12px;
+//   }
+//   @include xsBreakPoint {
+//     margin-bottom: 10px;
+//     font-size: 12px;
+//     padding: 8px;
+//   }
+// }
 
-.react-pdf__Page__textContent {
-  display: none !important;
-}
+// .react-pdf__Page__textContent {
+//   display: none !important;
+// }
 
-.react-pdf__Page__annotations {
-  height: 0 !important;
-}
+// .react-pdf__Page__annotations {
+//   height: 0 !important;
+// }
 
-.practise-full-container {
-  padding: 1%;
-  min-height: 100vh;
-  @include xsBreakPoint {
-    height: auto;
-    padding-bottom: 10%;
-  }
-  .practise-header {
-    font-size: 20px;
-    font-weight: 600;
-    @include xsBreakPoint {
-      font-size: 18px;
-    }
-  }
-  .practise-content {
-    font-size: 18px;
-    font-weight: 400;
-    @include mdBreakPoint {
-      font-size: x-small;
-    }
-    @include smBreakPoint {
-      font-size: x-small;
-    }
-    @include xsBreakPoint {
-      font-size: x-small;
-    }
-  }
-}
+// // .practise-full-container {
+// //   padding: 1%;
+// //   @include xsBreakPoint {
+// //     height: auto;
+// //     padding-bottom: 10%;
+// //   }
+// //   .practise-header {
+// //     font-size: 20px;
+// //     font-weight: 600;
+// //     @include xsBreakPoint {
+// //       font-size: 18px;
+// //     }
+// //   }
+// //   .practise-content {
+// //     font-size: 18px;
+// //     font-weight: 400;
+// //     @include mdBreakPoint {
+// //       font-size: x-small;
+// //     }
+// //     @include smBreakPoint {
+// //       font-size: x-small;
+// //     }
+// //     @include xsBreakPoint {
+// //       font-size: x-small;
+// //     }
+// //   }
+// // }

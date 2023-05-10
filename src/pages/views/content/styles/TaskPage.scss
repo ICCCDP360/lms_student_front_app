@@ -1,0 +1,110 @@
+@use "../../../../scss/abstract/" as *;
+
+.subject-full-container{
+    width: 100%;
+    height: 83vh;
+    overflow: auto;
+    background-color: white;
+    padding: 2%;
+    border-radius: 10px;
+    .top-header-container{
+        border: 1px solid #F5F5F5;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        .subject-container{
+            display: flex;
+            .subject-text{
+                padding: 5%;
+                padding-left: 10%;
+                padding-right: 10%;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            .subject-text-active{
+                padding: 5%;
+                padding-left: 10%;
+                padding-right: 10%;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: #FBD0CC;
+                border-radius: 10px;
+                border-bottom: 3px solid #9C1303;
+                cursor: pointer;
+            }
+        }
+        .input-container{
+            border: 1px solid #F5F5F5;
+            border-radius: 10px;
+            width: 35%;
+            padding: 0.5%;
+            display: flex;
+            .inputs{
+                border: none;
+                border-radius: 10px;
+                margin-left: 5px;
+                width: 100%;
+            }
+        }
+    }
+    
+    .myTask-full-container {
+        // padding: 1%;
+        .mytask-sub-container {
+          display: flex;
+          padding: 2%;
+          border-radius: 10px;
+          justify-content: space-between;
+          background-color: #F5F5F5;
+          .subject-name {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            color: #333333;
+            @include xsBreakPoint {
+              font-size: 15px;
+            }
+          }
+          .subject-content {
+            margin-top: 0px;
+            font-size: 24px;
+            font-weight: 700;
+            @include xsBreakPoint {
+              font-size: 20px;
+            }
+          }
+          .subject-btm-container {
+            display: flex;
+            .subject-btm-text {
+                margin-left: 20px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+          }
+          .mytask-btn {
+            padding: 2%;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding-left: 5%;
+            padding-right: 5%;
+            border: none;
+            background-image: linear-gradient(97.74deg, #9C1303 -4.15%, #E81402 100%);;
+            border-radius: 10px;
+            margin-top: 5%;
+            width: 106px;
+            height: 40px;
+            @include xsBreakPoint {
+              padding: 1.5%;
+            }
+          }
+          .task-progress-size {
+            width: 30%;
+            @include xsBreakPoint {
+              margin-left: -40%;
+            }
+          }
+        }
+      }
+}

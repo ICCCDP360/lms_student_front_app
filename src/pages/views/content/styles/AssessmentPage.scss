@@ -1,0 +1,46 @@
+@use "../../../../scss/abstract/" as *;
+
+.practise-full-container {
+  padding: 1%;
+  @include xsBreakPoint {
+    height: auto;
+  }
+  .practise-header {
+    font-size: 20px;
+    font-weight: 600;
+    @include xsBreakPoint {
+      font-size: 18px;
+    }
+  }
+  .practise-content {
+    font-size: 18px;
+    font-weight: 400;
+    @include mdBreakPoint {
+      font-size: x-small;
+    }
+    @include smBreakPoint {
+      font-size: x-small;
+    }
+    @include xsBreakPoint {
+      font-size: x-small;
+    }
+  }
+  .startpractise-btn {
+    padding: 1%;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    background-image: linear-gradient(97.74deg, #9c1303 -4.15%, #e81402 100%);
+    border-radius: 10px;
+    @include mdBreakPoint {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    @include xsBreakPoint {
+      margin-bottom: 10px;
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+}

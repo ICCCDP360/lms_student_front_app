@@ -31,7 +31,7 @@
     padding-left: 10%;
     padding-right: 10%;
     .divider-line {
-      border: 1px solid #0197c6;
+      border: 1px solid #333333;
       @include lgBreakPoint {
         margin-top: 0%;
         margin-bottom: 8%;
@@ -42,7 +42,7 @@
     margin-top: 5%;
     .single-sidecontent {
       display: flex;
-      padding: 6%;
+      padding: 7%;
       cursor: pointer;
       .sidetext-content {
         margin-top: auto;
@@ -57,9 +57,8 @@
       display: flex;
       padding: 6%;
       cursor: pointer;
-      background-color: #0395c4;
-      border-top-right-radius: 50px;
-      border-bottom-right-radius: 50px;
+      background-color: #FBD0CC;
+      border-left: 3px solid #9C1303;
       .sidetext-content {
         margin-top: auto;
         margin-bottom: auto;
@@ -73,7 +72,7 @@
     padding-left: 10%;
     padding-right: 10%;
     .end-divider-line {
-      border: 1px solid #0197c6;
+      border: 1px solid #333333;
       margin-top: 5%;
       @include lgBreakPoint {
         margin-top: 8%;
@@ -86,8 +85,8 @@
     .logout-btn {
       width: 100%;
       background-color: white;
-      border: 1px solid #0197c6;
-      border-radius: 50px;
+      border: 1px solid #9C1303;
+      border-radius: 10px;
       .logout-btn-container {
         display: flex;
         justify-content: space-around;
@@ -109,7 +108,7 @@
         .logout-text {
           font-size: 18px;
           font-weight: 600;
-          color: #0197c6;
+          color: #9C1303;
           margin: auto;
           margin-left: 10px;
           @include lgBreakPoint {

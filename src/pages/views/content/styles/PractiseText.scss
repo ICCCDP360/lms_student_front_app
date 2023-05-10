@@ -1,0 +1,158 @@
+@use "../../../../scss/abstract/" as *;
+
+
+
+.practisetext-fullcontainer{
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 2%;
+    background-color: white;
+    height: 100vh;
+    .heading-subject{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .practise-container-sm {
+        display: flex;
+        justify-content: space-between;
+        @include xsBreakPoint {
+          flex-direction: column;
+        }
+        .questionpage-practice-container {
+          width: 59%;
+          border: 1px solid #a2a2a2;
+          border-radius: 10px;
+          padding: 1%;
+          height: 500px;
+          overflow: auto;
+          @include xsBreakPoint {
+            width: 100%;
+            min-height: 300px;
+          }
+          .questionpage-inner-container{
+            padding: 1%;
+            .question-text{
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .answer-label{
+                padding: 2%;
+                padding-bottom: 0%;
+                .answer-inner-container{
+                    padding: 1%;
+                    .radio-input{
+                        cursor: pointer;
+                    }
+                    .answer-text{
+                        margin-left: 2%;
+                    }
+                }
+            }
+            .explain-hint-container{
+                padding-left: 2%;
+                padding-right: 2%;
+                .explain-text{
+                    font-size: 18px;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+                .explain-content{
+                    width: 80%;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+          }
+        }
+        .count-side-practise {
+          width: 40%;
+          min-height: 350px;
+          border: 1px solid gray;
+          border-radius: 10px;
+          @include xsBreakPoint {
+            width: 100%;
+            margin-top: 2%;
+            min-height: 200px;
+          }
+          .qusetion-head-text{
+            margin-bottom: 0px;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 2%;
+          }
+          .count-number-container{
+            padding: 2%;
+            .count-number-innercontainer{
+                display: flex;
+                flex-wrap: wrap;
+                .active {
+                    border: 1px solid #83d09f;
+                    border-radius: 100%;
+                    width: 45px;
+                    height: 45px;
+                    margin-left: 2%;
+                    margin-top: 2%;
+                    background-color: white;
+                  }
+            }
+          }
+        }
+      }
+}
+
+.data-button {
+    margin-top: 2%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .prev-btn {
+    border-radius: 30px !important;
+    border-color: #03c4ad !important;
+    background-color: white !important;
+    color: #03c4ad !important;
+  }
+  .skip-answer{
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid #03c4ad;
+    color: #03c4ad;
+    padding: 1%;
+    width: 100px;
+    margin-right: 5%;
+  }
+  .check-answer {
+    background-color: #03c4ad;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 1%;
+    width: 150px;
+    margin-right: 5%;
+  }
+  .check-answer1 {
+    background-color: #03c4ad;
+    border-radius: 25px;
+    width: 150px;
+    border: none;
+    margin-left: 41%;
+    opacity: 0.5;
+    color: white;
+    padding: 1%;
+    @include mdBreakPoint {
+      margin-left: 30%;
+      width: 110px;
+    }
+  }
+  .data-next {
+    background-color: #03c4ad;
+    border-radius: 25px;
+    width: 100px;
+    border: none;
+    color: white;
+    @include mdBreakPoint {
+      margin-left: 35%;
+    }
+  }

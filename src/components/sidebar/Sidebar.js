@@ -6,8 +6,10 @@ import contentWhite from "../../assets/images/contentWhite.svg";
 import contentBlack from "../../assets/images/contentBlack.svg";
 import forumWhite from "../../assets/images/forumWhite.svg";
 import forumBlack from "../../assets/images/forumBlack.svg";
-import LogoutIcon from "../../assets/images/logoutIcon.svg";
+import LogoutIcon from "../../assets/images/redlogOut.svg";
 import RightArrow from "../../assets/images/rightArrow.svg";
+import Article from '../../assets/images/article.svg'
+import Testspace from '../../assets/images/testspace.svg'
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 
@@ -58,6 +60,7 @@ function Sidebar() {
           localStorage.removeItem('access_tokens')
           localStorage.removeItem('id')
           localStorage.removeItem('school_id')
+          localStorage.removeItem('std')
     navigate("/")
           // navigate("/", { state: { id: response } });
         })
@@ -103,7 +106,8 @@ function Sidebar() {
               ) : (
                 <>
                   <img
-                    src="https://www.shutterstock.com/image-vector/education-logo-design-templates-institutes-260nw-1725604474.jpg"
+                  src={logo}
+                    // src="https://www.shutterstock.com/image-vector/education-logo-design-templates-institutes-260nw-1725604474.jpg"
                     width="100px"
                     height="100px"
                     style={{ borderRadius: "50%" }}
@@ -169,8 +173,42 @@ function Sidebar() {
                   {language == "english" ? "Q&A" : "கேள்வி பதில்"}
                 </p>
               </div>
+              <div className="single-sidecontent"
+                // className={
+                //   location.pathname === "/forum"
+                //     ? "single-sidecontent-active"
+                //     : "single-sidecontent"
+                // }
+                // onClick={forumPage}
+              >
+                {stepCount === 1 ? (
+                  <img src={Testspace} />
+                ) : (
+                  <img src={Testspace} />
+                )}
+                <p className="sidetext-content">
+                Test Space
+                </p>
+              </div>
+              <div className="single-sidecontent"
+                // className={
+                //   location.pathname === "/forum"
+                //     ? "single-sidecontent-active"
+                //     : "single-sidecontent"
+                // }
+                // onClick={forumPage}
+              >
+                {stepCount === 1 ? (
+                  <img src={Article} />
+                ) : (
+                  <img src={Article} />
+                )}
+                <p className="sidetext-content">
+                 News & Articles
+                </p>
+              </div>
             </div>
-            <div className="end-divider-container">
+            <div className="end-divider-container mt-4">
               <hr className="end-divider-line" />
             </div>
           </div>

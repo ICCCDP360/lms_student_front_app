@@ -61,6 +61,7 @@ function AccountVerification() {
               JSON.stringify(res?.access_tokens)
             );
             localStorage.setItem("id", JSON.stringify(res?.response?._id));
+            localStorage.setItem('std',JSON.stringify(res?.response?.standard[0]?.standard))
             navigate("/dashboard", { state: state });
           }
 
