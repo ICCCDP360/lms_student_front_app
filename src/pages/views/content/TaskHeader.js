@@ -28,7 +28,7 @@ function TaskHeader() {
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   // const [userDetails, SetuserDetails] = useState([]);
   // const [userOtherDetails, SetUserOtherDetails] = useState([]);
 
@@ -74,7 +74,7 @@ function TaskHeader() {
   //   });
   // };
   const englishLang = () => {
-    localStorage.setItem("lang", "english");
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -90,7 +90,7 @@ function TaskHeader() {
       const datas = localStorage.getItem("userid");
 
       dashboardServices
-        .profiledetails(JSON.parse(datas))
+        .profiledetails(datas)
 
         .then((res) => {
           resolve(res);
@@ -113,7 +113,7 @@ function TaskHeader() {
         <div className="task-header-container">
           <div className="task-head-text">
             <p className="head-text-content">
-              {language == "english" ? "Task" : "பணி"}
+              {language == "en" ? "Task" : "பணி"}
             </p>
           </div>
           <div
@@ -133,10 +133,10 @@ function TaskHeader() {
 
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                    {language == "en" ? "English" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -168,14 +168,14 @@ function TaskHeader() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>01:00</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -202,14 +202,14 @@ function TaskHeader() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>02:38</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New lesson was added in chemistry"
                         : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}{" "}
                     </p>
@@ -239,7 +239,7 @@ function TaskHeader() {
                       <p style={{ marginBottom: "0px" }}>12:30</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -261,7 +261,7 @@ function TaskHeader() {
                       marginBottom: "5px",
                     }}
                   >
-                    {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                    {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                   </p>
                 </Dropdown.Menu>
               </Dropdown>
@@ -301,7 +301,7 @@ function TaskHeader() {
         <div className="task-header-container">
           <div className="task-head-text">
             <p className="head-text-content">
-              {language == "english" ? "Task" : "பணி"}
+              {language == "en" ? "Task" : "பணி"}
             </p>
           </div>
           <div
@@ -321,10 +321,10 @@ function TaskHeader() {
 
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                    {language == "en" ? "en" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -356,14 +356,14 @@ function TaskHeader() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>01:00</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -390,14 +390,14 @@ function TaskHeader() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>02:38</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New lesson was added in chemistry"
                         : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}{" "}
                     </p>
@@ -427,7 +427,7 @@ function TaskHeader() {
                       <p style={{ marginBottom: "0px" }}>12:30</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -449,7 +449,7 @@ function TaskHeader() {
                       marginBottom: "5px",
                     }}
                   >
-                    {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                    {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                   </p>
                 </Dropdown.Menu>
               </Dropdown>
@@ -484,7 +484,7 @@ function TaskHeader() {
             )} */}
           </div>
           <h6 className="d-flex justify-content-center ">
-            {/* {language == "english" ? `${userDetails.name}` : "பாலா"} */}
+            {/* {language == "en" ? `${userDetails.name}` : "பாலா"} */}
           </h6>
           <h6 className="d-flex justify-content-center ">
             {/* {userDetails.email} */}
@@ -494,7 +494,7 @@ function TaskHeader() {
             className="modal-second-container mt-2"
             variant="outline-primary "
           >
-            {language == "english" ? "View" : "பார்வை"}
+            {language == "en" ? "View" : "பார்வை"}
           </Button>
           <hr className="horizantal-first" />
 
@@ -517,7 +517,7 @@ function TaskHeader() {
               className="mt-2 ms-3 "
               onClick={() => navigate("/change_password")}
             >
-              {language == "english"
+              {language == "en"
                 ? "Change password"
                 : "கடவுச்சொல்லை மாற்று"}
             </h6>
@@ -535,7 +535,7 @@ function TaskHeader() {
             <h6 className="mt-2 ms-3 " 
             // onClick={switchAccount}
             >
-              {language == "english" ? "Switch Account" : "கணக்கு சேர்க்க"}
+              {language == "en" ? "Switch Account" : "கணக்கு சேர்க்க"}
             </h6>
           </div>
         </Modal.Body>

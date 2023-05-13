@@ -16,7 +16,7 @@ function Resetpassword() {
   // const navigate = useNavigate();
   const [passwordType, setPasswordType] = useState("password");
   // const [passwordInput, setPasswordInput] = useState("");
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   // const handlePasswordChange = (evnt) => {
   //   setPasswordInput(evnt.target.value);
@@ -51,8 +51,8 @@ function Resetpassword() {
     },
   });
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -95,11 +95,11 @@ function Resetpassword() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

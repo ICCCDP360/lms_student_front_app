@@ -11,7 +11,7 @@ import schoolIdService from '../../../services/schoolId'
 
 
 function SchoolIdVerify() {
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const [error, setError] = useState("");
 
   const navigate=useNavigate()
@@ -28,8 +28,8 @@ function SchoolIdVerify() {
     },
   });
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -43,7 +43,6 @@ function SchoolIdVerify() {
         let trigger = {
             schoolId: data,
         };
-        console.log(trigger, "triggger");
         schoolIdService
           .SchoolIdpage(trigger)
           .then((res) => {
@@ -84,11 +83,11 @@ function SchoolIdVerify() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                  <Dropdown.Item onClick={enLang}>
+                    {language == "en" ? "en" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

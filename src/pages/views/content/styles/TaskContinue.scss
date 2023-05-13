@@ -7,7 +7,7 @@
     overflow: auto;
     border-radius: 10px;
     .header-container{
-        background-color: rgba(237, 20, 2, 0.2);
+        background-image: linear-gradient(97.81deg, #263468 0%, #4E66C1 100%);
         display: flex;
         justify-content: space-between;
         .subject-container{
@@ -15,10 +15,12 @@
             .subject-name{
                 font-size: 20px;
                 font-weight: 600;
+                color: white;
             }
             .content-name{
                 font-size: 24px;
                 font-weight: 700;
+                color:white;
             }
         }
         
@@ -45,9 +47,9 @@
                     padding-right: 10%;
                     font-size: 18px;
                     font-weight: 600;
-                    background-color: #FBD0CC;
+                    background-color: #D4D6E1;
                     border-radius: 10px;
-                    border-bottom: 3px solid #9C1303;
+                    border-bottom: 3px solid #4e66c1;
                     cursor: pointer;
                 }
             }

@@ -15,7 +15,7 @@ function ChangePasswordContent() {
   const [passwordType, setPasswordType] = useState("password");
   const [passwordType1, setPasswordType1] = useState("password");
   const [passwordType0, setPasswordType0] = useState("password");
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const { state } = useLocation();
   // console.log(state, "manoj");
   // const [error, setError] = useState("");
@@ -118,23 +118,23 @@ function ChangePasswordContent() {
         <div className="change-password-content-body">
           <form onSubmit={formik.handleSubmit} autoComplete="off">
             <h5>
-              {language == "english"
+              {language == "en"
                 ? "Change password"
                 : "கடவுச்சொல்லை மாற்று"}
             </h5>
 
             <div className="row">
-              <div className={language == "english" ? "col-md-4" : "col-md-6"}>
+              <div className={language == "en" ? "col-md-4" : "col-md-6"}>
                 <div className="mt-4">
                   <Form>
                     <Form.Group
                       // style={
-                      //   language == "english" ? { width: "40%" } : { width: "60%" }
+                      //   language == "en" ? { width: "40%" } : { width: "60%" }
                       // }
                       className="mb-3"
                     >
                       <Form.Label className="form-label">
-                        {language == "english"
+                        {language == "en"
                           ? "Old Password"
                           : "பழைய கடவுச்சொல்"}
                       </Form.Label>
@@ -146,7 +146,7 @@ function ChangePasswordContent() {
                           value={formik.values.oldPassword}
                           onChange={formik.handleChange}
                           placeholder={
-                            language == "english"
+                            language == "en"
                               ? "Enter your old password"
                               : "உங்கள் பழைய கடவுச்சொல்லை உள்ளிடவும்"
                           }
@@ -170,12 +170,12 @@ function ChangePasswordContent() {
                   <Form>
                     <Form.Group
                       // style={
-                      //   language == "english" ? { width: "40%" } : { width: "60%" }
+                      //   language == "en" ? { width: "40%" } : { width: "60%" }
                       // }
                       className="mb-3"
                     >
                       <Form.Label className="form-lebel1">
-                        {language == "english"
+                        {language == "en"
                           ? "New Password"
                           : "புதிய கடவுச்சொல்"}
                       </Form.Label>
@@ -186,7 +186,7 @@ function ChangePasswordContent() {
                           value={formik.values.newPassword}
                           onChange={formik.handleChange}
                           placeholder={
-                            language == "english"
+                            language == "en"
                               ? "Enter your new password"
                               : "உங்கள் புதிய கடவுச்சொல்லை உள்ளிடவும்"
                           }
@@ -214,11 +214,11 @@ function ChangePasswordContent() {
                   <Form>
                     <Form.Group
                     // style={
-                    //   language == "english" ? { width: "" } : { width: "60%" }
+                    //   language == "en" ? { width: "" } : { width: "60%" }
                     // }
                     >
                       <Form.Label className="password-retype">
-                        {language == "english"
+                        {language == "en"
                           ? "Retype New Password"
                           : "புதிய கடவுச்சொல் மீண்டும் தட்டச்சு"}{" "}
                       </Form.Label>
@@ -230,7 +230,7 @@ function ChangePasswordContent() {
                           value={formik.values.retypePassword}
                           onChange={formik.handleChange}
                           placeholder={
-                            language == "english"
+                            language == "en"
                               ? "Retype your new password"
                               : "உங்கள் புதிய கடவுச்சொல்லை மீண்டும் தட்டச்சு செய்யவும்"
                           }
@@ -258,10 +258,10 @@ function ChangePasswordContent() {
 
             <div className="mt-4 s-flex">
               <button className="password-change-btn" onClick={passwordChange}>
-                {language == "english" ? "Change" : "மாற்றவும்"}
+                {language == "en" ? "Change" : "மாற்றவும்"}
               </button>
               <button className="password-cancel">
-                {language == "english" ? "Cancel" : "ரத்து செய்"}
+                {language == "en" ? "Cancel" : "ரத்து செய்"}
               </button>
             </div>
           </form>

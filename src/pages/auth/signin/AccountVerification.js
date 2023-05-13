@@ -18,7 +18,7 @@ function AccountVerification() {
   const { state } = useLocation();
   const [passwordType, setPasswordType] = useState("password");
 
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   const formik = useFormik({
     initialValues: {
@@ -33,8 +33,8 @@ function AccountVerification() {
     },
   });
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -57,11 +57,10 @@ function AccountVerification() {
           if (res !== "Wrong Password") {
           // } else {
             localStorage.setItem(
-              "access_tokens",
-              JSON.stringify(res?.access_tokens)
+              "access_tokens",res?.access_tokens
             );
-            localStorage.setItem("id", JSON.stringify(res?.response?._id));
-            localStorage.setItem('std',JSON.stringify(res?.response?.standard[0]?.standard))
+            localStorage.setItem("id", res?.response?._id);
+            localStorage.setItem('std',res?.response?.standard[0]?.standard)
             navigate("/dashboard", { state: state });
           }
 
@@ -123,11 +122,11 @@ function AccountVerification() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

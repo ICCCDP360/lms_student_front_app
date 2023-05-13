@@ -4,13 +4,13 @@ class assessmentContentService {
     assessmentContent = (trigger) => {
         var config = {
             headers: {
-              "x-access-token": JSON.parse(localStorage.getItem("access_tokens")),
+              "x-access-token": localStorage.getItem("access_tokens"),
               "Content-Type": "application/json",
             },
           };
     return new Promise((resolve, reject) => {
       instanceBaseurl2
-        .post(`subchapter/assessments`, trigger,config)
+        .post(`chapter/assessments`, trigger,config)
         .then((res) => {
           resolve(res.data);
         })

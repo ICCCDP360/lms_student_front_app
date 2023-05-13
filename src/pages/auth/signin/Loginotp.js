@@ -22,7 +22,7 @@
 //   // const [otpNum4, setOtpNum4] = useState("");
 //   const [otp, setOtp] = useState("");
 //   const [error, setError] = useState("");
-//   const language = localStorage.getItem("lang") || "english";
+//   const language = localStorage.getItem("lang") || "en";
 
 //   // const otp = `${otpNum1 + otpNum2 + otpNum3 + otpNum4}`;
 
@@ -50,8 +50,8 @@
 //     });
 //   };
 
-//   const englishLang = () => {
-//     localStorage.setItem("lang", "english");
+//   const enLang = () => {
+//     localStorage.setItem("lang", "en");
 //     window.location.reload();
 //   };
 
@@ -84,11 +84,11 @@
 //               </Dropdown.Toggle>
 
 //               <Dropdown.Menu>
-//                 <Dropdown.Item onClick={englishLang}>
-//                   {language == "english" ? "English" : "ஆங்கிலம்"}
+//                 <Dropdown.Item onClick={enLang}>
+//                   {language == "en" ? "en" : "ஆங்கிலம்"}
 //                 </Dropdown.Item>
 //                 <Dropdown.Item onClick={tamilLang}>
-//                   {language == "english" ? "Tamil" : "தமிழ்"}
+//                   {language == "en" ? "Tamil" : "தமிழ்"}
 //                 </Dropdown.Item>
 //               </Dropdown.Menu>
 //             </Dropdown>
@@ -184,7 +184,7 @@ function Loginotp() {
   const { state } = useLocation();
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   const slideChange = () => {
     return new Promise((resolve, reject) => {
@@ -207,8 +207,8 @@ function Loginotp() {
     });
   };
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -241,11 +241,11 @@ function Loginotp() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

@@ -19,17 +19,17 @@ import dashboardServices from "../../../services/dashboard";
 function ChangePasswordHeader() {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const user = localStorage.getItem("userDetails");
-  const userDetails = JSON.parse(user);
+  const userDetails = (user);
 
   const other = localStorage.getItem("otherAccDetails");
-  const otherDetails = JSON.parse(other);
+  const otherDetails = (other);
   const [fullData, setFullData] = useState([]);
 
   useEffect(() => {
     const datas = localStorage.getItem("userid");
-    dashboardServices.profiledetails(JSON.parse(datas)).then((res) => {
+    dashboardServices.profiledetails((datas)).then((res) => {
       setFullData(res.data);
     });
   }, []);
@@ -38,9 +38,9 @@ function ChangePasswordHeader() {
   const handleClose = () => setShow(false);
 
   const switchAccount = () => {
-    // console.log(JSON.parse(localStorage.getItem("parentDetails")), "parents");
+    // console.log((localStorage.getItem("parentDetails")), "parents");
     let data = {
-      phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
+      phone: (localStorage.getItem("parentDetails")).phone,
     };
     dashboardServices
       .DashboardSwitchAcc(data)
@@ -63,8 +63,8 @@ function ChangePasswordHeader() {
       });
   };
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -84,7 +84,7 @@ function ChangePasswordHeader() {
               fontWeight: "700",
             }}
           >
-            {language == "english" ? "Change password" : "கடவுச்சொல்லை மாற்று"}
+            {language == "en" ? "Change password" : "கடவுச்சொல்லை மாற்று"}
           </p>
         </div>
         <div className="rightside-taskcontainer" style={{ cursor: "pointer" }}>
@@ -100,11 +100,11 @@ function ChangePasswordHeader() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -121,8 +121,8 @@ function ChangePasswordHeader() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu style={{ width: "310px", marginLeft: "-250px" }}>
-                {/* <Dropdown.Item onClick={() => setLanguage("english")}>
-                      English
+                {/* <Dropdown.Item onClick={() => setLanguage("en")}>
+                      en
                     </Dropdown.Item>
                     <Dropdown.Item onClick={() => setLanguage("tamil")}>
                       Tamil
@@ -139,14 +139,14 @@ function ChangePasswordHeader() {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p style={{ marginBottom: "0px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "Content_Admin"
                         : "உள்ளடக்க_நிர்வாகம்"}
                     </p>
                     <p style={{ marginBottom: "0px" }}>01:00</p>
                   </div>
                   <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                    {language == "english"
+                    {language == "en"
                       ? "New videos was uploaded on th..."
                       : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                   </p>
@@ -170,14 +170,14 @@ function ChangePasswordHeader() {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p style={{ marginBottom: "0px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "Content_Admin"
                         : "உள்ளடக்க_நிர்வாகம்"}
                     </p>
                     <p style={{ marginBottom: "0px" }}>02:38</p>
                   </div>
                   <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                    {language == "english"
+                    {language == "en"
                       ? "New lesson was added in chemistry"
                       : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}{" "}
                   </p>
@@ -204,7 +204,7 @@ function ChangePasswordHeader() {
                     <p style={{ marginBottom: "0px" }}>12:30</p>
                   </div>
                   <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                    {language == "english"
+                    {language == "en"
                       ? "New videos was uploaded on th..."
                       : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                   </p>
@@ -226,7 +226,7 @@ function ChangePasswordHeader() {
                     marginBottom: "5px",
                   }}
                 >
-                  {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                  {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                 </p>
               </Dropdown.Menu>
             </Dropdown>
@@ -252,7 +252,7 @@ function ChangePasswordHeader() {
           </div>
           <h6 className="d-flex justify-content-center ">
             {userDetails.name}
-            {/* {language == "english" ? "Bala" : "பாலா"} */}
+            {/* {language == "en" ? "Bala" : "பாலா"} */}
           </h6>
           <h6 className="d-flex justify-content-center ">
             {userDetails.email}
@@ -264,7 +264,7 @@ function ChangePasswordHeader() {
             // className="mt-2"
             variant="outline-primary "
           >
-            {language == "english" ? "View" : "பார்வை"}
+            {language == "en" ? "View" : "பார்வை"}
           </Button>
           <hr className="horizantal-first" />
           {otherDetails.map((data, index) => (
@@ -288,7 +288,7 @@ function ChangePasswordHeader() {
               className="mt-2 ms-3 "
               onClick={() => navigate("/change_password")}
             >
-              {language == "english"
+              {language == "en"
                 ? "Change password"
                 : "கடவுச்சொல்லை மாற்று"}
             </h6>
@@ -304,7 +304,7 @@ function ChangePasswordHeader() {
           <div className="d-flex justify-content-center point">
             <img src={switchacc} />
             <h6 className="mt-2 ms-3 " onClick={switchAccount}>
-              {language == "english" ? "Switch Account" : "கணக்கு சேர்க்க"}
+              {language == "en" ? "Switch Account" : "கணக்கு சேர்க்க"}
             </h6>
           </div>
         </Modal.Body>

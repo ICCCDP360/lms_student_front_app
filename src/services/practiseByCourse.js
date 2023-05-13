@@ -4,13 +4,13 @@ class practiseContentService {
     practiseContent = (trigger) => {
         var config = {
             headers: {
-              "x-access-token": JSON.parse(localStorage.getItem("access_tokens")),
+              "x-access-token": localStorage.getItem("access_tokens"),
               "Content-Type": "application/json",
             },
           };
     return new Promise((resolve, reject) => {
       instanceBaseurl2
-        .post(`subchapter/practices`, trigger,config)
+        .post(`chapter/practices`, trigger,config)
         .then((res) => {
           resolve(res.data);
         })

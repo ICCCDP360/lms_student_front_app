@@ -35,11 +35,13 @@ function ContentPlayPage() {
   const [pdfData, setPdfData] = useState("");
   const [practiseData,setPractiseData]=useState([])
   const [assessmentData,setAssessmentData]=useState([])
+  const language = localStorage.getItem('lang')||'en'
 
   const videoSelectionApi = (id) => {
     return new Promise((resolve, reject) => {
       let data = {
-        subchapterId: id,
+        chapterId: id,
+        languageCode:language
       };
       videoContentService
         .videoContent(data)
@@ -57,7 +59,8 @@ function ContentPlayPage() {
   const pdfSelectionApi = (id) => {
     return new Promise((resolve, reject) => {
       let data = {
-        subchapterId: id,
+        chapterId: id,
+        languageCode:language
       };
       pdfContentService
         .pdfContent(data)
@@ -74,7 +77,8 @@ function ContentPlayPage() {
   const practiseSelectionApi = (id) => {
     return new Promise((resolve, reject) => {
       let data = {
-        subchapterId: id,
+        chapterId: id,
+        languageCode:language
       };
       practiseContentService
         .practiseContent(data)
@@ -91,7 +95,8 @@ function ContentPlayPage() {
   const assessmentSelectionApi = (id) => {
     return new Promise((resolve, reject) => {
       let data = {
-        subchapterId: id,
+        chapterId: id,
+        languageCode:language
       };
       assessmentContentService
         .assessmentContent(data)

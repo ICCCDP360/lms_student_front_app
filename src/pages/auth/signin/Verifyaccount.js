@@ -17,7 +17,7 @@
 //   // const [passcode, setPasscode] = useState("");
 //   // const [confirmPasscode, setConfirmPasscode] = useState("");
 //   const [availableState, setAvailableState] = useState();
-//   const language = localStorage.getItem("lang") || "english";
+//   const language = localStorage.getItem("lang") || "en";
 
 //   const formik = useFormik({
 //     initialValues: {
@@ -77,8 +77,8 @@
 //     }
 //   }
 
-//   const englishLang = () => {
-//     localStorage.setItem("lang", "english");
+//   const enLang = () => {
+//     localStorage.setItem("lang", "en");
 //     window.location.reload();
 //   };
 
@@ -115,11 +115,11 @@
 //               </Dropdown.Toggle>
 
 //               <Dropdown.Menu>
-//                 <Dropdown.Item onClick={englishLang}>
-//                   {language == "english" ? "English" : "ஆங்கிலம்"}
+//                 <Dropdown.Item onClick={enLang}>
+//                   {language == "en" ? "en" : "ஆங்கிலம்"}
 //                 </Dropdown.Item>
 //                 <Dropdown.Item onClick={tamilLang}>
-//                   {language == "english" ? "Tamil" : "தமிழ்"}
+//                   {language == "en" ? "Tamil" : "தமிழ்"}
 //                 </Dropdown.Item>
 //               </Dropdown.Menu>
 //             </Dropdown>
@@ -247,7 +247,7 @@ import checkServices from "../../../services/checkaccount";
 import { useNavigate } from "react-router-dom";
 
 function Verifyaccount() {
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const [passcode, setPasscode] = useState("");
   const [confirmPasscode, setConfirmPasscode] = useState("");
   const { state } = useLocation();
@@ -255,8 +255,8 @@ function Verifyaccount() {
   const [datas] = useState(state.data);
 
   const navigate = useNavigate();
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -331,11 +331,11 @@ function Verifyaccount() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

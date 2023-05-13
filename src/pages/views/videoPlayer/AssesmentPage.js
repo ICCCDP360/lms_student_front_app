@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function AssesmentPage({ dataPageValue, title,user }) {
   const navigate = useNavigate();
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   // console.log(title, "data");
 
@@ -15,12 +15,12 @@ function AssesmentPage({ dataPageValue, title,user }) {
   return (
     <div className="practise-full-container">
       <p className="practise-header">
-        {language == "english"
+        {language == "en"
           ? " Assessment Instructions"
           : "மதிப்பீட்டு வழிமுறைகள்"}
       </p>
       <p className="practise-content">
-        {language == "english"
+        {language == "en"
           ? `The quizzes consists of questions carefully designed to help you
         self-assess your comprehension of the information presented on the
         topics covered in the module. No data will be collected on the website
@@ -31,7 +31,7 @@ function AssesmentPage({ dataPageValue, title,user }) {
         தொகுதியில் உள்ள தலைப்புகள். இணையதளத்தில் எந்த தகவலும் சேகரிக்கப்படாது
         உங்கள் பதில்கள் அல்லது வினாடி வினாவை எத்தனை முறை எடுக்கிறீர்கள்.`}
         <br></br>
-        {language == "english"
+        {language == "en"
           ? `Each
           question in the quiz is of multiple-choice or true or false format.
           Read each question carefully, and click on the button next to your
@@ -45,7 +45,7 @@ function AssesmentPage({ dataPageValue, title,user }) {
           தொகுதி. ஒவ்வொரு சரியான அல்லது தவறான பதில் பொருத்தமானதாக இருக்கும்
           திரையின் அடிப்பகுதியில் உடனடியாக பின்னூட்டம்.`}
         <br></br>
-        {language == "english"
+        {language == "en"
           ? `After responding to a
           question, click on the Next Question button at the bottom to go to the
           next question. After responding to the 8th question, click on Close on
@@ -55,7 +55,7 @@ function AssesmentPage({ dataPageValue, title,user }) {
           அடுத்த கேள்வி. 8வது கேள்விக்கு பதிலளித்த பிறகு, Close on என்பதைக் கிளிக் செய்யவும்
           வினாடி வினாவிலிருந்து வெளியேற சாளரத்தின் மேல்.`}
         <br></br>
-        {language == "english"
+        {language == "en"
           ? `If you select an incorrect
           response for a question, you can try again until you get the correct
           response. If you retake the quiz, the questions and their respective
@@ -66,7 +66,7 @@ function AssesmentPage({ dataPageValue, title,user }) {
           பதில் நீங்கள் வினாடி வினா, கேள்விகள் மற்றும் அவைகளை மீண்டும் எடுத்தால்
           பதில்கள் சீரற்றதாக மாற்றப்படும்.`}
         <br></br>
-        {language == "english"
+        {language == "en"
           ? `If you respond incorrectly to a
           question or retake a question again and get the correct response, your
           quiz score will reflect it appropriately. However, your quiz will not be
@@ -80,7 +80,7 @@ function AssesmentPage({ dataPageValue, title,user }) {
           கேள்விகள்.`}
       </p>
       <button className="startpractise-btn" onClick={AssessmentPageNav}>
-        {language == "english" ? "Start Test" : "சோதனையைத் தொடங்கவும்"}
+        {language == "en" ? "Start Test" : "சோதனையைத் தொடங்கவும்"}
       </button>
     </div>
   );

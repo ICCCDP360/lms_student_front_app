@@ -28,7 +28,7 @@ function Forum() {
   const [step, setStep] = useState(0);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   // const [userDetails, SetuserDetails] = useState([]);
 
   // const handleShow = () => setShow(true);
@@ -42,7 +42,7 @@ function Forum() {
       const datas = localStorage.getItem("id");
 
       dashboardServices
-        .profiledetails(JSON.parse(datas))
+        .profiledetails(datas)
 
         .then((res) => {
           resolve(res);
@@ -93,7 +93,7 @@ function Forum() {
   // };
 
   const englishLang = () => {
-    localStorage.setItem("lang", "english");
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -132,7 +132,7 @@ function Forum() {
               fontWeight: "700",
             }}
           >
-            {language == "english" ? "Q&A" : "கேள்வி பதில்"}
+            {language == "en" ? "Q&A" : "கேள்வி பதில்"}
           </p>
         </div>
         <div className="rightside-taskcontainer" style={{ cursor: "pointer" }}>
@@ -149,10 +149,10 @@ function Forum() {
 
               <Dropdown.Menu>
                 <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                  {language == "en" ? "English" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -172,8 +172,8 @@ function Forum() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu style={{ width: "310px", marginLeft: "-250px" }}>
-                {/* <Dropdown.Item onClick={() => setLanguage("english")}>
-                      English
+                {/* <Dropdown.Item onClick={() => setLanguage("en")}>
+                      en
                     </Dropdown.Item>
                     <Dropdown.Item onClick={() => setLanguage("tamil")}>
                       Tamil
@@ -190,14 +190,14 @@ function Forum() {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p style={{ marginBottom: "0px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "Content_Admin"
                         : "உள்ளடக்க_நிர்வாகம்"}
                     </p>
                     <p style={{ marginBottom: "0px" }}>01:00</p>
                   </div>
                   <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                    {language == "english"
+                    {language == "en"
                       ? "New videos was uploaded on th..."
                       : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                   </p>
@@ -221,14 +221,14 @@ function Forum() {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p style={{ marginBottom: "0px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "Content_Admin"
                         : "உள்ளடக்க_நிர்வாகம்"}
                     </p>
                     <p style={{ marginBottom: "0px" }}>02:38</p>
                   </div>
                   <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                    {language == "english"
+                    {language == "en"
                       ? "New lesson was added in chemistry"
                       : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}
                   </p>
@@ -255,7 +255,7 @@ function Forum() {
                     <p style={{ marginBottom: "0px" }}>12:30</p>
                   </div>
                   <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                    {language == "english"
+                    {language == "en"
                       ? "New videos was uploaded on th..."
                       : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                   </p>
@@ -277,7 +277,7 @@ function Forum() {
                     marginBottom: "5px",
                   }}
                 >
-                  {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                  {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                 </p>
               </Dropdown.Menu>
             </Dropdown>
@@ -334,7 +334,7 @@ function Forum() {
             )} */}
           </div>
           <h6 className="d-flex justify-content-center ">
-            {/* {language == "english" ? `${userDetails.name}` : "பாலா"} */}
+            {/* {language == "en" ? `${userDetails.name}` : "பாலா"} */}
           </h6>
           <h6 className="d-flex justify-content-center ">
             {/* {userDetails.email} */}
@@ -344,7 +344,7 @@ function Forum() {
             onClick={profileData}
             variant="outline-primary "
           >
-            {language == "english" ? "View" : "பார்வை"}
+            {language == "en" ? "View" : "பார்வை"}
           </Button>
           <hr className="horizantal-first" />
           {/* <div className="d-flex justify-content-center modal-third-container point">
@@ -371,7 +371,7 @@ function Forum() {
               className="mt-2 ms-3 "
               onClick={() => navigate("/change_password")}
             >
-              {language == "english"
+              {language == "en"
                 ? "Change password"
                 : "கடவுச்சொல்லை மாற்று"}
             </h6>
@@ -387,7 +387,7 @@ function Forum() {
           <div className="d-flex justify-content-center point">
             <img src={switchacc} />
             <h6 className="mt-2 ms-3 mb-0 " onClick={switchAccount}>
-              {language == "english" ? "Switch Account" : "கணக்கு சேர்க்க"}
+              {language == "en" ? "Switch Account" : "கணக்கு சேர்க்க"}
             </h6>
           </div>
         </Modal.Body>
@@ -400,13 +400,13 @@ function Forum() {
               onClick={() => setStep(0)}
               className={step === 0 ? "selectDailyTaskforum" : "dailyTaskforum"}
             >
-              {language == "english" ? "My Questions" : "என் கேள்விகள்"}
+              {language == "en" ? "My Questions" : "என் கேள்விகள்"}
             </p>
             <p
               onClick={() => setStep(1)}
               className={step === 1 ? "selectAllTaskforum" : "dailyTaskforum"}
             >
-              {language == "english" ? "Open Questions" : "கேள்விகள்"}
+              {language == "en" ? "Open Questions" : "கேள்விகள்"}
             </p>
           </div>
         </div>
@@ -424,10 +424,10 @@ function Forum() {
               <div className="d-flex justify-content-between w-100">
                 <div>
                   <p className="ms-3 para-one">
-                    {language == "english" ? "Bala" : "பாலா"}
+                    {language == "en" ? "Bala" : "பாலா"}
                   </p>
                   <p className="ms-3 para-two">
-                    17 {language == "english" ? "Jan" : "ஜனவரி"} 2023
+                    17 {language == "en" ? "Jan" : "ஜனவரி"} 2023
                   </p>
                 </div>
 
@@ -436,7 +436,7 @@ function Forum() {
             </div>
             <div>
               <h6 className="para-head">
-                {language == "english"
+                {language == "en"
                   ? "A mother is twice as old as her son. If 20 years ago, the age of the mother was 10 times the age of the son, what is the present age of the mother?"
                   : "ஒரு தாய் தன் மகனை விட இரண்டு மடங்கு வயதானவள். 20 ஆண்டுகளுக்கு முன்பு, தாயின் வயது மகனின் வயதை விட 10 மடங்கு என்றால், அம்மாவின் தற்போதைய வயது என்ன?"}
               </h6>
@@ -449,20 +449,20 @@ function Forum() {
               <div className="d-flex justify-content-between w-100">
                 <div className="mt-1">
                   <p className="ms-3 para-one">
-                    {language == "english"
+                    {language == "en"
                       ? "Content Admin1"
                       : "உள்ளடக்க நிர்வாகி1"}{" "}
                     16:05
                   </p>
                   <p className="ms-3 para-two ">
-                    17 {language == "english" ? "Jan" : "ஜனவரி"} 2023
+                    17 {language == "en" ? "Jan" : "ஜனவரி"} 2023
                   </p>
                 </div>
 
                 <p className="para-three">16:05</p>
               </div>
             </div>
-            {language == "english" ? (
+            {language == "en" ? (
               <div className="para-four">
                 <p className="para">Let the age of son = X years </p>
                 <p className="para"> Age of mother would be =2X </p>
@@ -496,11 +496,11 @@ function Forum() {
               <img src={up} className="logo-one" />
               <img src={down} className="logo-one" />
               <p className="mt-2">
-                {language == "english" ? "Reply" : "பதில்"}
+                {language == "en" ? "Reply" : "பதில்"}
               </p>
               <img src={time} className="logo-one" />
               <p className="mt-2">
-                3 {language == "english" ? "days ago" : "நாட்களுக்கு முன்பு"}
+                3 {language == "en" ? "days ago" : "நாட்களுக்கு முன்பு"}
               </p>
             </div> */}
             <hr className="horizontal-inner-data" />
@@ -516,10 +516,10 @@ function Forum() {
               <div className="w-100 justify-content-between d-flex">
                 <div>
                   <p className="ms-3 para-one">
-                    {language == "english" ? "Bala" : "பாலா"}
+                    {language == "en" ? "Bala" : "பாலா"}
                   </p>
                   <p className="ms-3 para-two">
-                    17 {language == "english" ? "Jan" : "ஜனவரி"} 2023
+                    17 {language == "en" ? "Jan" : "ஜனவரி"} 2023
                   </p>
                 </div>
 
@@ -528,7 +528,7 @@ function Forum() {
             </div>
             <div>
               <h6 className="para-head">
-                {language == "english"
+                {language == "en"
                   ? ` A monoatomic ideal gas expanded isothermally to double its
                 initial volume. It then expanded adiabatically to double the
                 volume again. Find the final pressure if the initial pressure of
@@ -547,13 +547,13 @@ function Forum() {
               <div className="d-flex justify-content-between w-100">
                 <div className="mt-1">
                   <p className="ms-3 para-one">
-                    {language == "english"
+                    {language == "en"
                       ? "Content Admin1"
                       : "உள்ளடக்க நிர்வாகி1"}{" "}
                     16:05
                   </p>
                   <p className="ms-3 para-two">
-                    17 {language == "english" ? "Jan" : "ஜனவரி"} 2023
+                    17 {language == "en" ? "Jan" : "ஜனவரி"} 2023
                   </p>
                 </div>
 
@@ -561,7 +561,7 @@ function Forum() {
               </div>
             </div>
 
-            {language == "english" ? (
+            {language == "en" ? (
               <div className="para-four">
                 <p className="para">Let the age of son = X years </p>
                 <p className="para"> Age of mother would be =2X </p>
@@ -594,11 +594,11 @@ function Forum() {
               <img className="logo-one" src={up} />
               <img className="logo-one" src={down} />
               <p className="mt-2">
-                {language == "english" ? "Reply" : "பதில்"}
+                {language == "en" ? "Reply" : "பதில்"}
               </p>
               <img className="logo-one" src={time} />
               <p className="mt-2">
-                3 {language == "english" ? "days ago" : "நாட்களுக்கு முன்பு"}
+                3 {language == "en" ? "days ago" : "நாட்களுக்கு முன்பு"}
               </p>
             </div> */}
             <hr className="horizontal-inner-data" />
@@ -618,10 +618,10 @@ function Forum() {
               <div className="d-flex justify-content-between w-100">
                 <div>
                   <p className="ms-3 para-one ">
-                    {language == "english" ? "Bala" : "பாலா"}
+                    {language == "en" ? "Bala" : "பாலா"}
                   </p>
                   <p className="ms-3 para-two">
-                    17 {language == "english" ? "Jan" : "ஜனவரி"} 2023
+                    17 {language == "en" ? "Jan" : "ஜனவரி"} 2023
                   </p>
                 </div>
 
@@ -630,7 +630,7 @@ function Forum() {
             </div>
             <div>
               <h6 className="para-head">
-                {language == "english"
+                {language == "en"
                   ? "Find work done in moving a particle of mass 0.5 kg from x = 0 to x = 2. V = 3x2 +4"
                   : "0.5 கிலோ எடையுள்ள ஒரு துகளை x = 0 இலிருந்து நகர்த்துவதில் செய்யப்பட்ட வேலையைக் கண்டறியவும்  x = 2. V = 3x2 +4"}
               </h6>
@@ -643,11 +643,11 @@ function Forum() {
               <img src={up} className="logo-one" />
               <img src={down} className="logo-one" />
               <p className="mt-2">
-                {language == "english" ? "Reply" : "பதில்"}
+                {language == "en" ? "Reply" : "பதில்"}
               </p>
               <img src={time} className="logo-one" />
               <p className="mt-2">
-                3 {language == "english" ? "days ago" : "நாட்களுக்கு முன்பு"}
+                3 {language == "en" ? "days ago" : "நாட்களுக்கு முன்பு"}
               </p>
             </div> */}
             <hr

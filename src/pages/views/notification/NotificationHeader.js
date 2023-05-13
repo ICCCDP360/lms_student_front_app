@@ -21,16 +21,16 @@ function NotificationHeader() {
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const [userDetails, setUserDetails] = useState([]);
   const [fullData, setFullData] = useState([]);
 
   const other = localStorage.getItem("otherAccDetails");
-  const otherDetails = JSON.parse(other);
+  const otherDetails = other;
 
   useEffect(() => {
     const datas = localStorage.getItem("userid");
-    dashboardServices.profiledetails(JSON.parse(datas)).then((res) => {
+    dashboardServices.profiledetails(datas).then((res) => {
       setFullData(res.data);
     });
   }, []);
@@ -41,14 +41,14 @@ function NotificationHeader() {
     //   userDetails
     //   // userOtherdetails,
     // );
-    setUserDetails(JSON.parse(localStorage.getItem("userDetails")));
+    setUserDetails(localStorage.getItem("userDetails"));
     // SetUserOtherDetails(JSON.parse(localStorage.getItem("otherAccDetails")));
   }, []);
 
   const switchAccount = () => {
     // console.log(JSON.parse(localStorage.getItem("parentDetails")), "parents");
     let data = {
-      phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
+      phone: localStorage.getItem("parentDetails").phone,
     };
     dashboardServices
       .DashboardSwitchAcc(data)
@@ -70,8 +70,8 @@ function NotificationHeader() {
         }
       });
   };
-  const name = JSON.parse(localStorage.getItem("otherAccDetails"))[0].name;
-  const id = JSON.parse(localStorage.getItem("otherAccDetails"))[0]._id;
+  const name = localStorage.getItem("otherAccDetails")[0].name;
+  const id = localStorage.getItem("otherAccDetails")[0]._id;
 
   const otherAcc = () => {
     let data = {
@@ -84,8 +84,8 @@ function NotificationHeader() {
     });
   };
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -106,7 +106,7 @@ function NotificationHeader() {
                 fontWeight: "700",
               }}
             >
-              {language == "english" ? "Notification" : "அறிவிப்பு"}
+              {language == "en" ? "Notification" : "அறிவிப்பு"}
             </p>
           </div>
           <div
@@ -125,11 +125,11 @@ function NotificationHeader() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                  <Dropdown.Item onClick={enLang}>
+                    {language == "en" ? "en" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -162,7 +162,7 @@ function NotificationHeader() {
                 fontWeight: "700",
               }}
             >
-              {language == "english" ? "Notification" : "அறிவிப்பு"}
+              {language == "en" ? "Notification" : "அறிவிப்பு"}
             </p>
           </div>
           <div
@@ -181,11 +181,11 @@ function NotificationHeader() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                  <Dropdown.Item onClick={enLang}>
+                    {language == "en" ? "en" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -213,7 +213,7 @@ function NotificationHeader() {
           </div>
           <h6 className="d-flex justify-content-center ">{userDetails.name}</h6>
           {/* <h6 className="d-flex justify-content-center ">
-            {language == "english" ? `${userDetails.name}` : "பாலா"}
+            {language == "en" ? `${userDetails.name}` : "பாலா"}
           </h6> */}
           <h6 className="d-flex justify-content-center ">
             {userDetails.email}
@@ -225,7 +225,7 @@ function NotificationHeader() {
             // className="mt-2"
             variant="outline-primary "
           >
-            {language == "english" ? "View" : "பார்வை"}
+            {language == "en" ? "View" : "பார்வை"}
           </Button>
           <hr className="horizantal-first" />
           {/* <div className="d-flex justify-content-center modal-third-container point">
@@ -252,7 +252,7 @@ function NotificationHeader() {
               className="mt-2 ms-3 "
               onClick={() => navigate("/change_password")}
             >
-              {language == "english"
+              {language == "en"
                 ? "Change password"
                 : "கடவுச்சொல்லை மாற்று"}
             </h6>
@@ -268,7 +268,7 @@ function NotificationHeader() {
           <div className="d-flex justify-content-center point">
             <img src={switchacc} />
             <h6 className="mt-2 ms-3 " onClick={switchAccount}>
-              {language == "english" ? "Switch Account" : "கணக்கு சேர்க்க"}
+              {language == "en" ? "Switch Account" : "கணக்கு சேர்க்க"}
             </h6>
           </div>
         </Modal.Body>

@@ -4,7 +4,7 @@ class subjectService {
   subjectServiceSelect = (trigger) => {
     var config = {
       headers: {
-        "x-access-token": JSON.parse(localStorage.getItem("access_tokens")),
+        "x-access-token": localStorage.getItem("access_tokens"),
         "Content-Type": "application/json",
       },
     };

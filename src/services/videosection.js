@@ -16,7 +16,7 @@ class videoServices {
     return new Promise((resolve, reject) => {
       instanceBaseurl1
         // .get(`/api/v1/tasks/concept/conceptVideo/${data}`)
-        .get(`/cdp/course/getCourseVideosList/${data}/?language=english`)
+        .get(`/cdp/course/getCourseVideosList/${data}/?language=en`)
         
         .then((res) => {
           resolve(res);

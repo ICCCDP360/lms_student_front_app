@@ -9,7 +9,7 @@ function PractisepageResult({
   handlebutton,
   resultPage,
 }) {
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const [assesmentData, setAssesmentData] = useState([]);
 
   const navigate = useNavigate();
@@ -36,12 +36,12 @@ function PractisepageResult({
       <div className="result-show-bottom-container">
         <div className="result-show-header-container">
           <h6 className="result-show-heading">
-            {language == "english"
+            {language == "en"
               ? "You have successfully completed your practice."
               : "உங்கள் பயிற்சியை வெற்றிகரமாக முடித்துவிட்டீர்கள்."}
           </h6>
           <p className="result-show-content">
-            {language == "english"
+            {language == "en"
               ? "Please take your assessment to get your reward points."
               : "உங்கள் வெகுமதி புள்ளிகளைப் பெற உங்கள் மதிப்பீட்டை எடுத்துக் கொள்ளவும்."}
           </p>
@@ -57,7 +57,7 @@ function PractisepageResult({
               )
             }
           >
-            {language == "english" ? "Take Test" : "சோதனை"}
+            {language == "en" ? "Take Test" : "சோதனை"}
           </button>
         </div>
         <div className="result-show-question-container">

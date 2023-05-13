@@ -9,9 +9,9 @@ import Language from "../../../assets/images/language.svg";
 import { Dropdown } from "react-bootstrap";
 
 function Login() {
-  const language = localStorage.getItem("lang") || "english";
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const language = localStorage.getItem("lang") || "en";
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -44,11 +44,11 @@ function Login() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

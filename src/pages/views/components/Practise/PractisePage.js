@@ -22,7 +22,7 @@ function PractisePage() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [hint, setHint] = useState(false);
   const { state } = useLocation();
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   const data = state.data;
 
@@ -288,7 +288,7 @@ function PractisePage() {
     <div className="practise-page-full-container">
       <div className="practise-page-inside-container">
         <p className="practise-page-header">
-          {/* {language == "english" ? "Digestive System" : "செரிமான அமைப்பு"} */}
+          {/* {language == "en" ? "Digestive System" : "செரிமான அமைப்பு"} */}
           {title}
         </p>
 
@@ -302,7 +302,7 @@ function PractisePage() {
                       <div className="showscore-inside-container">
                         <div className="show-header-img-container">
                           <img src={VideoComplete} />
-                          <p>{language == "english" ? "Video" : "வீடியோ"}</p>
+                          <p>{language == "en" ? "Video" : "வீடியோ"}</p>
                         </div>
                         <div className="show-header-img-container">
                           <img src={PdfComplete} />
@@ -311,7 +311,7 @@ function PractisePage() {
                         <div className="show-header-img-container">
                           <img src={PractiseSelect} />
                           <p>
-                            {language == "english" ? "Practice" : "பயிற்சி"}
+                            {language == "en" ? "Practice" : "பயிற்சி"}
                           </p>
                         </div>
                         {/* {console.log(assesmentData, "333")} */}
@@ -328,7 +328,7 @@ function PractisePage() {
                         >
                           <img src={AssestUnSelect} />
                           <p>
-                            {language == "english" ? "Assessment" : "மதிப்பீடு"}
+                            {language == "en" ? "Assessment" : "மதிப்பீடு"}
                           </p>
                         </div>
                       </div>
@@ -473,7 +473,7 @@ function PractisePage() {
                                     fontWeight: "400",
                                   }}
                                 >
-                                  {language == "english"
+                                  {language == "en"
                                     ? "Explanation"
                                     : "விளக்கம்"}
                                 </p>
@@ -514,7 +514,7 @@ function PractisePage() {
                                 fontWeight: "400",
                               }}
                             >
-                              {language == "english"
+                              {language == "en"
                                 ? "Questions"
                                 : "கேள்விகள்"}
                             </p>
@@ -549,7 +549,7 @@ function PractisePage() {
                           onClick={handleprev}
                         >
                           {" "}
-                          {language == "english" ? "Prev" : "முந்தைய"}
+                          {language == "en" ? "Prev" : "முந்தைய"}
                         </Button>
                       ) : (
                         <Button
@@ -558,7 +558,7 @@ function PractisePage() {
                           onClick={handleprev}
                         >
                           {" "}
-                          {language == "english" ? "Prev" : "முந்தைய"}
+                          {language == "en" ? "Prev" : "முந்தைய"}
                         </Button>
                       )}
 
@@ -570,7 +570,7 @@ function PractisePage() {
                             }
                             onClick={() => checkValue()}
                           >
-                            {language == "english"
+                            {language == "en"
                               ? "Check answer"
                               : "சரிபார்க்கவும்"}
                           </button>
@@ -582,7 +582,7 @@ function PractisePage() {
                             className="data-next"
                             onClick={() => handleData()}
                           >
-                            {language == "english" ? "Next" : "அடுத்தது"}
+                            {language == "en" ? "Next" : "அடுத்தது"}
                           </button>
                         </>
                       )}

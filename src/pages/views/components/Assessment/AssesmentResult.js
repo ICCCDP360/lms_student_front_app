@@ -17,7 +17,7 @@ function AssesmentResult({
   resultdata,
   correctAnswerCount,
 }) {
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   // const navigate = useNavigate();
   // const { state } = useLocation();
   // console.log(state, "manojkumar");
@@ -33,7 +33,7 @@ function AssesmentResult({
       <div>
         <div className="d-flex justify-content-between">
           <h1 style={{ fontSize: "24px", fontWeight: "700" }}>
-            {/* {language == "english" ? "Digestive System" : "செரிமான அமைப்பு"} */}
+            {/* {language == "en" ? "Digestive System" : "செரிமான அமைப்பு"} */}
             {title}
           </h1>
 
@@ -42,7 +42,7 @@ function AssesmentResult({
             variant="outline-success"
             onClick={retake}
           >
-            {language == "english" ? "Retake Test" : "மீண்டும் சோதனை"}
+            {language == "en" ? "Retake Test" : "மீண்டும் சோதனை"}
           </Button>
         </div>
         <div
@@ -72,19 +72,19 @@ function AssesmentResult({
           >
             <div style={{ display: "flex" }}>
               <div style={{ width: "40%" }}>
-                <h5>{language == "english" ? "Summary" : "சுருக்கம்"}</h5>
+                <h5>{language == "en" ? "Summary" : "சுருக்கம்"}</h5>
                 <p className="mt-3">
-                  {language == "english"
+                  {language == "en"
                     ? `Total number of questions: ${data.length}`
                     : "கேள்விகளின் மொத்த எண்ணிக்கை: 7"}
                 </p>
                 <p>
-                  {language == "english"
+                  {language == "en"
                     ? `Number of questions attempted: ${resultdata[0].attended.length}`
                     : `முயற்சித்த கேள்விகளின் எண்ணிக்கை: ${resultdata[0].attended.length}`}
                 </p>
                 <p>
-                  {language == "english"
+                  {language == "en"
                     ? `Number of questions correct:  ${correctAnswerCount}`
                     : `சரியான கேள்விகளின் எண்ணிக்கை:  ${correctAnswerCount}`}
                 </p>
@@ -111,17 +111,17 @@ function AssesmentResult({
               }}
             >
               {/* <p>
-                {language == "english"
+                {language == "en"
                   ? "Number of taken attempt: 5"
                   : "எடுக்கப்பட்ட முயற்சிகளின் எண்ணிக்கை: 5"}
               </p> */}
               {/* <p>
-                {language == "english"
+                {language == "en"
                   ? "Number of remaining attempt: 2"
                   : "மீதமுள்ள முயற்சிகளின் எண்ணிக்கை: 2"}
               </p> */}
               <p>
-                {language == "english"
+                {language == "en"
                   ? `Time spent: ${resultdata[1]}mins`
                   : `செலவழித்த நேரம்: ${resultdata[1]} நிமிடங்கள்`}
               </p>
@@ -136,7 +136,7 @@ function AssesmentResult({
                   fontSize: "16px",
                 }}
               >
-                {language == "english" ? "Go To Next" : "அடுத்தது"}
+                {language == "en" ? "Go To Next" : "அடுத்தது"}
               </Button>
             </div>
           </div>
@@ -232,7 +232,7 @@ function AssesmentResult({
                           marginTop: "4%",
                         }}
                       >
-                        {language == "english" ? "Correct" : "சரி"}
+                        {language == "en" ? "Correct" : "சரி"}
                       </p>
                     </div>
                     <div className="d-flex">
@@ -257,7 +257,7 @@ function AssesmentResult({
                           marginTop: "4%",
                         }}
                       >
-                        {language == "english" ? "Wrong" : "தவறு"}
+                        {language == "en" ? "Wrong" : "தவறு"}
                       </p>
                     </div>
                     <div className="d-flex">
@@ -274,7 +274,7 @@ function AssesmentResult({
                       >
                         <img src={Notans} style={{ marginTop: "-40%" }} />
                       </div>
-                      {language == "english" ? (
+                      {language == "en" ? (
                         <p
                           style={{
                             marginLeft: "10%",

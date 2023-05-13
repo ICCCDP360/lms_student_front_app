@@ -37,12 +37,12 @@ function Dashboard() {
   const {state}=useLocation()
   console.log(state,'manojk');
 
-  // const [language, setLanguage] = useState("english");
-  const language = localStorage.getItem("lang") || "english";
+  // const [language, setLanguage] = useState("en");
+  const language = localStorage.getItem("lang") || "en";
 
   const [setTaskRem] = useState([]);
   const detail = localStorage.getItem("userDetails");
-  const userdetail = JSON.parse(detail);
+  const userdetail = detail;
   // console.log(userdetail, "kk");
   // const other = localStorage.getItem("otherAccDetails");
   // const otherDetails = JSON.parse(other);
@@ -58,7 +58,7 @@ function Dashboard() {
       const datas = localStorage.getItem("id");
 
       dashboardServices
-        .profiledetails(JSON.parse(datas))
+        .profiledetails(datas)
 
         .then((res) => {
           resolve(res);
@@ -213,7 +213,7 @@ function Dashboard() {
   //   });
   // };
   const englishLang = () => {
-    localStorage.setItem("lang", "english");
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -228,13 +228,13 @@ function Dashboard() {
         <div className="header-container">
           <div className="header-leftside-container">
             <h2 className="heading-content">
-              {language == "english" ? "Welcome" : "வரவேற்பு"},{" "}
+              {language == "en" ? "Welcome" : "வரவேற்பு"},{" "}
               {/* {state?.id?.userName} */}
               Test
             </h2>
             <p className="header-sub-content">
             {/* ${state?.id?.standard[0].standard} */}
-              {language == "english"
+              {language == "en"
                 ? `11th Standard - Last logged in: 18 Jan, 2023 06:00 pm`
                 : "7ஆம் வகுப்பு - கடைசியாக உள்நுழைந்தது: 18 ஜனவரி, 2023 மாலை 06:00 மணி"}
             </p>
@@ -256,10 +256,10 @@ function Dashboard() {
 
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                    {language == "en" ? "English" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -291,14 +291,14 @@ function Dashboard() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>01:00</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -325,14 +325,14 @@ function Dashboard() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>02:38</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New lesson was added in chemistry"
                         : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}{" "}
                     </p>
@@ -362,7 +362,7 @@ function Dashboard() {
                       <p style={{ marginBottom: "0px" }}>12:30</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -384,7 +384,7 @@ function Dashboard() {
                       marginBottom: "5px",
                     }}
                   >
-                    {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                    {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                   </p>
                 </Dropdown.Menu>
               </Dropdown>
@@ -403,8 +403,8 @@ function Dashboard() {
         <div className="header-container">
           <div className="header-leftside-container">
             <h2 className="heading-content">
-              {/* {language == "english" ? "Welcome" : "வரவேற்பு"},{" "}
-            {language == "english" ? "Bala" : "பாலா"} */}
+              {/* {language == "en" ? "Welcome" : "வரவேற்பு"},{" "}
+            {language == "en" ? "Bala" : "பாலா"} */}
               {/* {item.lang.welcome[0]} {userDetails.stu_name} */}
             </h2>
           </div>
@@ -425,10 +425,10 @@ function Dashboard() {
 
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={englishLang}>
-                    {language == "english" ? "English" : "ஆங்கிலம்"}
+                    {language == "en" ? "En" : "ஆங்கிலம்"}
                   </Dropdown.Item>
                   <Dropdown.Item onClick={tamilLang}>
-                    {language == "english" ? "Tamil" : "தமிழ்"}
+                    {language == "en" ? "Tamil" : "தமிழ்"}
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -460,14 +460,14 @@ function Dashboard() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>01:00</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -494,14 +494,14 @@ function Dashboard() {
                       }}
                     >
                       <p style={{ marginBottom: "0px" }}>
-                        {language == "english"
+                        {language == "en"
                           ? "Content_Admin"
                           : "உள்ளடக்க_நிர்வாகம்"}
                       </p>
                       <p style={{ marginBottom: "0px" }}>02:38</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New lesson was added in chemistry"
                         : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}{" "}
                     </p>
@@ -531,7 +531,7 @@ function Dashboard() {
                       <p style={{ marginBottom: "0px" }}>12:30</p>
                     </div>
                     <p style={{ marginBottom: "0px", fontSize: "17px" }}>
-                      {language == "english"
+                      {language == "en"
                         ? "New videos was uploaded on th..."
                         : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                     </p>
@@ -553,7 +553,7 @@ function Dashboard() {
                       marginBottom: "5px",
                     }}
                   >
-                    {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                    {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                   </p>
                 </Dropdown.Menu>
               </Dropdown>
@@ -585,7 +585,7 @@ function Dashboard() {
             </div>
 
             <h6 className="d-flex justify-content-center ">
-              {/* {language == "english" ? "Bala" : "பாலா"} */}
+              {/* {language == "en" ? "Bala" : "பாலா"} */}
 
               {state?.id?.userName}
             </h6>
@@ -597,7 +597,7 @@ function Dashboard() {
               className="modal-second-container mt-2"
               variant="outline-primary "
             >
-              {language == "english" ? "View" : "பார்வை"}
+              {language == "en" ? "View" : "பார்வை"}
               {/* {item.lang.setting[0]} */}
             </Button>
             {/* {otherDetails.map((oacc) => (
@@ -627,7 +627,7 @@ function Dashboard() {
                 //   navigate("/change_password", { state: { stuId: detail._id } })
                 // }
               >
-                {language == "english"
+                {language == "en"
                   ? "Change password"
                   : "கடவுச்சொல்லை மாற்று"}
               </h6>
@@ -638,7 +638,7 @@ function Dashboard() {
               <h6 className="mt-2 ms-3 " 
               // onClick={switchAccount}
               >
-                {language == "english" ? "Switch Account" : "கணக்கை மாற்றவும்"}
+                {language == "en" ? "Switch Account" : "கணக்கை மாற்றவும்"}
               </h6>
             </div>
           </Modal.Body>
@@ -650,27 +650,27 @@ function Dashboard() {
           <div>
             <p
               className={
-                language == "english"
+                language == "en"
                   ? "leftside-heading"
                   : "leftside-heading-tamil"
               }
             >
               {/* {item.lang.title} */}
-              {language == "english" ? "Task Remainder" : "பணி மீதமுள்ளவை"}
+              {language == "en" ? "Task Remainder" : "பணி மீதமுள்ளவை"}
             </p>
             <div className="sub-container">
               <p className="subject-name">
-                {language == "english"
+                {language == "en"
                   ? "Science-  Nutrition in Animals"
                   : "இயற்பியல்"}
                 {/* {item.lang.subject} */}
               </p>
               <p
                 className={
-                  language == "english" ? "total-timing" : "total-timing-tamil"
+                  language == "en" ? "total-timing" : "total-timing-tamil"
                 }
               >
-                {language == "english"
+                {language == "en"
                   ? "Total: 8 Chapter"
                   : "மொத்தம்: 8 அத்தியாயம்"}
                 {/* {item.lang.total[0]}: 8 {item.lang.total[1]} */}
@@ -678,11 +678,11 @@ function Dashboard() {
             </div>
             <button
               className={
-                language == "english" ? "leftside-btn" : "leftside-btn-tamil"
+                language == "en" ? "leftside-btn" : "leftside-btn-tamil"
               }
               onClick={() => navigate("/content")}
             >
-              {language == "english" ? "Start" : "தொடங்கு"}
+              {language == "en" ? "Start" : "தொடங்கு"}
               {/* {item.lang.total[2]} */}
             </button>
           </div>
@@ -696,26 +696,26 @@ function Dashboard() {
           <div>
             <p
               className={
-                language == "english" ? "notice-header" : "notice-header-tamil"
+                language == "en" ? "notice-header" : "notice-header-tamil"
               }
             >
-              {language == "english" ? "Notice Board" : "அறிவிப்பு பலகை"}
+              {language == "en" ? "Notice Board" : "அறிவிப்பு பலகை"}
               {/* {item.lang.title} */}
             </p>
             <p className="notice-content">
               {/* {item.lang.content} */}
-              {language == "english"
+              {language == "en"
                 ? "New video on thermodynamics was uploaded."
                 : "வெப்ப இயக்கவியல் பற்றிய புதிய வீடியோ பதிவேற்றப்பட்டது."}
             </p>
             <button
               className={
-                language == "english" ? "notice-btn" : "notice-btn-tamil"
+                language == "en" ? "notice-btn" : "notice-btn-tamil"
               }
               onClick={() => navigate("/content")}
             >
               {/* {item.lang.total[2]} */}
-              {language == "english" ? "Start" : "தொடங்கு"}
+              {language == "en" ? "Start" : "தொடங்கு"}
             </button>
           </div>
           <div>
@@ -732,28 +732,28 @@ function Dashboard() {
           <div className="standing-inside-container">
             <img
               src={Trophy}
-              className={language == "english" ? "" : "trophy-img"}
+              className={language == "en" ? "" : "trophy-img"}
             />
             <div className="rightside-content-container">
               <p
                 className={
-                  language == "english"
+                  language == "en"
                     ? "content-header"
                     : "content-header-tamil"
                 }
               >
                 {/* {item.lang.standing} */}
-                {language == "english" ? "Standings" : "நிலைப்பாடுகள்"}
+                {language == "en" ? "Standings" : "நிலைப்பாடுகள்"}
               </p>
               <div className="subcontent-container">
                 <p
                   className={
-                    language == "english"
+                    language == "en"
                       ? "divider-sider-content"
                       : "divider-sider-content-tamil"
                   }
                 >
-                  {language == "english" ? "Bronze" : "வெண்கலம்"}
+                  {language == "en" ? "Bronze" : "வெண்கலம்"}
                   {/* {item.lang.cup} */}
                 </p>
               </div>
@@ -761,15 +761,15 @@ function Dashboard() {
             <div className="star-container">
               <img
                 src={Star}
-                className={language == "english" ? "" : "star-img"}
+                className={language == "en" ? "" : "star-img"}
               />
               <img
                 src={HalfStar}
-                className={language == "english" ? "" : "star-img"}
+                className={language == "en" ? "" : "star-img"}
               />
               <img
                 src={EmptyStar}
-                className={language == "english" ? "" : "star-img"}
+                className={language == "en" ? "" : "star-img"}
               />
             </div>
           </div>
@@ -779,22 +779,22 @@ function Dashboard() {
             <div className="average-inside-container">
               <img
                 src={Target}
-                className={language == "english" ? "" : "target-img"}
+                className={language == "en" ? "" : "target-img"}
               />
               <div className="average-content-container">
                 <p
                   className={
-                    language == "english"
+                    language == "en"
                       ? "average-content"
                       : "average-content-tamil"
                   }
                 >
-                  {language == "english" ? "Percentage" : "சதவிதம்"}
+                  {language == "en" ? "Percentage" : "சதவிதம்"}
                   {/* {item.lang.avergescore} */}
                 </p>
                 <p
                   className={
-                    language == "english"
+                    language == "en"
                       ? "average-subcontent"
                       : "average-subcontent-tamil"
                   }
@@ -808,31 +808,31 @@ function Dashboard() {
             <div className="average-inside-container">
               <img
                 src={Clock}
-                className={language == "english" ? "" : "target-img"}
+                className={language == "en" ? "" : "target-img"}
               />
               <div className="average-content-container">
                 <p
                   className={
-                    language == "english"
+                    language == "en"
                       ? "average-content"
                       : "average-content-tamil1"
                   }
                 >
-                  {language == "english"
+                  {language == "en"
                     ? "Total Time Spent"
                     : "செலவழித்த மொத்த நேரம்"}
                   {/* {item.lang.totaltimespent[0]} */}
                 </p>
                 <p
                   className={
-                    language == "english"
+                    language == "en"
                       ? "average-subcontent"
                       : "average-subcontent-tamil"
                   }
                 >
                   112
                   {/* {item.lang.totaltimespent[1]} */}
-                  {language == "english" ? "hrs" : "மணி"}
+                  {language == "en" ? "hrs" : "மணி"}
                 </p>
               </div>
             </div>
@@ -847,7 +847,7 @@ function Dashboard() {
         <div className="circle-graph-container">
           <p className="circle-graph-header">
             {/* {item.lang.title} */}
-            {language == "english"
+            {language == "en"
               ? "Learning Summary"
               : "தலைப்புகள் முடிக்கப்பட்டன"}
           </p>
@@ -883,7 +883,7 @@ function Dashboard() {
         <div className="bar-graph-container">
           <div className="bar-graph-header">
             <p className="bar-graph-heading">
-              {language == "english"
+              {language == "en"
                 ? "Performance Score"
                 : "செயல்திறன் மதிப்பெண்"}
             </p>
@@ -892,13 +892,13 @@ function Dashboard() {
               className="graph-header-form"
               aria-label="Default select example"
             >
-              <option>{language == "english" ? "Science" : "அறிவியல்"}</option>
+              <option>{language == "en" ? "Science" : "அறிவியல்"}</option>
               <option value="1">
-                {language == "english" ? "Mathematics" : "கணிதம்"}
+                {language == "en" ? "Mathematics" : "கணிதம்"}
               </option>
             </Form.Select>
           </div>
-          {language == "english" ? (
+          {language == "en" ? (
             <div id="chart" className="bar-graph-chart">
               <ReactApexChart
                 options={demoValue.options}

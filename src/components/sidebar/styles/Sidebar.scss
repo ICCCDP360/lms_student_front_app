@@ -1,7 +1,7 @@
 @use "../../../scss/abstract/" as *;
 
 .sidebar-full-container {
-  width: 180px;
+  width: 16%;
   height: 100vh;
   background-color: white;
   display: flex;
@@ -42,7 +42,7 @@
     margin-top: 5%;
     .single-sidecontent {
       display: flex;
-      padding: 7%;
+      padding: 9%;
       cursor: pointer;
       .sidetext-content {
         margin-top: auto;
@@ -55,7 +55,7 @@
     .single-sidecontent-active {
       // color: white;
       display: flex;
-      padding: 6%;
+      padding: 9%;
       cursor: pointer;
       background-color: #FBD0CC;
       border-left: 3px solid #9C1303;

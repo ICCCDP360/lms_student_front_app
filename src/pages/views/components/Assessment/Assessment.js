@@ -54,7 +54,7 @@ function Assessment() {
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState("");
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const [skc, setSkc] = useState(0);
   const [submittedDataCount, setSubmittedDataCount] = useState([]);
   const [skippedQuestion, setSkippedQuestion] = useState([]);
@@ -335,7 +335,7 @@ function Assessment() {
     let submittedData = {
       attended: answeredQuestion,
       notattended: skippedQuestion,
-      user_id: JSON.parse(localStorage.getItem("userDetails"))._id,
+      user_id: localStorage.getItem("userDetails")._id,
     };
     setSubmittedDataCount((submittedDataCount) => [
       ...submittedDataCount,
@@ -343,9 +343,9 @@ function Assessment() {
       formatTime(remainingTime),
     ]);
     let assessmentresultstoredata = {
-      student_id: JSON.parse(localStorage.getItem("userDetails"))._id,
+      student_id: localStorage.getItem("userDetails")._id,
       assessment_id: state.id, //assessment_id,
-      lang_type: "english", //lang,
+      lang_type: "en", //lang,
       assessment_result: [
         {
           assessment_id: state.id,
@@ -406,12 +406,12 @@ function Assessment() {
         <Modal.Body>
           <div>
             <h6>
-              {language == "english"
+              {language == "en"
                 ? "Conform your submission"
                 : "உங்கள் சமர்ப்பிப்பை உறுதிப்படுத்தவும்"}
             </h6>
             <p>
-              {language == "english"
+              {language == "en"
                 ? `You have not answered ` +
                   skc +
                   ` questions. Are you sure, you want to submit.`
@@ -429,7 +429,7 @@ function Assessment() {
                 }}
                 onClick={handlesubmit}
               >
-                {language == "english" ? "Submit" : "சமர்ப்பிக்கவும்"}
+                {language == "en" ? "Submit" : "சமர்ப்பிக்கவும்"}
               </Button>
               <Button
                 style={{
@@ -441,7 +441,7 @@ function Assessment() {
                 className="ms-3"
                 onClick={handleClose}
               >
-                {language == "english" ? "Cancel" : "ரத்து செய்"}
+                {language == "en" ? "Cancel" : "ரத்து செய்"}
               </Button>
             </div>
           </div>
@@ -457,12 +457,12 @@ function Assessment() {
         <Modal.Body>
           <div>
             <h6>
-              {language == "english"
+              {language == "en"
                 ? "Conform your submission"
                 : "உங்கள் சமர்ப்பிப்பை உறுதிப்படுத்தவும்"}
             </h6>
             <p>
-              {language == "english"
+              {language == "en"
                 ? `Time Up` +
                   " " +
                   skc +
@@ -481,7 +481,7 @@ function Assessment() {
                 }}
                 onClick={handlesubmit}
               >
-                {language == "english" ? "Submit" : "சமர்ப்பிக்கவும்"}
+                {language == "en" ? "Submit" : "சமர்ப்பிக்கவும்"}
               </Button>
             </div>
           </div>
@@ -530,7 +530,7 @@ function Assessment() {
                   <div>
                     <div className="d-flex justify-content-between">
                       <h1 style={{ fontSize: "24px", fontWeight: "700" }}>
-                        {/* {language == "english"
+                        {/* {language == "en"
                           ? "Digestive System"
                           : "செரிமான அமைப்பு"} */}
                         {title}
@@ -545,7 +545,7 @@ function Assessment() {
                         }}
                         onClick={handleShow}
                       >
-                        {language == "english" ? "Submit" : "சமர்ப்பிக்கவும்"}
+                        {language == "en" ? "Submit" : "சமர்ப்பிக்கவும்"}
                       </button>
                     </div>
                     <div className="assessment-question-container">
@@ -660,7 +660,7 @@ function Assessment() {
                                 fontWeight: "400",
                               }}
                             >
-                              {language == "english"
+                              {language == "en"
                                 ? "Remaining Timing:"
                                 : "மீதமுள்ள நேரம்:"}
                             </p>
@@ -686,7 +686,7 @@ function Assessment() {
                                 margin: "5px",
                               }}
                             >
-                              {language == "english"
+                              {language == "en"
                                 ? "Questions"
                                 : "கேள்விகள்"}
                             </p>
@@ -714,7 +714,7 @@ function Assessment() {
                           </div>
                         </div>
 
-                        {language == "english" ? (
+                        {language == "en" ? (
                           <div className="right-answer-check">
                             <div style={{ display: "flex" }}>
                               <div
@@ -735,7 +735,7 @@ function Assessment() {
                                   marginLeft: "5px",
                                 }}
                               >
-                                {language == "english"
+                                {language == "en"
                                   ? "Answered"
                                   : "பதிலளிக்கப்பட்டது"}
                               </p>
@@ -759,7 +759,7 @@ function Assessment() {
                                   marginLeft: "5px",
                                 }}
                               >
-                                {language == "english"
+                                {language == "en"
                                   ? "Not visited"
                                   : "பார்வையிடவில்லை"}
                               </p>
@@ -782,7 +782,7 @@ function Assessment() {
                                   marginLeft: "5px",
                                 }}
                               >
-                                {language == "english"
+                                {language == "en"
                                   ? "Skipped"
                                   : "தவிர்க்கப்பட்டது"}
                               </p>
@@ -809,7 +809,7 @@ function Assessment() {
                                   marginLeft: "10px",
                                 }}
                               >
-                                {language == "english"
+                                {language == "en"
                                   ? "Answered"
                                   : "பதிலளிக்கப்பட்டது"}
                               </p>
@@ -833,7 +833,7 @@ function Assessment() {
                                   marginLeft: "10px",
                                 }}
                               >
-                                {language == "english"
+                                {language == "en"
                                   ? "Not visited"
                                   : "பார்வையிடவில்லை"}
                               </p>
@@ -856,7 +856,7 @@ function Assessment() {
                                   marginLeft: "10px",
                                 }}
                               >
-                                {language == "english"
+                                {language == "en"
                                   ? "Skipped"
                                   : "தவிர்க்கப்பட்டது"}
                               </p>
@@ -884,7 +884,7 @@ function Assessment() {
                             }}
                           >
                             {" "}
-                            {language == "english" ? "Prev" : "முந்தைய"}
+                            {language == "en" ? "Prev" : "முந்தைய"}
                           </Button>
                         ) : (
                           <Button
@@ -899,7 +899,7 @@ function Assessment() {
                             }}
                           >
                             {" "}
-                            {language == "english" ? "Prev" : "முந்தைய"}
+                            {language == "en" ? "Prev" : "முந்தைய"}
                           </Button>
                         )}
 
@@ -917,7 +917,7 @@ function Assessment() {
                             }
                           >
                             {" "}
-                            {language == "english" ? "Skip" : "தவிர்க்கவும் "}
+                            {language == "en" ? "Skip" : "தவிர்க்கவும் "}
                           </Button>
                           {data.length - 1 <= currentQuestion + 0 ? (
                             <></>
@@ -937,7 +937,7 @@ function Assessment() {
                                   handledata(data[currentQuestion].number)
                                 }
                               >
-                                {language == "english" ? "Next" : "அடுத்த"}
+                                {language == "en" ? "Next" : "அடுத்த"}
                               </Button>
                             </>
                           )}

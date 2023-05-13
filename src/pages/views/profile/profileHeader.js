@@ -15,22 +15,22 @@ import dashboardServices from "../../../services/dashboard";
 function ProfileHeader() {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
   const other = localStorage.getItem("otherAccDetails");
-  const otherDetails = JSON.parse(other);
+  const otherDetails = other;
 
   const user = localStorage.getItem("userDetails");
-  const userDetail = JSON.parse(user);
+  const userDetail = user;
   console.log(userDetail, "user");
 
   const switchAccount = () => {
     return new Promise((resolve, reject) => {
       let data = {
-        phone: JSON.parse(localStorage.getItem("parentDetails")).phone,
+        phone: localStorage.getItem("parentDetails").phone,
       };
       dashboardServices
         .DashboardSwitchAcc(data)
@@ -47,8 +47,8 @@ function ProfileHeader() {
     });
   };
 
-  const name = JSON.parse(localStorage.getItem("otherAccDetails"))[0].name;
-  const id = JSON.parse(localStorage.getItem("otherAccDetails"))[0]._id;
+  const name = localStorage.getItem("otherAccDetails")[0].name;
+  const id = localStorage.getItem("otherAccDetails")[0]._id;
 
   const otherAcc = () => {
     let data = {
@@ -61,8 +61,8 @@ function ProfileHeader() {
     });
   };
 
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -77,7 +77,7 @@ function ProfileHeader() {
       <div className="task-header-container">
         <div className="task-head-text">
           <p className="profile-lang-1">
-            {language == "english" ? "Profile" : "சுயவிவரம்"}
+            {language == "en" ? "Profile" : "சுயவிவரம்"}
           </p>
         </div>
         <div className="rightside-taskcontainer" style={{ cursor: "pointer" }}>
@@ -93,11 +93,11 @@ function ProfileHeader() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item onClick={englishLang}>
-                  {language == "english" ? "English" : "ஆங்கிலம்"}
+                <Dropdown.Item onClick={enLang}>
+                  {language == "en" ? "en" : "ஆங்கிலம்"}
                 </Dropdown.Item>
                 <Dropdown.Item onClick={tamilLang}>
-                  {language == "english" ? "Tamil" : "தமிழ்"}
+                  {language == "en" ? "Tamil" : "தமிழ்"}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -117,14 +117,14 @@ function ProfileHeader() {
                 <div className="drop-submenu">
                   <div className="d-flex justify-content-between">
                     <p className="eng-content">
-                      {language == "english"
+                      {language == "en"
                         ? "Content_Admin"
                         : "உள்ளடக்க_நிர்வாகம்"}
                     </p>
                     <p className="eng-content">01:00</p>
                   </div>
                   <p className="eng-content-2">
-                    {language == "english"
+                    {language == "en"
                       ? "New videos was uploaded on th..."
                       : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                   </p>
@@ -133,14 +133,14 @@ function ProfileHeader() {
                 <div className="container-main-1">
                   <div className="d-flex justify-content-between">
                     <p className="eng-content">
-                      {language == "english"
+                      {language == "en"
                         ? "Content_Admin"
                         : "உள்ளடக்க_நிர்வாகம்"}
                     </p>
                     <p className="eng-content">02:38</p>
                   </div>
                   <p className="eng-content-2">
-                    {language == "english"
+                    {language == "en"
                       ? "New lesson was added in chemistry"
                       : "வேதியியலில் புதிய பாடம் சேர்க்கப்பட்டது"}{" "}
                   </p>
@@ -152,7 +152,7 @@ function ProfileHeader() {
                     <p className="eng-content">12:30</p>
                   </div>
                   <p className="eng-content-2">
-                    {language == "english"
+                    {language == "en"
                       ? "New videos was uploaded on th..."
                       : "அன்று புதிய வீடியோக்கள் பதிவேற்றப்பட்டன..."}
                   </p>
@@ -162,7 +162,7 @@ function ProfileHeader() {
                   className="eng-view-container"
                   onClick={() => navigate("/notification")}
                 >
-                  {language == "english" ? "View all" : "அனைத்தையும் காட்டு"}
+                  {language == "en" ? "View all" : "அனைத்தையும் காட்டு"}
                 </p>
               </Dropdown.Menu>
             </Dropdown>
@@ -219,7 +219,7 @@ function ProfileHeader() {
             )}
           </div>
           <h6 className="d-flex justify-content-center mt-2">
-            {language == "english" ? `${userDetail.name}` : "பாலா"}
+            {language == "en" ? `${userDetail.name}` : "பாலா"}
           </h6>
           <h6 className="d-flex justify-content-center ">{userDetail.email}</h6>
           {/* <Button
@@ -227,7 +227,7 @@ function ProfileHeader() {
             className="modal-second-container mt-2"
             variant="outline-primary "
           >
-            {language == "english" ? "View" : "பார்வை"}
+            {language == "en" ? "View" : "பார்வை"}
           </Button> */}
           {/* <hr className="horizantal-first" /> */}
 
@@ -256,7 +256,7 @@ function ProfileHeader() {
               className="mt-2 ms-3 "
               onClick={() => navigate("/change_password")}
             >
-              {language == "english"
+              {language == "en"
                 ? "Change password"
                 : "கடவுச்சொல்லை மாற்று"}
             </h6>
@@ -265,7 +265,7 @@ function ProfileHeader() {
           <div className="d-flex justify-content-center point">
             <img src={switchacc} />
             <h6 className="mt-2 ms-3 " onClick={switchAccount}>
-              {language == "english" ? "Switch Account" : "கணக்கு சேர்க்க"}
+              {language == "en" ? "Switch Account" : "கணக்கு சேர்க்க"}
             </h6>
           </div>
         </Modal.Body>

@@ -31,7 +31,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
   const [practiseImg, setPractiseImg] = useState(PractiseUnSelect);
   const [assestImg, setAssestImg] = useState(AssestUnSelect);
   const [html, setHtml] = useState("");
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   console.log(titleValue, "hhhhh");
 
@@ -142,13 +142,13 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
       <div className="video-full-container">
         <p className="video-header">
           {title}
-          {/* {language == "english" ? "Digestive System" : "செரிமான அமைப்பு"} */}
+          {/* {language == "en" ? "Digestive System" : "செரிமான அமைப்பு"} */}
         </p>
         <div className="top-header-img-container">
           <div className="header-img-inside-container">
             <div onClick={VideoPlay} className="img-header-container">
               <img src={videoImg} />
-              <p>{language == "english" ? "Video" : "வீடியோ"}</p>
+              <p>{language == "en" ? "Video" : "வீடியோ"}</p>
             </div>
             <div
               onClick={PDFPage}
@@ -156,7 +156,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
               className="img-header-container"
             >
               <img src={pdfImg} />
-              <p>{language == "english" ? "PDF" : "PDF"}</p>
+              <p>{language == "en" ? "PDF" : "PDF"}</p>
             </div>
             <div
               onClick={PractisePage}
@@ -165,7 +165,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
               className="img-header-container"
             >
               <img src={practiseImg} />
-              <p>{language == "english" ? "Practice" : "பயிற்சி"}</p>
+              <p>{language == "en" ? "Practice" : "பயிற்சி"}</p>
             </div>
             <div
               onClick={AssesmentPages}
@@ -174,7 +174,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
               className="img-header-container"
             >
               <img src={assestImg} />
-              <p>{language == "english" ? "Assessment" : "மதிப்பீடு"}</p>
+              <p>{language == "en" ? "Assessment" : "மதிப்பீடு"}</p>
             </div>
           </div>
         </div>
@@ -211,7 +211,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
                 videoDivision === 0 ? "selectVideoPlay" : "dailyVideoPlay"
               }
             >
-              {language == "english" ? "Video Content" : "வீடியோ உள்ளடக்கம்"}
+              {language == "en" ? "Video Content" : "வீடியோ உள்ளடக்கம்"}
             </p>
             <p
               onClick={() => setVideoDicvision(1)}
@@ -219,7 +219,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
                 videoDivision === 1 ? "selectVideoPlay" : "dailyVideoPlay"
               }
             >
-              {language == "english" ? "FAQs" : "FAQs"}
+              {language == "en" ? "FAQs" : "FAQs"}
             </p>
             <p
               onClick={() => setVideoDicvision(2)}
@@ -227,16 +227,16 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
                 videoDivision === 2 ? "selectVideoPlay" : "dailyVideoPlay"
               }
             >
-              {language == "english" ? "Q&A" : "கேள்வி பதில்"}
+              {language == "en" ? "Q&A" : "கேள்வி பதில்"}
             </p>
           </div>
           <div className="video-descrip-container">
             {videoDivision === 0 ? (
               <>
                 <p className="descrip-name">
-                  {language == "english" ? "Description" : "விளக்கம்"}
+                  {language == "en" ? "Description" : "விளக்கம்"}
                 </p>
-                {language == "english" ? (
+                {language == "en" ? (
                   <p className="descrip-content">
                     Nutrition in animals is as important as it is for plants.
                     Plants prepare their own food by the process of
@@ -285,7 +285,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
             ) : null}
             {videoDivision === 1 ? (
               <>
-                {language == "english" ? (
+                {language == "en" ? (
                   <div>
                     <p className="second-video-content">
                       1. The process by which digested food enters the walls of
@@ -349,7 +349,7 @@ function VideoPlayer({ ctrlPage, dataPage, title, user }) {
             {videoDivision === 2 ? (
               <div>
                 <p className="details-head">
-                  {language == "english" ? "Details" : "விவரங்கள்"}
+                  {language == "en" ? "Details" : "விவரங்கள்"}
                 </p>
                 <div className="email-container">
                   <DefaultEditor value={html} onChange={onChange} />

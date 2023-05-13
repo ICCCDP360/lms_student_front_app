@@ -23,7 +23,7 @@ axios.interceptors.request.use(
       config.headers = {
         ...config.headers,
         "Content-Type": "application/json",
-        Authorization: `Bearer ${JSON.parse(token)}`,
+        Authorization: `Bearer ${token}`,
       };
       config.withCredentials = true;
       return config;

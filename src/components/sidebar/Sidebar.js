@@ -24,13 +24,13 @@ function Sidebar() {
   // const [taskRem, setTaskRem] = useState([]);
   // const { state } = useLocation();
   const stepCount = 0;
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
   const [slide, setSlide] = useState(true);
 
   const [schoolDetails, SetschoolDetails] = useState([]);
 
   useEffect(() => {
-    SetschoolDetails(JSON.parse(localStorage.getItem("schoolDetails")));
+    SetschoolDetails(localStorage.getItem("schoolDetails"));
   }, []);
 
   const dashboardPage = () => {
@@ -49,7 +49,7 @@ function Sidebar() {
     return new Promise((resolve, reject) => {
       let data = {
         // phone: JSON.parse(localStorage.getItem("userDetails")).phone,
-        _id: JSON.parse(localStorage.getItem("id")),
+        _id: localStorage.getItem("id"),
       };
 
       sidebarlogServices
@@ -134,7 +134,7 @@ function Sidebar() {
                 )}
                 <p className="sidetext-content">
                   {/* {item.lang.dashboard} */}
-                  {language == "english" ? "Dashboard" : "தகவல்பலகை"}
+                  {language == "en" ? "Dashboard" : "தகவல்பலகை"}
                 </p>
               </div>
               <div
@@ -152,7 +152,7 @@ function Sidebar() {
                 )}
                 <p className="sidetext-content">
                   {/* {item.lang.course} */}
-                  {language == "english" ? "Course" : "பாடநெறி"}
+                  {language == "en" ? "Course" : "பாடநெறி"}
                 </p>
               </div>
               <div
@@ -170,7 +170,7 @@ function Sidebar() {
                 )}
                 <p className="sidetext-content">
                   {/* {item.lang.qna} */}
-                  {language == "english" ? "Q&A" : "கேள்வி பதில்"}
+                  {language == "en" ? "Q&A" : "கேள்வி பதில்"}
                 </p>
               </div>
               <div className="single-sidecontent"
@@ -218,16 +218,16 @@ function Sidebar() {
                 <img
                   src={LogoutIcon}
                   className={
-                    language == "english" ? "logout-img" : "logout-img-tamil"
+                    language == "en" ? "logout-img" : "logout-img-tamil"
                   }
                 />
                 <p
                   className={
-                    language == "english" ? "logout-text" : "logout-text-tamil"
+                    language == "en" ? "logout-text" : "logout-text-tamil"
                   }
                   onClick={logouts}
                 >
-                  {language == "english" ? "Logout" : "வெளியேறு"}
+                  {language == "en" ? "Logout" : "வெளியேறு"}
                 </p>
               </div>
             </button>
@@ -306,7 +306,7 @@ function Sidebar() {
                 <img
                   src={LogoutIcon}
                   className={
-                    language == "english" ? "logout-img" : "logout-img-tamil"
+                    language == "en" ? "logout-img" : "logout-img-tamil"
                   }
                 />
               </div>

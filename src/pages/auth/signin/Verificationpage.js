@@ -12,7 +12,7 @@ function Verificationpage() {
   const [states] = useState(false);
   const { state } = useLocation();
   // console.log(state,'manoj');
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   const slideChange = () => {
     navigate("/login_otp", { state:  state  });
@@ -28,8 +28,8 @@ function Verificationpage() {
       navigate("/login_otp", { state: { number: state.number } });
     },
   });
-  const englishLang = () => {
-    localStorage.setItem("lang", "english");
+  const enLang = () => {
+    localStorage.setItem("lang", "en");
     window.location.reload();
   };
 
@@ -66,11 +66,11 @@ function Verificationpage() {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item onClick={englishLang}>
-                        {language == "english" ? "English" : "ஆங்கிலம்"}
+                      <Dropdown.Item onClick={enLang}>
+                        {language == "en" ? "en" : "ஆங்கிலம்"}
                       </Dropdown.Item>
                       <Dropdown.Item onClick={tamilLang}>
-                        {language == "english" ? "Tamil" : "தமிழ்"}
+                        {language == "en" ? "Tamil" : "தமிழ்"}
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>

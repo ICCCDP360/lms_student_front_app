@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import subjectService from "../../../services/subjectService";
 import classSelectionService from "../../../services/courseStd";
+// import { ProgressBar } from "react-bootstrap";
 
 function Subject() {
   const [step, setStep] = useState(0);
@@ -17,12 +18,13 @@ function Subject() {
 
   const classSelectionApi = (step) => {
     let data = {
-      standard: JSON.parse(localStorage.getItem("std")),
+      standard: localStorage.getItem("std"),
     };
     if (data?.standard) {
       classSelectionService.classSelect(data).then((res) => {
         setState(res);
-        if(step){
+        console.log(res,'res');
+        if (step) {
           let data = {
             standard: res[step].standard,
             subject: res[step].subject,
@@ -32,26 +34,27 @@ function Subject() {
             .subjectServiceSelect(data)
             .then((res) => {
               setSubjectData(res);
-              console.log(res,'res1');
+              console.log(res, "res1");
             })
             .catch((err) => {
-              console.log(err,'err1');
+              console.log(err, "err1");
               setSubjectData(err.response.data);
             });
-        }else{
+        } else {
           let data = {
             standard: res[0].standard,
             subject: res[0].subject,
             courseId: res[0].courseId,
           };
+          console.log(data,'data');
           subjectService
             .subjectServiceSelect(data)
             .then((res) => {
               setSubjectData(res);
-              console.log(res,'res2');
+              console.log(res, "res2");
             })
             .catch((err) => {
-              console.log(err,'err2');
+              console.log(err, "err2");
             });
         }
       });
@@ -101,30 +104,28 @@ function Subject() {
 
       {subjectData.map((data) => (
         <>
-          {data.languageCode == "en" ? (
-            <div className="myTask-full-container mt-4">
-              <div className="mytask-sub-container">
-                <div>
-                  <h1 className="subject-content">{data.name}</h1>
-                  <div className="subject-btm-container mt-3">
-                    <img src={Chapter} />
-                    <p className="subject-btm-text mb-0">
-                      {data.subchaptersCount} Chapter
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => courseContentPage(data)}
-                    className="mytask-btn mt-3"
-                  >
-                    Continue
-                  </button>
+        {data.chapters.map((data,index) => (
+          <div className="myTask-full-container mt-4" key={index}>
+            <div className="mytask-sub-container">
+              <div>
+                <h1 className="subject-content">{data.chapterName}</h1>
+                <div className="subject-btm-container mt-3">
+                  <img src={Chapter} />
+                  <p className="subject-btm-text mb-0">
+                    {data.subchaptersCount} Chapter
+                  </p>
                 </div>
+                <button
+                  onClick={() => courseContentPage(data)}
+                  className="mytask-btn mt-3"
+                >
+                  Continue
+                </button>
               </div>
             </div>
-          ) : (
-            <p>{data.message}</p>
-          )}
-        </>
+          </div>
+        ))}
+      </>
       ))}
 
       {/* {step === 0 ? (

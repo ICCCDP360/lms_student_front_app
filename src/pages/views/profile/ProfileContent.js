@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import logo1 from "../../../assets/avatar.svg";
 // import { useEffect } from "react";
 function ProfileContent() {
-  const language = localStorage.getItem("lang") || "english";
+  const language = localStorage.getItem("lang") || "en";
 
   const { state } = useLocation();
 
@@ -49,12 +49,12 @@ function ProfileContent() {
       </div>
       <div className="sub-container-content-2">
         <p className="personal-para-info">
-          {language == "english" ? "Personal Info" : "தனிப்பட்ட தகவல்"}
+          {language == "en" ? "Personal Info" : "தனிப்பட்ட தகவல்"}
         </p>
         <div className="d-flex justify-content-between w-100">
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "Name" : "பெயர்"}
+              {language == "en" ? "Name" : "பெயர்"}
             </p>
             <input
               value={student?.name}
@@ -64,7 +64,7 @@ function ProfileContent() {
           </div>
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "Mobile Number" : "கைபேசி எண்"}
+              {language == "en" ? "Mobile Number" : "கைபேசி எண்"}
             </p>
             <input
               className="stu-name-input-field "
@@ -76,7 +76,7 @@ function ProfileContent() {
         <div className="d-flex justify-content-beetween w-100">
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "Email" : "மின்னஞ்சல்"}
+              {language == "en" ? "Email" : "மின்னஞ்சல்"}
             </p>
             <input
               className="stu-name-input-field "
@@ -86,7 +86,7 @@ function ProfileContent() {
           </div>
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "Date of Birth" : "பிறந்த தேதி"}
+              {language == "en" ? "Date of Birth" : "பிறந்த தேதி"}
             </p>
             <input
               className="stu-name-input-field"
@@ -98,7 +98,7 @@ function ProfileContent() {
         <div className="d-flex justify-content-between w-100">
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "Gender" : "பாலினம்"}
+              {language == "en" ? "Gender" : "பாலினம்"}
             </p>
             <input
               className="stu-name-input-field"
@@ -108,7 +108,7 @@ function ProfileContent() {
           </div>
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "City" : "நகரம்"}
+              {language == "en" ? "City" : "நகரம்"}
             </p>
             <input
               className="stu-name-input-field"
@@ -118,12 +118,12 @@ function ProfileContent() {
           </div>
         </div>
         <p className="personal-para-info">
-          {language == "english" ? "School Info" : "பள்ளி தகவல்"}
+          {language == "en" ? "School Info" : "பள்ளி தகவல்"}
         </p>
         <div className="d-flex justify-content-between w-100">
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "Role Number" : "பட்டியல் எண்"}
+              {language == "en" ? "Role Number" : "பட்டியல் எண்"}
             </p>
             <input
               className="stu-name-input-field"
@@ -134,7 +134,7 @@ function ProfileContent() {
           <div className="d-flex justify-content-between w-100">
             <div className="w-100">
               <p className="eng-para-1">
-                {language == "english" ? "Standard" : "தரநிலை"}
+                {language == "en" ? "Standard" : "தரநிலை"}
               </p>
               <input
                 className="stu-name-input-field"
@@ -144,7 +144,7 @@ function ProfileContent() {
             </div>
             <div className="w-100">
               <p className="eng-para-1" style={{ marginBottom: "0px" }}>
-                {language == "english" ? "Section" : "பிரிவு"}
+                {language == "en" ? "Section" : "பிரிவு"}
               </p>
               <input className="stu-name-input-field" value="B" type="text" />
             </div>
@@ -153,7 +153,7 @@ function ProfileContent() {
         <div className="d-flex justify-content-between w-100">
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "School Name" : "பள்ளி பெயர்"}
+              {language == "en" ? "School Name" : "பள்ளி பெயர்"}
             </p>
             <input
               className="stu-name-input-field"
@@ -163,7 +163,7 @@ function ProfileContent() {
           </div>
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "School Id" : "பள்ளி Id"}
+              {language == "en" ? "School Id" : "பள்ளி Id"}
             </p>
             <input
               className="stu-name-input-field"
@@ -175,7 +175,7 @@ function ProfileContent() {
         <div className="d-flex justify-content-between w-100">
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "School Address" : "பள்ளி முகவரி"}
+              {language == "en" ? "School Address" : "பள்ளி முகவரி"}
             </p>
             <input
               className="stu-name-input-field"
@@ -185,7 +185,7 @@ function ProfileContent() {
           </div>
           <div className="w-100">
             <p className="eng-para-1">
-              {language == "english" ? "City" : "நகரம்"}
+              {language == "en" ? "City" : "நகரம்"}
             </p>
             <input
               className="stu-name-input-field"
@@ -195,7 +195,7 @@ function ProfileContent() {
           </div>
         </div>
         <p className="personal-para-info">
-          {language == "english"
+          {language == "en"
             ? "Parent/Guardian Info"
             : "பெற்றோர்/பாதுகாவலர் தகவல்"}
         </p>
@@ -203,7 +203,7 @@ function ProfileContent() {
           <div className="profile-parent-1 d-flex justify-content-between w-100">
             <div className="w-100">
               <p className="eng-para-1">
-                {language == "english"
+                {language == "en"
                   ? "Parent/Guardian Name"
                   : "பெற்றோர்/பாதுகாவலர் பெயர்"}
               </p>
@@ -216,7 +216,7 @@ function ProfileContent() {
             </div>
             <div className="w-100">
               <p className="eng-para-1">
-                {language == "english" ? "Relationship" : "உறவு"}
+                {language == "en" ? "Relationship" : "உறவு"}
               </p>
               <input
                 value={parent.relation}
@@ -228,7 +228,7 @@ function ProfileContent() {
           <div className="profile-parent-2 d-flex justify-content-between w-100">
             <div className="w-100">
               <p className="eng-para-1">
-                {language == "english"
+                {language == "en"
                   ? "Parent/Guardian Email"
                   : "பெற்றோர்/பாதுகாவலர் மின்னஞ்சல்"}
               </p>
@@ -240,7 +240,7 @@ function ProfileContent() {
             </div>
             <div className="w-100">
               <p className="eng-para-1">
-                {language == "english"
+                {language == "en"
                   ? "Parent/Guardian Contact Number"
                   : "பெற்றோர்/பாதுகாவலர் தொடர்பு எண்"}
               </p>
